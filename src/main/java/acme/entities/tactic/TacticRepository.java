@@ -11,6 +11,6 @@ import acme.client.repositories.AbstractRepository;
 @Repository
 public interface TacticRepository extends AbstractRepository {
 
-	@Query("select * from Tactic t where t.strategy.id = :strategyId")
+	@Query("select t from Tactic t where t.strategy.id = :strategyId")
 	List<Tactic> getTacticsByStrategyId(int strategyId);
 }

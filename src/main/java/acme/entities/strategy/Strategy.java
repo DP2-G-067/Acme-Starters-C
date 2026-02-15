@@ -4,6 +4,7 @@ package acme.entities.strategy;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -16,7 +17,6 @@ import javax.validation.Valid;
 import org.springframework.data.annotation.Transient;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -51,18 +51,18 @@ public class Strategy extends AbstractEntity {
 
 	@Mandatory
 	@ValidText
-	@Column(name = "moreInfo")
+	@Column(name = "description")
 	public String				description;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	public Moment				startMoment;
+	public Date					startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	public Moment				endMoment;
+	public Date					endMoment;
 
 	@Optional
 	@ValidUrl
