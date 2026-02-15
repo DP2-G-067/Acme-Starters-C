@@ -42,7 +42,7 @@
 		<link>
 			<name>target/classes</name>
 			<type>2</type>
-			<location>//C:/Users/Virginia/Desktop/Workspace-26/Workspace-26/Projects/Acme-Starters-C/target/classes/</location>
+			<locationURI>WORKSPACE_LOC/Projects/Acme-Starters-C/target/classes/</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>
