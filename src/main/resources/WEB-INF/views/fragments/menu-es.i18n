@@ -8,6 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+# master.menu.any #######################################################
+
+master.menu.any.strategy = Estrategias
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo

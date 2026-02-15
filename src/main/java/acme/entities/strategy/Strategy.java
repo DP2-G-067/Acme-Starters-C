@@ -73,6 +73,11 @@ public class Strategy extends AbstractEntity {
 	@ManyToOne
 	public Fundraiser			fundraiser;
 
+	@Mandatory
+	@Valid
+	@Column(name = "draftMode")
+	public Boolean				draftMode;
+
 
 	@Valid
 	@Transient

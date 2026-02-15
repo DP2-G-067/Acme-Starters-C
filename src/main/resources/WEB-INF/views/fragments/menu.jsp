@@ -17,7 +17,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:menu-bar>
-	<acme:menu-left>
+	<acme:menu-left>	
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
@@ -38,6 +38,8 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.youtube.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.any.strategy" action="/any/strategy/list"/>
 	</acme:menu-left>
 
 	<acme:menu-right>		
