@@ -7,7 +7,16 @@
 	<acme:form-textarea code="authenticated.inventor.form.label.keyWords" path="keyWords" readonly="false"/>
 	<acme:form-checkbox code="authenticated.inventor.form.label.licensed" path="licensed" readonly="false"/>
 
-	
-	<acme:submit code="authenticated.inventor.form.button.create" action="/authenticated/inventor/create"/>
-	<acme:submit code="authenticated.inventor.form.button.update" action="/authenticated/inventor/update"/>
+	<jstl:if test="${_command == 'create'}">
+	<acme:submit
+		code="authenticated.inventor.form.button.create"
+		action="/authenticated/inventor/create" />
+	</jstl:if>
+
+	<jstl:if test="${_command == 'update'}">
+	<acme:submit
+		code="authenticated.inventor.form.button.update"
+		action="/authenticated/inventor/update"
+		/>
+		</jstl:if>
 </acme:form>
