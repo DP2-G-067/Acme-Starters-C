@@ -45,7 +45,7 @@ public class Part extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	public Invention			invention;
 
 	@Mandatory

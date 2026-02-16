@@ -1,0 +1,10 @@
+key,name,description,cost,kind,draftMode,key:invention
+part-01,"Glass chamber","Tempered glass chamber for evaporation.",EUR 45.00,CORE,FALSE,invention-01
+part-02,"Condensation pipe","Food-grade pipe for condensation flow.",EUR 15.50,MANDATORY,FALSE,invention-01
+part-03,"Frame","Aluminium structure.",EUR 22.00,OPTIONAL,FALSE,invention-01
+
+part-04,"Moisture sensor","Capacitive moisture sensor.",EUR 12.99,CORE,FALSE,invention-02
+part-05,"Microcontroller","Low power microcontroller.",EUR 8.50,MANDATORY,FALSE,invention-02
+part-06,"Enclosure","IP65 protective case.",EUR 6.00,OPTIONAL,FALSE,invention-02
+
+part-07,"Hidden draft part","Must not appear to Any if invention is draft.",EUR 1.00,CORE,TRUE,invention-03

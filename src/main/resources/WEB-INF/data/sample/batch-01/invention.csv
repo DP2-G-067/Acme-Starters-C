@@ -1,0 +1,4 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
+invention-01,SW25-DESAL1,"Solar Water Desalinator","...",2025/02/01 10:00,2025/06/01 10:00,https://example.com/inv-01,FALSE,inventor-01
+invention-02,SS25-SOIL01,"Smart Soil Sensor","...",2025/03/01 09:00,2025/09/01 09:00,https://example.com/inv-02,FALSE,inventor-02
+invention-03,DP25-DRAFT1,"Draft Prototype","...",2025/04/01 12:00,2025/05/01 12:00,,TRUE,inventor-01
