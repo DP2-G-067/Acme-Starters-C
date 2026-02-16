@@ -3,7 +3,7 @@ any.invention.form.title = Detalles del invento
 
 any.invention.list.label.ticker = Ticker
 any.invention.list.label.name = Nombre
-any.invention.list.label.monthsActive = Meses activo
+any.invention.list.label.description = Descripción
 
 any.invention.form.label.ticker = Ticker:
 any.invention.form.label.name = Nombre:
