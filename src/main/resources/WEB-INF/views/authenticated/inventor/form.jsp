@@ -3,17 +3,11 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-textarea code="authenticated.inventor.form.label.bio" path="bio"/>
-	<acme:form-textarea code="authenticated.inventor.form.label.keyWords" path="keyWords"/>
-	<acme:form-checkbox code="authenticated.inventor.form.label.licensed" path="licensed"/>
+	<acme:form-textarea code="authenticated.inventor.form.label.bio" path="bio" readonly="false"/>
+	<acme:form-textarea code="authenticated.inventor.form.label.keyWords" path="keyWords" readonly="false"/>
+	<acme:form-checkbox code="authenticated.inventor.form.label.licensed" path="licensed" readonly="false"/>
 
-	<jstl:choose>
-		<jstl:when test="${command == 'create'}">
-			<acme:submit code="authenticated.inventor.form.button.create" action="/authenticated/inventor/create"/>
-		</jstl:when>
-		<jstl:when test="${command == 'update'}">
-			<acme:submit code="authenticated.inventor.form.button.update" action="/authenticated/inventor/update"/>
-		</jstl:when>
-	</jstl:choose>
-
+	
+	<acme:submit code="authenticated.inventor.form.button.create" action="/authenticated/inventor/create"/>
+	<acme:submit code="authenticated.inventor.form.button.update" action="/authenticated/inventor/update"/>
 </acme:form>
