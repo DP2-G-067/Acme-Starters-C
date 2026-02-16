@@ -17,5 +17,6 @@
 		action="/any/part/list?inventionId=${id}"/>
 
 	<acme:button code="any.invention.form.button.inventor"
-		action="/any/inventor/show?inventorId=${inventorId}"/>
+	action="/any/inventor/show?id=${inventorId}"/>
+
 </acme:form>
