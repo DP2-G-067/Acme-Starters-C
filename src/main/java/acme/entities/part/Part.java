@@ -48,4 +48,9 @@ public class Part extends AbstractEntity {
 	@ManyToOne
 	public Invention			invention;
 
+	@Mandatory
+	@Valid
+	@Column
+	private Boolean				draftMode;
+
 }

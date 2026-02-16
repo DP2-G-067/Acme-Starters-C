@@ -15,6 +15,7 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -89,6 +90,12 @@ public class Invention extends AbstractEntity {
 		double months = days / 30.4375;
 
 		return Math.round(months * 10.0) / 10.0;
+	}
+
+	@Valid
+	@Transient
+	public Money getCost() {
+		return null;
 	}
 
 
