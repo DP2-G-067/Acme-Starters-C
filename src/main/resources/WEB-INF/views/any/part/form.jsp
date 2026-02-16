@@ -7,6 +7,6 @@
 	<acme:form-textbox  code="any.part.form.label.name" path="name"/>
 	<acme:form-textarea code="any.part.form.label.description" path="description"/>
 	<acme:form-money    code="any.part.form.label.cost" path="cost"/>
-	<acme:form-select   code="any.part.form.label.kind" path="kind"choices="${kinds}"/>
+	<acme:form-select code="any.part.form.label.kind" path="kind" choices="${kinds}"/>
 
 </acme:form>
