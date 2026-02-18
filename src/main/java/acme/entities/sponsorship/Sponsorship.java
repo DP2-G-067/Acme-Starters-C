@@ -7,7 +7,6 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -19,10 +18,12 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.entities.donation.Donation;
+import acme.entities.donation.DonationRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,46 +35,47 @@ public class Sponsorship extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
-	private static final long serialVersionUID = 1L;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
-	private String ticker;
+	private String				ticker;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String name;
+	private String				name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	private String description;
+	private String				description;
 
 	@Mandatory
 	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date startMoment;
+	private Date				startMoment;
 
 	@Mandatory
 	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date endMoment;
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String moreInfo;
+	private String				moreInfo;
 
 	@Mandatory
 	@Valid
 	@Column
-	private Boolean draftMode;
+	private Boolean				draftMode;
 
 	// Derived attributes -----------------------------------------------------
+
 
 	// @Mandatory
 	@Valid
@@ -94,15 +96,19 @@ public class Sponsorship extends AbstractEntity {
 		return result;
 	}
 
-	// @Mandatory
 	// @ValidMoney
+	@Valid
 	@Transient
 	public Money totalMoney() {
 		Money result;
-		double amount = 0.0;
+		double amount;
 
-		if (this.donations != null)
-			for (Donation donation : this.donations)
+		DonationRepository repository = SpringHelper.getBean(DonationRepository.class);
+		List<Donation> donations = repository.findBySponsorshipId(this.getId());
+
+		amount = 0.0;
+		if (donations != null)
+			for (Donation donation : donations)
 				if (donation.getMoney() != null && "EUR".equals(donation.getMoney().getCurrency()))
 					amount += donation.getMoney().getAmount();
 
@@ -115,13 +121,8 @@ public class Sponsorship extends AbstractEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	@Mandatory
-	@Valid
+
 	@ManyToOne
 	private Sponsor sponsor;
-
-	@Valid
-	@OneToMany(mappedBy = "sponsorship")
-	private List<Donation> donations;
 
 }

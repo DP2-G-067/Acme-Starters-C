@@ -23,35 +23,33 @@ public class Donation extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
-	private static final long serialVersionUID = 1L;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String name;
+	private String				name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	private String notes;
+	private String				notes;
 
 	@Mandatory
 	@ValidMoney
 	@Column
-	private Money money;
+	private Money				money;
 
 	@Mandatory
 	@Valid
 	@Column
-	private DonationKind kind;
+	private DonationKind		kind;
 
 	// Relationships ----------------------------------------------------------
 
-	@Mandatory
-	@Valid
 	@ManyToOne
-	private Sponsorship sponsorship;
+	private Sponsorship			sponsorship;
 
 }
