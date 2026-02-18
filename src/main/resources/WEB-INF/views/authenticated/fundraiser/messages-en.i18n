@@ -8,8 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.fundraiser.form.title = Fundraiser
+authenticated.fundraiser.form.title = Fundraiser form
 
-any.fundraiser.form.label.bank = Bank
-any.fundraiser.form.label.statement = Statement
-any.fundraiser.form.label.agent = Agent
+authenticated.fundraiser.form.label.bank = Bank: 
+authenticated.fundraiser.form.label.statement = Statement:
+authenticated.fundraiser.form.label.agent = Agent
+
+authenticated.fundraiser.form.button.create = Register
+authenticated.fundraiser.form.button.update = Update

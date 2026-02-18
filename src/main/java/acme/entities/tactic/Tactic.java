@@ -24,24 +24,26 @@ public class Tactic extends AbstractEntity {
 
 	@Mandatory
 	@ValidHeader
-	@Column(name = "name")
+	@Column
 	public String				name;
 
 	@Mandatory
 	@ValidText
-	@Column(name = "notes")
+	@Column
 	public String				notes;
 
 	@Mandatory
 	@ValidScore
-	@Column(name = "expectedPercentage")
+	@Column
 	public Double				expectedPercentage;
 
 	@Mandatory
 	@Valid
-	@Column(name = "kind")
+	@Column
 	public TacticKind			kind;
 
-	@ManyToOne
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
 	public Strategy				strategy;
 }

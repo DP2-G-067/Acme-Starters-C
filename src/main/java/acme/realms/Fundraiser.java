@@ -21,16 +21,16 @@ public class Fundraiser extends AbstractRole {
 
 	@Mandatory
 	@ValidHeader
-	@Column(name = "bank")
+	@Column
 	public String				bank;
 
 	@Mandatory
 	@ValidText
-	@Column(name = "statement")
+	@Column
 	public String				statement;
 
 	@Mandatory
 	@Valid
-	@Column(name = "agent")
+	@Column
 	public Boolean				agent;
 }

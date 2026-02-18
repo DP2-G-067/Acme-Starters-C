@@ -8,8 +8,21 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.fundraiser.form.title = Fundraiser
+any.strategy.form.title = Strategy
+any.strategy.list.title = Strategies list
 
-any.fundraiser.form.label.bank = Bank
-any.fundraiser.form.label.statement = Statement
-any.fundraiser.form.label.agent = Agent
+any.strategy.list.label.ticker = Ticker
+any.strategy.list.label.name = Name
+any.strategy.list.label.description = Description
+
+any.strategy.form.label.ticker = Ticker
+any.strategy.form.label.name = Name
+any.strategy.form.label.startMoment = Start date
+any.strategy.form.label.endMoment = End date
+any.strategy.form.label.description = Description
+any.strategy.form.label.moreInfo = Additional information
+any.strategy.form.label.monthsActive = Months active
+ any.strategy.form.label.expectedPercentage = Expected percentage
+
+any.strategy.form.button.fundraiser = View fundraisers
+any.strategy.form.button.tactic = View tactics
