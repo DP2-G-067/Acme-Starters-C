@@ -1,4 +1,4 @@
-package acme.entities.sponsorship;
+package acme.entities.donation;
 
 public enum DonationKind {
     ALTRUIST,
