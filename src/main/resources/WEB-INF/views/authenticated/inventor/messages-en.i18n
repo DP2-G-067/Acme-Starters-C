@@ -1,7 +1,28 @@
-authenticated.inventor.form.title = Inventor profile
-authenticated.inventor.form.label.bio = Bio
-authenticated.inventor.form.label.keyWords = Keywords
-authenticated.inventor.form.label.licensed = Licensed
-authenticated.inventor.form.button.create = Register
-authenticated.inventor.form.button.update = Update
-authenticated.inventor.form.button.return = Return
+inventor.invention.list.label.ticker = Ticker
+inventor.invention.list.label.name = Name
+inventor.invention.list.label.draftMode = Draft mode
+
+inventor.invention.form.label.ticker = Ticker
+inventor.invention.form.label.name = Name
+inventor.invention.form.label.description = Description
+inventor.invention.form.label.startMoment = Start moment
+inventor.invention.form.label.endMoment = End moment
+inventor.invention.form.label.moreInfo = More info
+inventor.invention.form.label.monthsActive = Months active
+inventor.invention.form.label.draftMode = Draft mode
+
+inventor.invention.form.button.create = Create
+inventor.invention.form.button.update = Update
+inventor.invention.form.button.delete = Delete
+inventor.invention.form.button.publish = Publish
+inventor.invention.form.button.parts = Parts
+
+inventor.invention.form.error.end-after-start = The end moment must be after the start moment.
+inventor.invention.form.error.start-future = The start moment must be in the future.
+inventor.invention.form.error.end-future = The end moment must be in the future.
+
+inventor.invention.publish.error.no-parts = You must add at least one part before publishing.
+inventor.invention.publish.error.start-not-future = The start moment must be in the future to publish.
+inventor.invention.publish.error.end-not-future = The end moment must be in the future to publish.
+inventor.invention.publish.error.bad-interval = The end moment must be after the start moment.
+inventor.invention.publish.error.parts-not-eur = All parts must be priced in EUR to publish.

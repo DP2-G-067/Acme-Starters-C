@@ -52,13 +52,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 
 	@Override
 	public void bind() {
-		// Publish se invoca como custom command de update, así que bindeamos lo editable
-		// pero NO dejamos que toquen inventor ni draftMode (anti-hacking)
-		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
-
-		// Reforzar lo protegido
-		this.invention.setInventor(this.invention.getInventor());
-		this.invention.setDraftMode(true);
+		; // no binding on publish
 	}
 
 	@Override
@@ -66,39 +60,28 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		super.validateObject(this.invention);
 
 		// 1) Debe tener al menos una parte
-		{
-			boolean hasParts;
+		boolean hasParts = this.partRepository.countByInventionId(this.invention.getId()) > 0;
+		super.state(hasParts, "*", "inventor.invention.publish.error.no-parts");
 
-			hasParts = this.partRepository.countByInventionId(this.invention.getId()) > 0;
-			super.state(hasParts, "*", "inventor.invention.publish.error.no-parts");
-		}
+		// 2) Fechas futuras y consistentes
+		Date now = MomentHelper.getCurrentMoment();
+		Date start = this.invention.getStartMoment();
+		Date end = this.invention.getEndMoment();
 
-		// 2) Fechas futuras en el momento de publicar (requisito + formal testing)
-		{
-			Date now, start, end;
+		if (start != null)
+			super.state(start.after(now), "startMoment", "inventor.invention.publish.error.start-not-future");
+		if (end != null)
+			super.state(end.after(now), "endMoment", "inventor.invention.publish.error.end-not-future");
+		if (start != null && end != null)
+			super.state(end.after(start), "endMoment", "inventor.invention.publish.error.bad-interval");
 
-			now = MomentHelper.getCurrentMoment();
-			start = this.invention.getStartMoment();
-			end = this.invention.getEndMoment();
+		// 3) EUR obligatorio en parts
+		boolean allEur = this.parts != null && this.parts.stream().allMatch(p -> p.getCost() != null && "EUR".equals(p.getCost().getCurrency()));
+		super.state(allEur, "*", "inventor.invention.publish.error.parts-not-eur");
 
-			if (start != null)
-				super.state(start.after(now), "startMoment", "inventor.invention.publish.error.start-not-future");
-
-			if (end != null)
-				super.state(end.after(now), "endMoment", "inventor.invention.publish.error.end-not-future");
-
-			if (start != null && end != null)
-				super.state(end.after(start), "endMoment", "inventor.invention.publish.error.bad-interval");
-		}
-
-		// 3) EUR obligatorio en las parts (aunque ya lo valides en PartCreate/Update, aquí se revalida)
-		{
-			boolean allEur;
-
-			allEur = this.parts != null && this.parts.stream().allMatch(p -> p.getCost() != null && "EUR".equals(p.getCost().getCurrency()));
-
-			super.state(allEur, "*", "inventor.invention.publish.error.parts-not-eur");
-		}
+		// 4) (recomendado) parts deben estar en draft antes de publicar
+		boolean allDraft = this.parts != null && this.parts.stream().allMatch(p -> Boolean.TRUE.equals(p.getDraftMode()));
+		super.state(allDraft, "*", "inventor.invention.publish.error.parts-not-draft");
 	}
 
 	@Override

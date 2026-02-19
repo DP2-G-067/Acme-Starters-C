@@ -72,7 +72,7 @@ public class Invention extends AbstractEntity {
 
 	@Valid
 	@Transient
-	public Double monthsActive() {
+	public Double getMonthsActive() {
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 
 		long days = duration.toDays();
