@@ -1,24 +1,27 @@
 
-package acme.features.authenticated.inventor.invention;
+package acme.features.inventor.invention;
 
-import java.util.Date;
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
+import acme.entities.part.Part;
 import acme.realms.Inventor;
 
 @Service
-public class InventorInventionUpdateService extends AbstractService<Inventor, Invention> {
+public class InventorInventionDeleteService extends AbstractService<Inventor, Invention> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	private InventorInventionRepository	repository;
+
+	@Autowired
+	private InventorPartRepository		partRepository;
 
 	private Invention					invention;
 
@@ -39,7 +42,7 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 		// Formal testing:
 		// - right realm, wrong user -> isPrincipal() lo bloquea
-		// - right user, wrong action -> solo si está en borrador
+		// - right user, wrong action -> draftMode==true requerido
 		status = this.invention != null && Boolean.TRUE.equals(this.invention.getDraftMode()) && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
@@ -47,36 +50,27 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 	@Override
 	public void bind() {
-		// No bindear inventor ni draftMode (anti-hacking)
+		// Igual que en JobDeleteService: bindear campos del form por consistencia,
+		// pero NO permitir cambiar inventor/draftMode por hacking
 		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
-
-		// Reforzar atributos protegidos
 		this.invention.setInventor(this.invention.getInventor());
 		this.invention.setDraftMode(true);
 	}
 
 	@Override
 	public void validate() {
-		super.validateObject(this.invention);
-
-		Date start = this.invention.getStartMoment();
-		Date end = this.invention.getEndMoment();
-
-		// end > start
-		if (start != null && end != null)
-			super.state(end.after(start), "endMoment", "inventor.invention.form.error.end-after-start");
-
-		// futuras (en update también deben seguir siendo futuras)
-		// OJO: en publish también se revalida con el "now" del reloj del sistema
-		if (start != null)
-			super.state(MomentHelper.isFuture(start), "startMoment", "inventor.invention.form.error.start-future");
-		if (end != null)
-			super.state(MomentHelper.isFuture(end), "endMoment", "inventor.invention.form.error.end-future");
+		// No hay validaciones adicionales para borrar (como en JobDeleteService) :contentReference[oaicite:2]{index=2}
+		;
 	}
 
 	@Override
 	public void execute() {
-		this.repository.save(this.invention);
+		Collection<Part> parts;
+
+		// Borrar primero los hijos (parts), luego el padre (invention)
+		parts = this.partRepository.findManyByInventionId(this.invention.getId());
+		this.partRepository.deleteAll(parts);
+		this.repository.delete(this.invention);
 	}
 
 	@Override
@@ -85,10 +79,5 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 		tuple.put("monthsActive", this.invention.getMonthsActive());
-
-		// flags para la UI
-		tuple.put("showPublish", Boolean.TRUE.equals(this.invention.getDraftMode()));
-		tuple.put("showDelete", Boolean.TRUE.equals(this.invention.getDraftMode()));
-		tuple.put("inventionId", this.invention.getId());
 	}
 }

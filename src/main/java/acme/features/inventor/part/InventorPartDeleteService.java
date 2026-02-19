@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.inventor.part;
+package acme.features.inventor.part;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.part.Part;
-import acme.features.authenticated.inventor.invention.InventorPartRepository;
+import acme.features.inventor.invention.InventorPartRepository;
 import acme.realms.Inventor;
 
 @Service
-public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
+public class InventorPartDeleteService extends AbstractService<Inventor, Part> {
 
 	@Autowired
 	private InventorPartRepository	repository;
@@ -29,32 +29,24 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 	public void authorise() {
 		boolean status;
 
-		status = this.part != null && this.part.getInvention() != null && this.part.getInvention().getInventor().isPrincipal() && Boolean.TRUE.equals(this.part.getDraftMode()) && Boolean.TRUE.equals(this.part.getInvention().getDraftMode()); // invention publicada => no editar parts
+		status = this.part != null && this.part.getInvention() != null && this.part.getInvention().getInventor().isPrincipal() && Boolean.TRUE.equals(this.part.getDraftMode()) && Boolean.TRUE.equals(this.part.getInvention().getDraftMode());
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
-		super.bindObject(this.part, "name", "description", "kind", "cost");
-
-		// refuerzo anti-hacking
-		this.part.setInvention(this.part.getInvention());
-		this.part.setDraftMode(true);
+		; // nada que bindear para borrar
 	}
 
 	@Override
 	public void validate() {
-		super.validateObject(this.part);
-
-		// EUR obligatorio
-		if (this.part.getCost() != null && this.part.getCost().getCurrency() != null)
-			super.state("EUR".equals(this.part.getCost().getCurrency()), "cost", "inventor.part.form.error.currency");
+		; // sin validaciones extra
 	}
 
 	@Override
 	public void execute() {
-		this.repository.save(this.part);
+		this.repository.delete(this.part);
 	}
 
 	@Override

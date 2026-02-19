@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.inventor.invention;
+package acme.features.inventor.invention;
 
 import java.util.Collection;
 import java.util.Date;

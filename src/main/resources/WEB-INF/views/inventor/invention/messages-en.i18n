@@ -3,6 +3,7 @@ inventor.invention.list.label.name = Name
 inventor.invention.list.label.draftMode = Draft mode
 inventor.invention.list.title = My Inventions
 
+inventor.invention.form.title = Invention 
 inventor.invention.form.label.ticker = Ticker
 inventor.invention.form.label.name = Name
 inventor.invention.form.label.description = Description

@@ -2,5 +2,18 @@ inventor.part.list.label.name = Nombre
 inventor.part.list.label.kind = Tipo
 inventor.part.list.label.cost = Coste
 inventor.part.list.label.draftMode = Borrador
+inventor.part.list.title = Partes del invento
 
 inventor.part.form.error.currency = Solo se acepta EUR.
+
+inventor.part.form.label.name = Nombre
+inventor.part.form.label.description = Descripción
+inventor.part.form.label.cost = Coste
+inventor.part.form.label.kind = Tipo
+inventor.part.form.label.draftMode = Borrador
+
+inventor.part.form.button.create = Crear
+inventor.part.form.button.update = Actualizar
+inventor.part.form.button.delete = Borrar
+inventor.part.form.button.return = Volver
+inventor.part.form.title = Parte

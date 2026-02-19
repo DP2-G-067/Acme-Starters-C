@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.inventor.part;
+package acme.features.inventor.part;
 
 import java.util.Collection;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.part.Part;
-import acme.features.authenticated.inventor.invention.InventorPartRepository;
+import acme.features.inventor.invention.InventorPartRepository;
 import acme.realms.Inventor;
 
 @Service
