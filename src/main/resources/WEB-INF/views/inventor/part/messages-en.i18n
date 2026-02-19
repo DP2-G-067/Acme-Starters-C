@@ -1,0 +1,6 @@
+inventor.part.list.label.name = Name
+inventor.part.list.label.kind = Kind
+inventor.part.list.label.cost = Cost
+inventor.part.list.label.draftMode = Draft mode
+
+inventor.part.form.error.currency = Only EUR is accepted.

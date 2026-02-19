@@ -1,5 +1,5 @@
 
-package acme.features.inventor;
+package acme.features.authenticated.inventor.invention;
 
 import java.util.Date;
 
@@ -13,7 +13,7 @@ import acme.entities.invention.Invention;
 import acme.realms.Inventor;
 
 @Service
-public class InventorInventionUpdateService extends AbstractService<Inventor, Invention> {
+public class InventorInventionCreateService extends AbstractService<Inventor, Invention> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -27,31 +27,29 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 	@Override
 	public void load() {
-		int id;
+		Inventor inventor;
 
-		id = super.getRequest().getData("id", int.class);
-		this.invention = this.repository.findOneById(id);
+		inventor = (Inventor) super.getRequest().getPrincipal().getActiveRealm();
+
+		this.invention = new Invention();
+		this.invention.setInventor(inventor);
+		this.invention.setDraftMode(true);		// SIEMPRE se crea en borrador (anti-hacking)
 	}
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		// Formal testing:
-		// - right realm, wrong user -> isPrincipal() lo bloquea
-		// - right user, wrong action -> solo si está en borrador
-		status = this.invention != null && Boolean.TRUE.equals(this.invention.getDraftMode()) && this.invention.getInventor().isPrincipal();
-
-		super.setAuthorised(status);
+		// Si has llegado aquí como Inventor realm, normalmente basta con true:
+		super.setAuthorised(true);
 	}
 
 	@Override
 	public void bind() {
-		// No bindear inventor ni draftMode (anti-hacking)
+		// IMPORTANTÍSIMO: no bindear inventor ni draftMode (anti-hacking)
 		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 
-		// Reforzar atributos protegidos
-		this.invention.setInventor(this.invention.getInventor());
+		// Reforzamos valores “protegidos” (por si alguien intenta colarlos por POST)
+		Inventor inventor = (Inventor) super.getRequest().getPrincipal().getActiveRealm();
+		this.invention.setInventor(inventor);
 		this.invention.setDraftMode(true);
 	}
 
@@ -59,17 +57,16 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 	public void validate() {
 		super.validateObject(this.invention);
 
+		// Validación start < end + futuras, sin getBuffer()
 		Date start = this.invention.getStartMoment();
 		Date end = this.invention.getEndMoment();
 
-		// end > start
 		if (start != null && end != null)
-			super.state(end.after(start), "endMoment", "inventor.invention.form.error.end-after-start");
+			super.state(MomentHelper.isAfter(end, start), "endMoment", "inventor.invention.form.error.end-after-start");
 
-		// futuras (en update también deben seguir siendo futuras)
-		// OJO: en publish también se revalida con el "now" del reloj del sistema
 		if (start != null)
 			super.state(MomentHelper.isFuture(start), "startMoment", "inventor.invention.form.error.start-future");
+
 		if (end != null)
 			super.state(MomentHelper.isFuture(end), "endMoment", "inventor.invention.form.error.end-future");
 	}
@@ -84,11 +81,7 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		// Si tu JSP quiere mostrar monthsActive en create/update (readonly), puedes añadirlo:
 		tuple.put("monthsActive", this.invention.getMonthsActive());
-
-		// flags para la UI
-		tuple.put("showPublish", Boolean.TRUE.equals(this.invention.getDraftMode()));
-		tuple.put("showDelete", Boolean.TRUE.equals(this.invention.getDraftMode()));
-		tuple.put("inventionId", this.invention.getId());
 	}
 }

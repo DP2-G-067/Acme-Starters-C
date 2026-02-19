@@ -1,5 +1,5 @@
 
-package acme.features.inventor;
+package acme.features.authenticated.inventor.invention;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

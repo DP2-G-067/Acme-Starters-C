@@ -1,6 +1,7 @@
 inventor.invention.list.label.ticker = Ticker
 inventor.invention.list.label.name = Name
 inventor.invention.list.label.draftMode = Draft mode
+inventor.invention.list.title = My Inventions
 
 inventor.invention.form.label.ticker = Ticker
 inventor.invention.form.label.name = Name

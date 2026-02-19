@@ -1,0 +1,6 @@
+inventor.part.list.label.name = Nombre
+inventor.part.list.label.kind = Tipo
+inventor.part.list.label.cost = Coste
+inventor.part.list.label.draftMode = Borrador
+
+inventor.part.form.error.currency = Solo se acepta EUR.

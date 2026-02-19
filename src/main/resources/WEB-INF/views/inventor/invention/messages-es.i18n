@@ -1,6 +1,7 @@
 inventor.invention.list.label.ticker = Ticker
 inventor.invention.list.label.name = Nombre
 inventor.invention.list.label.draftMode = Borrador
+inventor.invention.list.title = Mis Inventos
 
 inventor.invention.form.label.ticker = Ticker
 inventor.invention.form.label.name = Nombre
