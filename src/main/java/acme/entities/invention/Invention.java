@@ -1,9 +1,7 @@
 
 package acme.entities.invention;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
+import java.time.Duration;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -21,6 +19,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
@@ -73,19 +72,10 @@ public class Invention extends AbstractEntity {
 
 	@Valid
 	@Transient
-	public Double getMonthsActive() {
+	public Double monthsActive() {
+		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 
-		if (this.startMoment == null || this.endMoment == null)
-			return null;
-
-		LocalDate start = this.startMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
-		LocalDate end = this.endMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
-		if (end.isBefore(start))
-			return 0.0;
-
-		long days = ChronoUnit.DAYS.between(start, end);
+		long days = duration.toDays();
 
 		double months = days / 30.4375;
 
