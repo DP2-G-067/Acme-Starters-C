@@ -3,4 +3,4 @@
 acme.validation.campaign.duplicated-ticker.message =  El ticker de la campaña ya existe. 
 acme.validation.campaign.draftMode.message = La campaña no puede ser publicada sin un milestone.
 acme.validation.campaign.startMoment.message = La fecha de inicio no puede ser posterior a la de publicación.
-acme.validation.campaign.endMoment.message = La fecha de fin no puede ser posterior a la de publicación.
+acme.validation.campaign.endMoment.message = La fecha de fin no puede ser posterior a la de inicio.
