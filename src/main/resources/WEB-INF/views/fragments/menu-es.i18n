@@ -10,7 +10,7 @@
 
 # master.menu.any #######################################################
 
-master.menu.any.strategy = Estrategias
+master.menu.any.strategy = Estrategias públicas
 
 # master.menu.anonymous #######################################################
 
@@ -34,6 +34,11 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.fundraiser ##########################################################
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.strategy.list = Mis estrategias
 
 # master.menu.user-account ####################################################
 

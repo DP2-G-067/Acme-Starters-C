@@ -1,7 +1,7 @@
 
 package acme.features.any.tactic;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class AnyTacticListService extends AbstractService<Any, Tactic> {
 	private AnyTacticRepository	repository;
 
 	private Strategy			strategy;
-	private List<Tactic>		tactics;
+	private Collection<Tactic>	tactics;
 
 	// AbstractService interface -------------------------------------------
 

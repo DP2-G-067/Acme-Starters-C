@@ -14,7 +14,7 @@
 	<acme:form-url code="any.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
 
 	<jstl:if test="${_command == 'show'}">
-		<acme:submit code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?strategyId=${id}"/>
-		<acme:submit code="any.strategy.form.button.tactic" action="/any/tactic/list?strategyId=${id}"/>
+		<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?strategyId=${id}"/>
+		<acme:button code="any.strategy.form.button.tactic" action="/any/tactic/list?strategyId=${id}"/>
 	</jstl:if>
 </acme:form>

@@ -62,6 +62,11 @@ public class Strategy extends AbstractEntity {
 	public Date					endMoment;
 
 	@Optional
+	@ValidMoment
+	@Temporal(TemporalType.DATE)
+	public Date					publishDate;
+
+	@Optional
 	@ValidUrl
 	@Column
 	public String				moreInfo;
