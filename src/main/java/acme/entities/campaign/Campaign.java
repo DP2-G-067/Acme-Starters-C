@@ -1,7 +1,10 @@
 
 package acme.entities.campaign;
 
+import java.time.Duration;
+
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -15,13 +18,19 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.entities.milestone.MilestoneRepository;
 import acme.realms.Spokesperson;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@Entity
 public class Campaign extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -70,7 +79,11 @@ public class Campaign extends AbstractEntity {
 	@Valid
 	@Transient
 	private Double monthsActive() {
-		return 0.0;
+		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
+		long days = duration.toDays();
+		double months = days / 30.4375;
+
+		return Math.round(months * 10.0) / 10.0;
 	}
 
 	@Transient
