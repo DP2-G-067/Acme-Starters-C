@@ -1,0 +1,11 @@
+key,key:strategy,name,notes,expectedPercentage,kind
+tactic-01,strategy-01,"Alianzas locales","Colaboración con distribuidores regionales",15.0,SUBTLE
+tactic-02,strategy-01,"Campaña marketing intensiva","Publicidad digital y eventos presenciales",25.0,AGGRESSIVE
+tactic-03,strategy-02,"Subvenciones públicas","Solicitud de ayudas europeas verdes",20.0,TENDER
+tactic-04,strategy-02,"Adquisición startups","Compra de pequeñas empresas sostenibles",30.0,AGGRESSIVE
+tactic-05,strategy-03,"Freemium SaaS","Modelo gratuito con funcionalidades premium",10.0,SUBTLE
+tactic-06,strategy-03,"Expansión internacional online","Localización en nuevos mercados",18.5,AGGRESSIVE
+tactic-07,strategy-04,"Colaboración municipal","Convenios con ayuntamientos",22.0,TENDER
+tactic-08,strategy-04,"Licitaciones públicas","Participación en concursos de obra",35.0,AGGRESSIVE
+tactic-09,strategy-05,"Ensayos clínicos fase I","Validación inicial de producto",12.5,TENDER
+tactic-10,strategy-05,"Ronda inversión privada","Captación de capital riesgo",27.5,AGGRESSIVE

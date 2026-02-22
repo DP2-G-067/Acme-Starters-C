@@ -1,0 +1,6 @@
+key,key:fundraiser,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+strategy-01,fundraiser-01,AB12-EXPANSION,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",false
+strategy-02,fundraiser-01,CD34-VERDE2026,"Innovación Verde","Financiación de proyectos sostenibles y energías renovables","2026/07/15 09:00","2028/01/15 09:00","https://example.com/verde",true
+strategy-03,fundraiser-01,EF56-DIGIGROW,"Digital Growth","Impulso de productos digitales y SaaS","2026/05/10 12:30","2027/12/10 12:30","",true
+strategy-04,fundraiser-01,GH78-INFRAURB,"Infraestructura Local","Desarrollo de infraestructuras urbanas","2026/09/01 08:00","2029/09/01 08:00","https://example.com/infra",true
+strategy-05,fundraiser-01,IJ90-BIOTECHX,"Salud y Biotech","Inversión en startups biotecnológicas","2026/08/20 11:15","2028/08/20 11:15","https://example.com/biotech",true

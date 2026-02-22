@@ -1,0 +1,4 @@
+key,key:userAccount,bank,statement,agent
+fundraiser-01,user-account-fundraiser-01,"Banco Santander","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-02,user-account-fundraiser-02,"三菱UFJ銀行","Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
+fundraiser-03,user-account-fundraiser-03,"بنك الأهلي","Gestión de inversiones en salud, biotecnología e infraestructuras.",true
