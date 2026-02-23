@@ -101,16 +101,12 @@ public class Sponsorship extends AbstractEntity {
 	@Transient
 	public Money totalMoney() {
 		Money result;
-		double amount;
+		Double amount;
 
-		DonationRepository repository = SpringHelper.getBean(DonationRepository.class);
-		List<Donation> donations = repository.findBySponsorshipId(this.getId());
+		SponsorshipRepository repository = SpringHelper.getBean(SponsorshipRepository.class);
+		amount = repository.totalMoney(this.getId());
 
-		amount = 0.0;
-		if (donations != null)
-			for (Donation donation : donations)
-				if (donation.getMoney() != null && "EUR".equals(donation.getMoney().getCurrency()))
-					amount += donation.getMoney().getAmount();
+		amount = amount == null ? 0.0 : amount;
 
 		result = new Money();
 		result.setAmount(amount);
