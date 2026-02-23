@@ -1,13 +1,13 @@
 
 package acme.constraints;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
@@ -22,7 +22,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 	@Autowired
 	private CampaignRepository	repository;
 
-	//@Autowired???
+	@Autowired
 	private MilestoneRepository	milestoneRepository;
 
 
@@ -30,10 +30,9 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 	public boolean isValid(final Campaign value, final ConstraintValidatorContext context) {
 		assert context != null;
 		boolean result;
-		if (value == null) {
-			super.state(context, false, "*", "javax.validation.constraints.NotNull.message");
-			result = !super.hasErrors(context);
-		} else
+		if (value == null)
+			return true;
+		else
 			result = this.isUnique(value, context) && this.correctStatus(value, context) && this.isFutureDate(value, context);
 		return result;
 	}
@@ -63,8 +62,8 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 	private boolean isFutureDate(final Campaign campaign, final ConstraintValidatorContext context) {
 		boolean isFutureStart = true;
 		boolean isFutureEnd = true;
-		Moment startDate = campaign.getStartMoment();
-		Moment endDate = campaign.getEndMoment();
+		Date startDate = campaign.getStartMoment();
+		Date endDate = campaign.getEndMoment();
 
 		if (!campaign.getDraftMode()) {
 			isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
