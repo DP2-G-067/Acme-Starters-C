@@ -17,6 +17,7 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
@@ -55,12 +56,12 @@ public class Sponsorship extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				startMoment;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
 
@@ -122,6 +123,8 @@ public class Sponsorship extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 
 
+	@Mandatory
+	@Valid
 	@ManyToOne
 	private Sponsor sponsor;
 
