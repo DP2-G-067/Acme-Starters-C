@@ -7,7 +7,6 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
-import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,22 +14,23 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Fundraiser extends AbstractRole {
+public class Spokesperson extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	@ValidHeader
+	@ValidText
 	@Column
-	public String				bank;
+	public String				cv;
 
 	@Mandatory
 	@ValidText
 	@Column
-	public String				statement;
+	public String				achievements;
 
 	@Mandatory
 	@Valid
 	@Column
-	public Boolean				agent;
+	public Boolean				licensed;
+
 }

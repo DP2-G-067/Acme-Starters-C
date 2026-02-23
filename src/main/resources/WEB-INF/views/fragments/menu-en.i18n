@@ -8,6 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+# master.menu.any #######################################################
+
+master.menu.any.strategy = Public strategies
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
@@ -31,6 +35,11 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.fundraiser ##########################################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.strategy.list = My Strategies
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -39,3 +48,5 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-fundraiser = Become a fundraiser
+master.menu.user-account.fundraiser-profile = Fundraiser profile
