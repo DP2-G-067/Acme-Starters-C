@@ -50,7 +50,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 	// Can not be published unless they have one milestone. 
 	private boolean correctStatus(final Campaign campaign, final ConstraintValidatorContext context) {
-		boolean correctStatus = false;
+		boolean correctStatus = true;
 		List<Milestone> milestoneByCampaign = this.milestoneRepository.findAllMilestoneByCampaignId(campaign.getId());
 		if (!campaign.getDraftMode())
 			correctStatus = milestoneByCampaign.size() > 0;
