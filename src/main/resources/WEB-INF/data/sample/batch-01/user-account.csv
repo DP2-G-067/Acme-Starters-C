@@ -8,7 +8,12 @@ user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטי�
 user-account-administrator-01,true,"UserIdentity{name: 'Administrator1', surname: 'Acme', email: 'administrator1@acme.com'}",administrator1,administrator1
 user-account-administrator-02,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator2@acme.com'}",administrator2,administrator2
 user-account-administrator-03,true,"UserIdentity{name: 'Administrator3', surname: 'Acme', email: 'administrator3@acme.com'}",administrator3,administrator3
+user-account-fundraiser-01,true,"UserIdentity{name: 'Laura', surname: 'Gómez', email: 'laura.fundraiser@acme.com'}",fundraiser1,fundraiser1
+user-account-fundraiser-02,true,"UserIdentity{name: 'Hiro', surname: '山田 Λορεμ', email: 'hiro.fundraiser@acme.com'}",fundraiser2,fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Amir', surname: 'التمويل ᏥᏲᏎᎭ', email: 'amir.fundraiser@acme.com'}",fundraiser3,fundraiser3
 user-account-inventor-01,true,"UserIdentity{name: 'Inventor1', surname: 'Acme', email: 'inventor1@acme.com'}",inventor1,inventor1
 user-account-inventor-02,true,"UserIdentity{name: 'Inventor2', surname: 'Acme', email: 'inventor2@acme.com'}",inventor2,inventor2
 user-account-inventor-03,true,"UserIdentity{name: 'Inventor3', surname: 'Acme', email: 'inventor3@acme.com'}",inventor3,inventor3
-
+user-account-spokesperson-01,true,"UserIdentity{name: 'Spokesperson1', surname: 'Acme', email: 'spokesperson1@acme.com'}",spokesperson1,spokesperson1
+user-account-spokesperson-02,true,"UserIdentity{name: 'Spokesperson2', surname: '貸んい建濯よ芝弾テソ Λορεμ ιπσθμ', email: 'spokesperson2@acme.com'}",spokesperson2,spokesperson2
+user-account-spokesperson-03,true,"UserIdentity{name: 'Spokesperson3', surname: '之乎路可良 ᏥᏲᏎᎭ', email: 'spokesperson3@acme.com'}",spokesperson3,spokesperson3

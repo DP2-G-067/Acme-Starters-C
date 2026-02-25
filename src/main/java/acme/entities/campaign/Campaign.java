@@ -1,5 +1,5 @@
 
-package acme.entities.strategy;
+package acme.entities.campaign;
 
 import java.time.Duration;
 import java.util.Date;
@@ -12,8 +12,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
@@ -21,91 +19,79 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.client.helpers.SpringHelper;
+import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.entities.tactic.TacticRepository;
-import acme.realms.Fundraiser;
+import acme.entities.milestone.MilestoneRepository;
+import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-public class Strategy extends AbstractEntity {
+@Entity
+@ValidCampaign
+public class Campaign extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
-	public String				ticker;
+	private String				ticker;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	public String				name;
+	private String				name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	public String				description;
+	private String				description;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	public Date					startMoment;
+	private Date				startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	public Date					endMoment;
-
-	@Optional
-	@ValidMoment
-	@Temporal(TemporalType.DATE)
-	public Date					publishDate;
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	public String				moreInfo;
-
-	@Mandatory
-	@Valid
-	@ManyToOne(optional = false)
-	public Fundraiser			fundraiser;
+	private String				moreInfo;
 
 	@Mandatory
 	@Valid
 	@Column
-	public Boolean				draftMode;
+	private Boolean				draftMode;
 
-	@Transient
-	@Autowired
-	private TacticRepository	repository;
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Spokesperson		spokesperson;
 
 
 	@Valid
 	@Transient
-	public Double monthsActive() {
+	private Double getMonthsActive() {
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
-
 		long days = duration.toDays();
-
 		double months = days / 30.4375;
 
 		return Math.round(months * 10.0) / 10.0;
 	}
 
 	@Transient
-	public Double expectedPercentage() {
-		double result;
-		Double wrapper;
-
-		wrapper = this.repository.getExpectedPercentageSum(this.getId());
-		result = wrapper == null ? 0 : wrapper.doubleValue();
-
-		return result;
+	private Double effort() {
+		MilestoneRepository repository = SpringHelper.getBean(MilestoneRepository.class);
+		return repository.computeCampaignEffort(this.getId());
 	}
+
 }
