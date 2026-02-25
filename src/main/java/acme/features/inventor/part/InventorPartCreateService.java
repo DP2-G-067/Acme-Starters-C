@@ -1,13 +1,11 @@
 
 package acme.features.inventor.part;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.part.Part;
@@ -39,8 +37,13 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	@Override
 	public void authorise() {
 		boolean status;
+		int inventionId;
+		Invention invention;
 
-		status = this.invention != null && this.invention.getInventor().isPrincipal() && Boolean.TRUE.equals(this.invention.getDraftMode()); // si la invention está publicada, no se pueden crear parts
+		inventionId = super.getRequest().getData("inventionId", int.class);
+		invention = this.repository.findOneInventionById(inventionId);
+
+		status = invention != null && Boolean.TRUE.equals(invention.getDraftMode()) && invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
 	}
@@ -73,9 +76,9 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void unbind() {
 		Tuple tuple;
 
-		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost", "draftMode");
+		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost");
 		tuple.put("inventionId", this.invention.getId());
-		List<PartKind> kinds = Arrays.asList(PartKind.values());
-		tuple.put("kinds", kinds);
+		SelectChoices choices = SelectChoices.from(PartKind.class, this.part.getKind());
+		tuple.put("kinds", choices);
 	}
 }
