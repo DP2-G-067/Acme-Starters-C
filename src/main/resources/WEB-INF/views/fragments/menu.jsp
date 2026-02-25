@@ -46,6 +46,12 @@
 			<acme:menu-suboption code="master.menu.inventor.invention.list" action="/inventor/invention/list"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.fundraiser.strategy.list" action="/fundraiser/strategy/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.any.strategy" action="/any/strategy/list"/>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>		
@@ -57,6 +63,8 @@
 			<acme:menu-suboption code="master.menu.user-account.consumer-profile" action="/authenticated/consumer/update" access="hasRealm('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRealm('Inventor')"/>
 			<acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')"/>	
+			<acme:menu-suboption code="master.menu.user-account.become-fundraiser" action="/authenticated/fundraiser/create" access="!hasRealm('Fundraiser')"/>
+			<acme:menu-suboption code="master.menu.user-account.fundraiser-profile" action="/authenticated/fundraiser/update" access="hasRealm('Fundraiser')"/>
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>
