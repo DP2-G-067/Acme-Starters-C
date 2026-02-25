@@ -11,11 +11,13 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoney;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidPart;
 import acme.constraints.ValidText;
 import acme.entities.invention.Invention;
 import lombok.Getter;
 import lombok.Setter;
 
+@ValidPart
 @Entity
 @Getter
 @Setter

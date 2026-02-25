@@ -17,4 +17,7 @@ public interface InventionRepository extends AbstractRepository {
 	@Query("select i from Invention i where i.draftMode = false")
 	Collection<Invention> findManyPublished();
 
+	@Query("select i from Invention i where i.ticker = :ticker")
+	Invention findInventionByTicker(String ticker);
+
 }

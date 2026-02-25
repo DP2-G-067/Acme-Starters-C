@@ -38,8 +38,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void authorise() {
-		// Si has llegado aquí como Inventor realm, normalmente basta con true:
-		super.setAuthorised(true);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -80,7 +79,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 	public void unbind() {
 		Tuple tuple;
 
-		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 		// Si tu JSP quiere mostrar monthsActive en create/update (readonly), puedes añadirlo:
 		tuple.put("monthsActive", this.invention.getMonthsActive());
 	}

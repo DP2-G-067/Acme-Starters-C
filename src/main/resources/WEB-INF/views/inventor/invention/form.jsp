@@ -9,10 +9,16 @@
 	<acme:form-moment   code="inventor.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment   code="inventor.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url      code="inventor.invention.form.label.moreInfo" path="moreInfo"/>
+	
+	<jstl:if test="${_command != 'create'}">
+	    <acme:form-double 
+	        code="inventor.invention.form.label.monthsActive" 
+	        path="monthsActive" 
+	        readonly="true"/>
+	</jstl:if>
+	
+	
 
-	<!-- Campos solo lectura -->
-	<acme:form-double   code="inventor.invention.form.label.monthsActive" path="monthsActive" readonly="true"/>
-	<acme:form-checkbox code="inventor.invention.form.label.draftMode" path="draftMode" readonly="true"/>
 
 	<!-- Botones según comando -->
 	<jstl:if test="${_command == 'create'}">
