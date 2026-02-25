@@ -116,26 +116,37 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 	}
 
 	private void checkPartsCostCurrencyIsEuro(final Invention invention, final ConstraintValidatorContext context) {
+
 		boolean ok = true;
 
-		// Solo tiene sentido si ya existe en BD (id != 0); si es nueva, aún no tendrá parts persistidas.
-		if (invention.getId() != 0) {
+		final Boolean draftMode = invention.getDraftMode();
+		final boolean isPublished = draftMode != null && !draftMode;
+
+		if (isPublished) {
+
 			final Collection<Part> parts = this.partRepository.findByInventionId(invention.getId());
 
-			if (parts != null)
+			double total = 0.0;
+
+			if (parts == null || parts.isEmpty())
+				ok = false;
+			else
 				for (final Part p : parts) {
 					final Money cost = p.getCost();
-					if (cost != null) {
-						final String currency = cost.getCurrency();
-						if (currency == null || !"EUR".equals(currency)) {
-							ok = false;
-							break;
-						}
+
+					if (cost == null || cost.getCurrency() == null || !"EUR".equals(cost.getCurrency())) {
+						ok = false;
+						break;
 					}
+
+					total += cost.getAmount();
 				}
+
+			// coste total debe ser positivo
+			if (ok)
+				ok = total > 0.0;
 		}
 
-		// “Only Euros are accepted.” :contentReference[oaicite:3]{index=3}
-		super.state(context, ok, "*", "acme.entities.invention.error.parts-cost-not-eur");
+		super.state(context, ok, "*", "acme.entities.invention.error.parts-cost-invalid");
 	}
 }

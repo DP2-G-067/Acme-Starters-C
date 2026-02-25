@@ -1,6 +1,9 @@
 
 package acme.features.inventor.part;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +11,7 @@ import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.part.Part;
+import acme.entities.part.PartKind;
 import acme.features.inventor.invention.InventorPartRepository;
 import acme.realms.Inventor;
 
@@ -29,7 +33,7 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 		this.part = new Part();
 		this.part.setInvention(this.invention);
-		this.part.setDraftMode(true); // siempre se crea en borrador
+		this.part.setDraftMode(true);
 	}
 
 	@Override
@@ -71,5 +75,7 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost", "draftMode");
 		tuple.put("inventionId", this.invention.getId());
+		List<PartKind> kinds = Arrays.asList(PartKind.values());
+		tuple.put("kinds", kinds);
 	}
 }

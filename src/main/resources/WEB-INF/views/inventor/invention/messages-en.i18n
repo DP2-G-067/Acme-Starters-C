@@ -28,3 +28,5 @@ inventor.invention.publish.error.start-not-future = The start moment must be in 
 inventor.invention.publish.error.end-not-future = The end moment must be in the future to publish.
 inventor.invention.publish.error.bad-interval = The end moment must be after the start moment.
 inventor.invention.publish.error.parts-not-eur = All parts must be priced in EUR to publish.
+
+inventor.invention.list.button.create = create new invention

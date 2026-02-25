@@ -56,18 +56,11 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 	public void validate() {
 		super.validateObject(this.invention);
 
-		// Validación start < end + futuras, sin getBuffer()
 		Date start = this.invention.getStartMoment();
 		Date end = this.invention.getEndMoment();
 
 		if (start != null && end != null)
 			super.state(MomentHelper.isAfter(end, start), "endMoment", "inventor.invention.form.error.end-after-start");
-
-		if (start != null)
-			super.state(MomentHelper.isFuture(start), "startMoment", "inventor.invention.form.error.start-future");
-
-		if (end != null)
-			super.state(MomentHelper.isFuture(end), "endMoment", "inventor.invention.form.error.end-future");
 	}
 
 	@Override

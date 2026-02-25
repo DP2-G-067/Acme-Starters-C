@@ -8,9 +8,8 @@
 
 	<acme:form-money    code="inventor.part.form.label.cost" path="cost"/>
 
-	<!-- kind es enum, normalmente se muestra como textbox.
-	     Si quieres selector, te lo hago con choices (necesita que el service los ponga en el model). -->
-	<acme:form-textbox  code="inventor.part.form.label.kind" path="kind"/>
+	<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kinds}"/>
+	
 
 	<acme:form-checkbox code="inventor.part.form.label.draftMode" path="draftMode" readonly="true"/>
 
