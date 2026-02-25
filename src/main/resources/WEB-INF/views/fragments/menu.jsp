@@ -17,7 +17,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:menu-bar>
-	<acme:menu-left>
+	<acme:menu-left>	
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption 
@@ -65,6 +65,8 @@
 			<acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')"/>	
 			<acme:menu-suboption code="master.menu.user-account.become-fundraiser" action="/authenticated/fundraiser/create" access="!hasRealm('Fundraiser')"/>
 			<acme:menu-suboption code="master.menu.user-account.fundraiser-profile" action="/authenticated/fundraiser/update" access="hasRealm('Fundraiser')"/>
+			
+
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>

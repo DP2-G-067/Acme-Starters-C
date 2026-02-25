@@ -15,22 +15,26 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Fundraiser extends AbstractRole {
+public class Sponsor extends AbstractRole {
+
+	// Serialisation version --------------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
-	@Mandatory
-	@ValidHeader
-	@Column
-	public String				bank;
+	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@ValidText
 	@Column
-	public String				statement;
+	private String				address;
+
+	@Mandatory
+	@ValidHeader
+	@Column
+	private String				im;
 
 	@Mandatory
 	@Valid
 	@Column
-	public Boolean				agent;
+	private Boolean				gold;
 }

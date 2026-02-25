@@ -1,0 +1,4 @@
+key,key:spokesperson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+campaign-01,spokesperson-01,AB12-CAMPAIGN1,"Campaña 01","Primera campaña de la empresa","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",false
+campaign-02,spokesperson-02,CD34-COCACOLA26,"Coca Cola 2026","之乎路可良 ᏥᏲᏎᎭ","2026/07/15 09:00","2028/01/15 09:00","",true
+campaign-03,spokesperson-03,EF56-EJEMPLO03,"Ejemplo 03","貸んい建濯よ芝弾テソ Λορεμ ιπσθμ","2026/05/10 12:30","2027/12/10 12:30","https://example.com/europa-2026",true
