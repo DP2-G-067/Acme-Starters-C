@@ -12,6 +12,8 @@ any.invention.form.label.startMoment = Inicio:
 any.invention.form.label.endMoment = Fin:
 any.invention.form.label.moreInfo = Más información: (Opcional)
 any.invention.form.label.monthsActive = Meses activo:
+any.invention.form.label.moreInfo = coste total
+
 
 any.invention.form.button.parts = Piezas
 any.invention.form.button.inventor = Perfil del inventor
