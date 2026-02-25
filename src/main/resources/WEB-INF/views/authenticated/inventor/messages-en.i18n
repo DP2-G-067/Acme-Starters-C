@@ -1,0 +1,7 @@
+authenticated.inventor.form.label.bio=Biography
+authenticated.inventor.form.label.keyWords=Key words
+authenticated.inventor.form.label.licensed=Licensed
+
+authenticated.inventor.form.button.create=Become inventor
+authenticated.inventor.form.button.update=Update profile
+authenticated.inventor.form.title=Inventor profile

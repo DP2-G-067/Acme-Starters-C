@@ -11,11 +11,13 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoney;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidPart;
 import acme.constraints.ValidText;
 import acme.entities.invention.Invention;
 import lombok.Getter;
 import lombok.Setter;
 
+@ValidPart
 @Entity
 @Getter
 @Setter
@@ -25,27 +27,27 @@ public class Part extends AbstractEntity {
 
 	@Mandatory
 	@ValidHeader
-	@Column(name = "name")
+	@Column
 	public String				name;
 
 	@Mandatory
 	@ValidText
-	@Column(name = "description")
+	@Column
 	public String				description;
 
 	@Mandatory
 	@ValidMoney(min = 0)
-	@Column(name = "cost")
+	@Column
 	public Money				cost;
 
 	@Mandatory
 	@Valid
-	@Column(name = "kind")
+	@Column
 	public PartKind				kind;
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	public Invention			invention;
 
 	@Mandatory

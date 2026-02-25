@@ -11,6 +11,7 @@
 # master.menu.any #######################################################
 
 master.menu.any.strategy = Public strategies
+master.menu.any.invention.list = List Of Inventions
 
 # master.menu.anonymous #######################################################
 
@@ -40,6 +41,11 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.strategy.list = My Strategies
 
+# master.menu.inventor ##########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = My inventions
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -48,5 +54,8 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-inventor = Become inventor
+master.menu.user-account.inventor-profile = Inventor profile
 master.menu.user-account.become-fundraiser = Become a fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile
+
