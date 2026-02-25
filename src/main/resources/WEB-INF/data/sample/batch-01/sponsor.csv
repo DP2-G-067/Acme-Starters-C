@@ -1,0 +1,4 @@
+key,address,im,gold,key:userAccount
+sponsor1,"Calle Mayor 1","im1",true,user-account-auditor-01
+sponsor2,"Calle Menor 2","im2",false,user-account-auditor-02
+sponsor3,"Plaza Mayor 3","im3",true,user-account-auditor-03
