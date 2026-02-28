@@ -1,8 +1,27 @@
 key,name,description,cost,kind,draftMode,key:invention
-part-01,Glass chamber,Tempered glass chamber for evaporation.,EUR 45.00,CORE,TRUE,invention-01
-part-02,Condensation pipe,Food-grade pipe for condensation flow.,EUR 15.50,MANDATORY,FALSE,invention-01
-part-03,Frame,Aluminium structure.,EUR 22.00,OPTIONAL,FALSE,invention-01
-part-04,Moisture sensor,Capacitive moisture sensor.,EUR 12.99,CORE,FALSE,invention-04
-part-05,Microcontroller,Low power microcontroller.,EUR 8.50,MANDATORY,FALSE,invention-02
-part-06,Enclosure,IP65 protective case.,EUR 6.00,OPTIONAL,FALSE,invention-02
-part-07,Hidden draft part,Must not appear to Any if invention is draft.,EUR 1.00,CORE,TRUE,invention-03
+# base
+part-01,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,true,invention-01
+# name
+part-02,"L","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,false,invention-02
+part-03,"Loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,true,invention-02
+part-04,"โลเร็ม อิปซัม","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,false,invention-02
+part-05,"لوريم إيبسوم","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,true,invention-02
+part-06,"洛伦·伊普森","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,false,invention-01
+part-07,"<marquee>Hacked</marquee>","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,true,invention-01
+part-08,"<script>alert(‘Hacked!’);</script>","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,false,invention-01
+# description
+part-09,"Lorem ipsum dolor sit amet.","L",EUR 10.00,CORE,true,invention-01
+part-10,"Lorem ipsum dolor sit amet.","Loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",EUR 10.00,CORE,true,invention-01
+part-11,"Lorem ipsum dolor sit amet.","โลเร็ม อิปซัม",EUR 10.00,CORE,false,invention-02
+part-12,"Lorem ipsum dolor sit amet.","洛伦·伊普森",EUR 10.00,CORE,true,invention-02
+part-13,"Lorem ipsum dolor sit amet.","<marquee>Hacked</marquee>",EUR 10.00,CORE,false,invention-02
+part-14,"Lorem ipsum dolor sit amet.","<script>alert(‘Hacked!’);</script>",EUR 10.00,CORE,true,invention-01
+# cost
+part-15,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,false,invention-01
+part-16,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 0.01,CORE,true,invention-01
+part-17,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 999999.99,CORE,false,invention-01
+part-18,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 1000000.00,CORE,true,invention-01
+# kind
+part-19,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,CORE,false,invention-33
+part-20,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,MANDATORY,true,invention-33
+part-21,"Lorem ipsum dolor sit amet.","Lorem ipsum dolor sit amet, consectetur adipiscing elit",EUR 10.00,OPTIONAL,false,invention-33

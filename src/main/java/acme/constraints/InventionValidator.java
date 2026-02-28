@@ -69,18 +69,6 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 		final Date start = invention.getStartMoment();
 		final Date end = invention.getEndMoment();
 
-		/*
-		 * Regla: start/end deben ser un intervalo válido en el futuro
-		 * respecto al momento en el que se publica.
-		 *
-		 * Interpretación práctica:
-		 * - Si está en draft: no forzamos "futuro respecto a ahora" (porque aún no está publicada),
-		 * pero sí exigimos end > start (intervalo válido).
-		 * - Si NO está en draft (publicada): exigimos start y end en el futuro respecto a "ahora" y end > start.
-		 *
-		 * Esto encaja con la especificación del modelo. :contentReference[oaicite:1]{index=1}
-		 */
-
 		if (start != null && end != null) {
 			final boolean endAfterStart = MomentHelper.isAfter(end, start);
 
@@ -91,8 +79,8 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				ok = endAfterStart;
 			else {
 				final Date now = MomentHelper.getCurrentMoment();
-				final boolean startFuture = MomentHelper.isAfter(start, now);
-				final boolean endFuture = MomentHelper.isAfter(end, now);
+				final boolean startFuture = !MomentHelper.isBefore(start, now);
+				final boolean endFuture = !MomentHelper.isBefore(end, now);
 				ok = endAfterStart && startFuture && endFuture;
 			}
 		}

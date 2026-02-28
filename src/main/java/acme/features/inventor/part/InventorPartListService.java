@@ -20,14 +20,15 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	private Collection<Part>		parts;
 	private Invention				invention;
+	private int						inventionId;
 
 
 	@Override
 	public void load() {
-		int inventionId = super.getRequest().getData("inventionId", int.class);
+		this.inventionId = super.getRequest().getData("inventionId", int.class);
 
-		this.invention = this.repository.findOneInventionById(inventionId);
-		this.parts = this.repository.findManyByInventionId(inventionId);
+		this.invention = this.repository.findOneInventionById(this.inventionId);
+		this.parts = this.repository.findManyByInventionId(this.inventionId);
 	}
 
 	@Override
@@ -40,6 +41,9 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
+
 		super.unbindObjects(this.parts, "name", "kind", "cost", "draftMode");
+		super.getResponse().addGlobal("inventionId", this.inventionId);
+
 	}
 }

@@ -5,9 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.part.Part;
+import acme.entities.part.PartKind;
 import acme.features.inventor.invention.InventorPartRepository;
 import acme.realms.Inventor;
 
@@ -69,7 +71,10 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void unbind() {
 		Tuple tuple;
 
-		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost", "draftMode");
+		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost");
 		tuple.put("inventionId", this.invention.getId());
+
+		SelectChoices choices = SelectChoices.from(PartKind.class, this.part.getKind());
+		tuple.put("kinds", choices);
 	}
 }
