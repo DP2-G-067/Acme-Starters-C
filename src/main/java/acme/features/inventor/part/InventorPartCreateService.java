@@ -71,7 +71,7 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void unbind() {
 		Tuple tuple;
 
-		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost", "draftMode");
+		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost");
 		tuple.put("inventionId", this.invention.getId());
 
 		SelectChoices choices = SelectChoices.from(PartKind.class, this.part.getKind());

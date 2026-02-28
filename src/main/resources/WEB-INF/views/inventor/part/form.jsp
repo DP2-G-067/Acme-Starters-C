@@ -10,7 +10,6 @@
 
 	<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kinds}"/>
 
-	<acme:form-checkbox code="inventor.part.form.label.draftMode" path="draftMode" readonly="true"/>
 
 	<!-- CREATE -->
 	<jstl:if test="${_command == 'create'}">
