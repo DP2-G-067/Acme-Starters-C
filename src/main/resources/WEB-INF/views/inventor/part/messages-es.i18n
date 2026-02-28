@@ -17,3 +17,5 @@ inventor.part.form.button.update = Actualizar
 inventor.part.form.button.delete = Borrar
 inventor.part.form.button.return = Volver
 inventor.part.form.title = Parte
+
+inventor.part.list.button.create = Create

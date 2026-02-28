@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.part.Part;
@@ -20,6 +21,7 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	private Collection<Part>		parts;
 	private Invention				invention;
+	private int						inventionId;
 
 
 	@Override
@@ -40,6 +42,12 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
+
 		super.unbindObjects(this.parts, "name", "kind", "cost", "draftMode");
+
+		Tuple tuple = new Tuple();
+		tuple.put("inventionId", this.inventionId);
+		super.getResponse().addGlobal("inventionId", this.inventionId);
+
 	}
 }
