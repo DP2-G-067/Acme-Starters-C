@@ -11,6 +11,7 @@
 # master.menu.any #######################################################
 
 master.menu.any.strategy = Estrategias públicas
+master.menu.any.campaign = Campañas públicas
 
 # master.menu.anonymous #######################################################
 
@@ -39,6 +40,11 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.fundraiser = Recaudador
 master.menu.fundraiser.strategy.list = Mis estrategias
+
+# master.menu.spokesperson ##########################################################
+
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.campaign.list = Mis campañas
 
 # master.menu.user-account ####################################################
 
