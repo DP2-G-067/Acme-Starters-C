@@ -52,7 +52,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 	private boolean correctStatus(final Campaign campaign, final ConstraintValidatorContext context) {
 		boolean correctStatus = false;
 		List<Milestone> milestoneByCampaign = this.milestoneRepository.findAllMilestoneByCampaignId(campaign.getId());
-		if (!campaign.getDraftMode())
+		if (!campaign.isDraftMode())
 			correctStatus = milestoneByCampaign.size() > 0;
 
 		super.state(context, correctStatus, "draftMode", "acme.validation.campaign.draftMode.message");
@@ -65,7 +65,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		Date startDate = campaign.getStartMoment();
 		Date endDate = campaign.getEndMoment();
 
-		if (!campaign.getDraftMode()) {
+		if (!campaign.isDraftMode()) {
 			isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
 			isFutureEnd = MomentHelper.isAfter(endDate, startDate);
 		}
