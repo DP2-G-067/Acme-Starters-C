@@ -13,6 +13,7 @@
 package acme.constraints;
 
 import java.util.Collection;
+import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
 
@@ -20,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.strategy.Strategy;
 import acme.entities.strategy.StrategyRepository;
 import acme.entities.tactic.Tactic;
@@ -60,10 +62,17 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				super.state(context, uniqueStrategy, "ticker", "acme.validation.strategy.duplicated-ticker.message");
 			}
 			{
-				boolean isTimeCompliant = false;
-				if (strategy.publishDate.before(strategy.getStartMoment()) && strategy.getStartMoment().before(strategy.getEndMoment()))
-					isTimeCompliant = true;
-				super.state(context, isTimeCompliant, "*", "acme.validation.strategy.not-time-compliant");
+				boolean isFutureStart = true;
+				boolean isFutureEnd = true;
+				Date startDate = strategy.getStartMoment();
+				Date endDate = strategy.getEndMoment();
+
+				if (!strategy.getDraftMode()) {
+					isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
+					isFutureEnd = MomentHelper.isAfter(endDate, startDate);
+				}
+				super.state(context, isFutureStart, "startMoment", "acme.validation.strategy.startMoment.message");
+				super.state(context, isFutureEnd, "endMoment", "acme.validation.strategy.endMoment.message");
 			}
 			{
 				boolean isPublishedWithNoTactics = false;

@@ -1,11 +1,44 @@
-key,key:strategy,name,notes,expectedPercentage,kind
-tactic-01,strategy-01,"Alianzas locales","Colaboración con distribuidores regionales",15.0,SUBTLE
-tactic-02,strategy-01,"Campaña marketing intensiva","Publicidad digital y eventos presenciales",25.0,AGGRESSIVE
-tactic-03,strategy-02,"Subvenciones públicas","Solicitud de ayudas europeas verdes",20.0,TENDER
-tactic-04,strategy-02,"Adquisición startups","Compra de pequeñas empresas sostenibles",30.0,AGGRESSIVE
-tactic-05,strategy-03,"Freemium SaaS","Modelo gratuito con funcionalidades premium",10.0,SUBTLE
-tactic-06,strategy-03,"Expansión internacional online","Localización en nuevos mercados",18.5,AGGRESSIVE
-tactic-07,strategy-04,"Colaboración municipal","Convenios con ayuntamientos",22.0,TENDER
-tactic-08,strategy-04,"Licitaciones públicas","Participación en concursos de obra",35.0,AGGRESSIVE
-tactic-09,strategy-05,"Ensayos clínicos fase I","Validación inicial de producto",12.5,TENDER
-tactic-10,strategy-05,"Ronda inversión privada","Captación de capital riesgo",27.5,AGGRESSIVE
+key,key:strategy,name,notes,expectedPercentage,kind,draftMode
+tactic-01,strategy-01,"Alianzas locales","Colaboración con distribuidores regionales",15.0,SUBTLE,false
+tactic-02,strategy-01,"Campaña marketing intensiva","Publicidad digital y eventos presenciales",25.0,AGGRESSIVE,false
+tactic-03,strategy-02,"Subvenciones públicas","Solicitud de ayudas europeas verdes",20.0,TENDER,true
+tactic-04,strategy-02,"Adquisición startups","Compra de pequeñas empresas sostenibles",30.0,AGGRESSIVE,true
+tactic-05,strategy-03,"Freemium SaaS","Modelo gratuito con funcionalidades premium",10.0,SUBTLE,true
+tactic-06,strategy-03,"Expansión internacional online","Localización en nuevos mercados",18.5,AGGRESSIVE,true
+tactic-07,strategy-04,"Colaboración municipal","Convenios con ayuntamientos",22.0,TENDER,true
+tactic-08,strategy-04,"Licitaciones públicas","Participación en concursos de obra",35.0,AGGRESSIVE,true
+tactic-09,strategy-05,"Ensayos clínicos fase I","Validación inicial de producto",12.5,TENDER,true
+tactic-10,strategy-05,"Ronda inversión privada","Captación de capital riesgo",27.5,AGGRESSIVE,true
+
+##Casos positivos para name
+
+tactic-11,strategy-06,"L","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-12,strategy-06,"Lo","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-13,strategy-07,"Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod t","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-14,strategy-07,"Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod te","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-15,strategy-08,"โลเร็ม อิปซัม","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-16,strategy-08,"لوريم إيبسوم","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-17,strategy-09,"洛伦·伊普森","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-18,strategy-09,"<marquee>Hacked</marquee>","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-19,strategy-10,"<script>alert(‘Hacked!’);</script>","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+tactic-20,strategy-10,"' or 'A' = 'A ","Colaboración con distribuidores regionales",15.0,SUBTLE,true
+
+##Casos positivos para notes
+
+tactic-21,strategy-11,"Alianzas locales","L",15.0,SUBTLE,true
+tactic-22,strategy-11,"Alianzas locales","Lo",15.0,SUBTLE,true
+tactic-23,strategy-12,"Alianzas locales","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",15.0,SUBTLE,true
+tactic-24,strategy-12,"Alianzas locales","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",15.0,SUBTLE,true
+tactic-25,strategy-13,"Alianzas locales","โลเร็ม อิปซัม",15.0,SUBTLE,true
+tactic-26,strategy-13,"Alianzas locales","لوريم إيبسوم",15.0,SUBTLE,true
+tactic-27,strategy-14,"Alianzas locales","洛伦·伊普森",15.0,SUBTLE,true
+tactic-28,strategy-14,"Alianzas locales","<marquee>Hacked</marquee>",15.0,SUBTLE,true
+tactic-29,strategy-15,"Alianzas locales","<script>alert(‘Hacked!’);</script>",15.0,SUBTLE,true
+tactic-30,strategy-15,"Alianzas locales","' or 'A' = 'A ",15.0,SUBTLE,true
+
+##Casos positivos para expectedPercentage
+tactic-31,strategy-15,"Alianzas locales","Colaboración con distribuidores regionales",00.00,SUBTLE,true
+tactic-33,strategy-15,"Alianzas locales","Colaboración con distribuidores regionales",00.01,SUBTLE,true
+tactic-34,strategy-16,"Alianzas locales","Colaboración con distribuidores regionales",99.99,SUBTLE,true
+tactic-35,strategy-17,"Alianzas locales","Colaboración con distribuidores regionales",100.00,SUBTLE,true
+

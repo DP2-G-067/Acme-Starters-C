@@ -20,7 +20,7 @@ public class AuthenticatedFundraiserCreateService extends AbstractService<Authen
 
 	private Fundraiser							fundraiser;
 
-	// AbstractService<Authenticated, Consumer> ---------------------------
+	// AbstractService<Authenticated, Fundraiser> ---------------------------
 
 
 	@Override
