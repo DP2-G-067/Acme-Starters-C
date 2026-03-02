@@ -16,3 +16,6 @@ authenticated.fundraiser.form.label.agent = Agente
 
 authenticated.fundraiser.form.button.create = Registrar
 authenticated.fundraiser.form.button.update = Actualizar
+
+acme.validation.text.message = El texto es demasiado largo
+acme.validation.header.message = La cabecera es demasiado larga

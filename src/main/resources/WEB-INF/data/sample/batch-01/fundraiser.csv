@@ -1,4 +1,33 @@
 key,key:userAccount,bank,statement,agent
+
+##Datos generales
+
 fundraiser-01,user-account-fundraiser-01,"Banco Santander","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
-fundraiser-02,user-account-fundraiser-02,"三菱UFJ銀行","Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
-fundraiser-03,user-account-fundraiser-03,"بنك الأهلي","Gestión de inversiones en salud, biotecnología e infraestructuras.",true
+fundraiser-02,user-account-fundraiser-02,"Caixa Bank","Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
+fundraiser-03,user-account-fundraiser-03,"BBVA","Gestión de inversiones en salud, biotecnología e infraestructuras.",true
+
+##Casos positivos para bank
+
+fundraiser-04,user-account-fundraiser-04,"L","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-05,user-account-fundraiser-05,"Lo","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-06,user-account-fundraiser-06,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-07,user-account-fundraiser-07,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-08,user-account-fundraiser-08,"โลเร็ม อิปซัม","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-09,user-account-fundraiser-09,"لوريم إيبسوم","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-10,user-account-fundraiser-10,"洛伦·伊普森","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-11,user-account-fundraiser-11,"<marquee>Hacked</marquee>","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-12,user-account-fundraiser-12,"<script>alert(‘Hacked!’);</script>","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+fundraiser-13,user-account-fundraiser-13,"' or 'A' = 'A ","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
+
+##Casos positivos para statement
+
+fundraiser-14,user-account-fundraiser-14,"Banco Santander","L",true
+fundraiser-15,user-account-fundraiser-15,"Banco Santander","Lo",true
+fundraiser-16,user-account-fundraiser-16,"Banco Santander","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",true
+fundraiser-17,user-account-fundraiser-17,"Banco Santander","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",true
+fundraiser-18,user-account-fundraiser-18,"Banco Santander","โลเร็ม อิปซัม",true
+fundraiser-19,user-account-fundraiser-19,"Banco Santander","لوريم إيبسوم",true
+fundraiser-20,user-account-fundraiser-20,"Banco Santander","洛伦·伊普森",true
+fundraiser-21,user-account-fundraiser-21,"Banco Santander","<marquee>Hacked</marquee>",true
+fundraiser-22,user-account-fundraiser-22,"Banco Santander","<script>alert(‘Hacked!’);</script>",true
+fundraiser-23,user-account-fundraiser-23,"Banco Santander","' or 'A' = 'A ",true
