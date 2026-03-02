@@ -2,6 +2,7 @@
 package acme.entities.sponsorship;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,9 +21,11 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
-import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.constraints.ValidSponsorship;
+import acme.entities.donation.Donation;
+import acme.entities.donation.DonationRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,47 +38,46 @@ public class Sponsorship extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long serialVersionUID = 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
-	private String				ticker;
+	private String ticker;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String				name;
+	private String name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	private String				description;
+	private String description;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startMoment;
+	private Date startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				endMoment;
+	private Date endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String				moreInfo;
+	private String moreInfo;
 
 	@Mandatory
 	@Valid
 	@Column
-	private Boolean				draftMode;
+	private Boolean draftMode;
 
 	// Derived attributes -----------------------------------------------------
-
 
 	@Valid
 	@Transient
@@ -114,7 +116,6 @@ public class Sponsorship extends AbstractEntity {
 	}
 
 	// Relationships ----------------------------------------------------------
-
 
 	@Mandatory
 	@Valid
