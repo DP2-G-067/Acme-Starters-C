@@ -2,6 +2,7 @@
 package acme.entities.campaign;
 
 import java.time.Duration;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +13,6 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -20,6 +20,7 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.client.helpers.SpringHelper;
+import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
@@ -31,6 +32,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@ValidCampaign
 public class Campaign extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -53,12 +55,12 @@ public class Campaign extends AbstractEntity {
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Moment				startMoment;
+	private Date				startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Moment				endMoment;
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
@@ -78,7 +80,7 @@ public class Campaign extends AbstractEntity {
 
 	@Valid
 	@Transient
-	private Double monthsActive() {
+	private Double getMonthsActive() {
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 		long days = duration.toDays();
 		double months = days / 30.4375;
