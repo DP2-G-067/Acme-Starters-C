@@ -1,0 +1,2 @@
+key,enabled,identity,password,username
+errata-user-account-1,true,"UserIdentity{name: '', surname: '', email: 'bademail'}",,

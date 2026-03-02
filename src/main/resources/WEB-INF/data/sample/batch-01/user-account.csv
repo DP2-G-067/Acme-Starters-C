@@ -5,7 +5,7 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
-user-account-administrator-01,true,"UserIdentity{name: 'Administrator1', surname: 'Acme', email: 'administrator1@acme.com'}",administrator1,administrator1
+user-account-administrator-04,true,"UserIdentity{name: 'Administrator1', surname: 'Acme', email: 'administrator1@acme.com'}",administrator1,administrator1
 user-account-administrator-02,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator2@acme.com'}",administrator2,administrator2
 user-account-administrator-03,true,"UserIdentity{name: 'Administrator3', surname: 'Acme', email: 'administrator3@acme.com'}",administrator3,administrator3
 user-account-fundraiser-01,true,"UserIdentity{name: 'Laura', surname: 'Gómez', email: 'laura.fundraiser@acme.com'}",fundraiser1,fundraiser1
@@ -17,3 +17,6 @@ user-account-inventor-03,true,"UserIdentity{name: 'Inventor3', surname: 'Acme', 
 user-account-spokesperson-01,true,"UserIdentity{name: 'Spokesperson1', surname: 'Acme', email: 'spokesperson1@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'Spokesperson2', surname: '貸んい建濯よ芝弾テソ Λορεμ ιπσθμ', email: 'spokesperson2@acme.com'}",spokesperson2,spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Spokesperson3', surname: '之乎路可良 ᏥᏲᏎᎭ', email: 'spokesperson3@acme.com'}",spokesperson3,spokesperson3
+user-account-sponsor-02,true,"UserIdentity{name: 'Sponsor2', surname: 'Acme', email: 'sponsor2@acme.com'}",sponsor2,sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Sponsor3', surname: 'Acme', email: 'sponsor3@acme.com'}",sponsor3,sponsor3
+user-account-sponsor-04,true,"UserIdentity{name: 'Sponsor4', surname: 'Acme', email: 'sponsor4@acme.com'}",sponsor4,sponsor4

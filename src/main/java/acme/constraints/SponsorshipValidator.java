@@ -1,3 +1,4 @@
+
 package acme.constraints;
 
 import java.util.Collection;
@@ -18,77 +19,64 @@ import acme.entities.sponsorship.SponsorshipRepository;
 @Validator
 public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sponsorship> {
 
-    // Internal state ---------------------------------------------------------
+	// Internal state ---------------------------------------------------------
 
-    @Autowired
-    private SponsorshipRepository sponsorshipRepository;
+	@Autowired
+	private SponsorshipRepository	sponsorshipRepository;
 
-    @Autowired
-    private DonationRepository donationRepository;
+	@Autowired
+	private DonationRepository		donationRepository;
 
-    // ConstraintValidator interface ------------------------------------------
+	// ConstraintValidator interface ------------------------------------------
 
-    @Override
-    protected void initialise(final ValidSponsorship annotation) {
-        assert annotation != null;
-    }
 
-    @Override
-    public boolean isValid(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
-        assert context != null;
+	@Override
+	protected void initialise(final ValidSponsorship annotation) {
+		assert annotation != null;
+	}
 
-        if (sponsorship == null) {
-            return true;
-        }
+	@Override
+	public boolean isValid(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
+		assert context != null;
 
-        this.checkTickerIsUnique(sponsorship, context);
-        this.checkTimeCompliance(sponsorship, context);
-        this.checkPublicationConsistency(sponsorship, context);
+		if (sponsorship == null)
+			return true;
 
-        return !super.hasErrors(context);
-    }
+		this.checkTickerIsUnique(sponsorship, context);
+		this.checkTimeCompliance(sponsorship, context);
+		this.checkPublicationConsistency(sponsorship, context);
 
-    private void checkTickerIsUnique(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
-        boolean uniqueTicker;
-        Sponsorship existingSponsorship;
+		return !super.hasErrors(context);
+	}
 
-        existingSponsorship = this.sponsorshipRepository.findSponsorshipByTicker(sponsorship.getTicker());
-        uniqueTicker = existingSponsorship == null || existingSponsorship.equals(sponsorship);
+	private void checkTickerIsUnique(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
+		boolean uniqueTicker;
+		Sponsorship existingSponsorship;
 
-        super.state(context, uniqueTicker, "ticker", "acme.entities.sponsorship.error.ticker.not-unique");
-    }
+		existingSponsorship = this.sponsorshipRepository.findSponsorshipByTicker(sponsorship.getTicker());
+		uniqueTicker = existingSponsorship == null || existingSponsorship.equals(sponsorship);
 
-    private void checkTimeCompliance(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
-        boolean isTimeCompliant = false;
+		super.state(context, uniqueTicker, "ticker", "acme.entities.sponsorship.error.ticker.not-unique");
+	}
 
-        Date start = sponsorship.getStartMoment();
-        Date end = sponsorship.getEndMoment();
+	private void checkTimeCompliance(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
+		Date start = sponsorship.getStartMoment();
+		Date end = sponsorship.getEndMoment();
 
-        if (start != null && end != null) {
-            boolean isStartFuture = MomentHelper.isAfter(start, MomentHelper.getCurrentMoment());
-            boolean isEndFuture = MomentHelper.isAfter(end, MomentHelper.getCurrentMoment());
-            boolean isEndAfterStart = MomentHelper.isAfter(end, start);
+		if (start != null && end != null)
+			super.state(context, MomentHelper.isAfter(end, start), "*", "acme.entities.sponsorship.error.not-time-compliant");
+	}
 
-            if (isStartFuture && isEndFuture && isEndAfterStart) {
-                isTimeCompliant = true;
-            }
-        }
+	private void checkPublicationConsistency(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
+		boolean isPublishedWithNoDonations = false;
 
-        super.state(context, isTimeCompliant, "*", "acme.entities.sponsorship.error.not-time-compliant");
-    }
+		if (sponsorship.getDraftMode() != null && !sponsorship.getDraftMode()) {
+			Collection<Donation> donations = this.donationRepository.findBySponsorshipId(sponsorship.getId());
+			if (donations == null || donations.isEmpty())
+				isPublishedWithNoDonations = true;
+		}
 
-    private void checkPublicationConsistency(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
-        boolean isPublishedWithNoDonations = false;
-
-        if (sponsorship.getDraftMode() != null && !sponsorship.getDraftMode()) {
-            Collection<Donation> donations = this.donationRepository.findBySponsorshipId(sponsorship.getId());
-            if (donations == null || donations.isEmpty()) {
-                isPublishedWithNoDonations = true;
-            }
-        }
-
-        super.state(context, !isPublishedWithNoDonations, "*",
-                "acme.entities.sponsorship.error.published-no-donations");
-    }
+		super.state(context, !isPublishedWithNoDonations, "*", "acme.entities.sponsorship.error.published-no-donations");
+	}
 
 }
