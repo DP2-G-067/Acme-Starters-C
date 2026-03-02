@@ -1,7 +1,6 @@
 
 package acme.constraints;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
-import acme.entities.donation.Donation;
 import acme.entities.donation.DonationRepository;
 import acme.entities.sponsorship.Sponsorship;
 import acme.entities.sponsorship.SponsorshipRepository;
@@ -68,13 +66,8 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 	}
 
 	private void checkPublicationConsistency(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
-		boolean isPublishedWithNoDonations = false;
-
-		if (sponsorship.getDraftMode() != null && !sponsorship.getDraftMode()) {
-			Collection<Donation> donations = this.donationRepository.findBySponsorshipId(sponsorship.getId());
-			if (donations == null || donations.isEmpty())
-				isPublishedWithNoDonations = true;
-		}
+		boolean isPublishedWithNoDonations = sponsorship.getDraftMode() != null && !sponsorship.getDraftMode() //
+			&& !this.donationRepository.existsBySponsorshipId(sponsorship.getId());
 
 		super.state(context, !isPublishedWithNoDonations, "*", "acme.entities.sponsorship.error.published-no-donations");
 	}
