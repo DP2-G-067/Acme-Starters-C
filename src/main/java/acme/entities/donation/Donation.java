@@ -38,7 +38,7 @@ public class Donation extends AbstractEntity {
 	private String				notes;
 
 	@Mandatory
-	@ValidMoney
+	@ValidMoney(min = 0.0)
 	@Column
 	private Money				money;
 
@@ -51,7 +51,7 @@ public class Donation extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Sponsorship			sponsorship;
 
 }

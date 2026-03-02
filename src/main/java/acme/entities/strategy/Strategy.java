@@ -62,11 +62,6 @@ public class Strategy extends AbstractEntity {
 	public Date					endMoment;
 
 	@Optional
-	@ValidMoment
-	@Temporal(TemporalType.DATE)
-	public Date					publishDate;
-
-	@Optional
 	@ValidUrl
 	@Column
 	public String				moreInfo;
@@ -89,6 +84,9 @@ public class Strategy extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double monthsActive() {
+		if (this.getStartMoment() == null || this.getEndMoment() == null)
+			return 0.;
+
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 
 		long days = duration.toDays();
@@ -102,6 +100,9 @@ public class Strategy extends AbstractEntity {
 	public Double expectedPercentage() {
 		double result;
 		Double wrapper;
+
+		if (this.isTransient())
+			return 0.;
 
 		wrapper = this.repository.getExpectedPercentageSum(this.getId());
 		result = wrapper == null ? 0 : wrapper.doubleValue();

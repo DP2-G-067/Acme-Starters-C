@@ -1,0 +1,8 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
+errata-sponsorship-1,ER01-DUP01,Dup Ticker 1,Desc 1,2025/06/01 10:00,2025/12/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-2,ER01-DUP01,Dup Ticker 2,Desc 2,2025/07/01 10:00,2025/11/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-3,ER02-NOD02,No Donation,No donation pub,2025/08/01 10:00,2026/01/01 10:00,http://example.com,false,errata-sponsor-1
+errata-sponsorship-4,ER03-BAD03,Bad Dates,End before start,2025/12/01 10:00,2025/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-5,ER04-PAS04,Past Dates,Start in the past,2024/01/01 10:00,2025/12/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-6,,Missing Ticker,Missing mandatory ticker,2025/06/01 10:00,2025/12/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-7,ER05-MIS05,Missing End,Missing end,2025/06/01 10:00,,http://example.com,true,errata-sponsor-1

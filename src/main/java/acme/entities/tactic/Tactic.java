@@ -44,6 +44,11 @@ public class Tactic extends AbstractEntity {
 
 	@Mandatory
 	@Valid
+	@Column
+	public Boolean				draftMode;
+
+	@Mandatory
+	@Valid
 	@ManyToOne(optional = false)
 	public Strategy				strategy;
 }
