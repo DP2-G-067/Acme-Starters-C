@@ -20,17 +20,17 @@ public class Inventor extends AbstractRole {
 
 	@Mandatory
 	@ValidText
-	@Column(name = "bio")
+	@Column
 	public String				bio;
 
 	@Mandatory
 	@ValidText
-	@Column(name = "keyWords")
+	@Column
 	public String				keyWords;
 
 	@Mandatory
 	@Valid
-	@Column(name = "licensed")
+	@Column
 	public Boolean				licensed;
 
 }
