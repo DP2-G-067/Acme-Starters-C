@@ -17,3 +17,6 @@ user-account-inventor-03,true,"UserIdentity{name: 'Inventor3', surname: 'Acme', 
 user-account-spokesperson-01,true,"UserIdentity{name: 'Spokesperson1', surname: 'Acme', email: 'spokesperson1@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'Spokesperson2', surname: '貸んい建濯よ芝弾テソ Λορεμ ιπσθμ', email: 'spokesperson2@acme.com'}",spokesperson2,spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Spokesperson3', surname: '之乎路可良 ᏥᏲᏎᎭ', email: 'spokesperson3@acme.com'}",spokesperson3,spokesperson3
+user-account-sponsor-01,true,"UserIdentity{name: 'Sponsor1', surname: 'Acme', email: 'sponsor1@acme.com'}",sponsor1,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'Sponsor2', surname: 'Acme', email: 'sponsor2@acme.com'}",sponsor2,sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Sponsor3', surname: 'Acme', email: 'sponsor3@acme.com'}",sponsor3,sponsor3

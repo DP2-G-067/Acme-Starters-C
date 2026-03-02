@@ -1,8 +1,10 @@
 
 package acme.entities.sponsorship;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,19 +15,15 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
-import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.constraints.ValidSponsorship;
-import acme.entities.donation.Donation;
-import acme.entities.donation.DonationRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -82,37 +80,13 @@ public class Sponsorship extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double monthsActive() {
-		Double result;
-		long diff;
-		double months;
-
 		if (this.startMoment == null || this.endMoment == null)
-			result = null;
-		else {
-			diff = this.endMoment.getTime() - this.startMoment.getTime();
-			months = diff / (1000.0 * 60.0 * 60.0 * 24.0 * 30.0);
-			result = Math.round(months * 10.0) / 10.0;
-		}
+			return null;
 
-		return result;
-	}
+		LocalDate start = this.startMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		LocalDate end = this.endMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
-	@Valid
-	@Transient
-	public Money totalMoney() {
-		Money result;
-		Double amount;
-
-		SponsorshipRepository repository = SpringHelper.getBean(SponsorshipRepository.class);
-		amount = repository.totalMoney(this.getId());
-
-		amount = amount == null ? 0.0 : amount;
-
-		result = new Money();
-		result.setAmount(amount);
-		result.setCurrency("EUR");
-
-		return result;
+		return (double) ChronoUnit.MONTHS.between(start, end);
 	}
 
 	// Relationships ----------------------------------------------------------

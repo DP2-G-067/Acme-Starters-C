@@ -59,22 +59,11 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
     }
 
     private void checkTimeCompliance(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
-        boolean isTimeCompliant = false;
-
         Date start = sponsorship.getStartMoment();
         Date end = sponsorship.getEndMoment();
 
-        if (start != null && end != null) {
-            boolean isStartFuture = MomentHelper.isAfter(start, MomentHelper.getCurrentMoment());
-            boolean isEndFuture = MomentHelper.isAfter(end, MomentHelper.getCurrentMoment());
-            boolean isEndAfterStart = MomentHelper.isAfter(end, start);
-
-            if (isStartFuture && isEndFuture && isEndAfterStart) {
-                isTimeCompliant = true;
-            }
-        }
-
-        super.state(context, isTimeCompliant, "*", "acme.entities.sponsorship.error.not-time-compliant");
+        if (start != null && end != null)
+            super.state(context, MomentHelper.isAfter(end, start), "*", "acme.entities.sponsorship.error.not-time-compliant");
     }
 
     private void checkPublicationConsistency(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
