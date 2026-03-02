@@ -1,8 +1,10 @@
 
 package acme.entities.sponsorship;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,10 +23,9 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.entities.donation.Donation;
-import acme.entities.donation.DonationRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidSponsorship
 public class Sponsorship extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -78,40 +80,26 @@ public class Sponsorship extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 
-	// @Mandatory
 	@Valid
 	@Transient
 	public Double monthsActive() {
-		Double result;
-		long diff;
-		double months;
-
 		if (this.startMoment == null || this.endMoment == null)
-			result = null;
-		else {
-			diff = this.endMoment.getTime() - this.startMoment.getTime();
-			months = diff / (1000.0 * 60.0 * 60.0 * 24.0 * 30.0);
-			result = Math.round(months * 10.0) / 10.0;
-		}
+			return null;
 
-		return result;
+		LocalDate start = this.startMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		LocalDate end = this.endMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+		return (double) ChronoUnit.MONTHS.between(start, end);
 	}
 
-	// @ValidMoney
 	@Valid
 	@Transient
 	public Money totalMoney() {
 		Money result;
-		double amount;
+		Double amount;
 
-		DonationRepository repository = SpringHelper.getBean(DonationRepository.class);
-		List<Donation> donations = repository.findBySponsorshipId(this.getId());
-
-		amount = 0.0;
-		if (donations != null)
-			for (Donation donation : donations)
-				if (donation.getMoney() != null && "EUR".equals(donation.getMoney().getCurrency()))
-					amount += donation.getMoney().getAmount();
+		amount = SpringHelper.getBean(SponsorshipRepository.class).totalMoney(this.getId());
+		amount = amount == null ? 0.0 : amount;
 
 		result = new Money();
 		result.setAmount(amount);
@@ -125,7 +113,7 @@ public class Sponsorship extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Sponsor sponsor;
 
 }

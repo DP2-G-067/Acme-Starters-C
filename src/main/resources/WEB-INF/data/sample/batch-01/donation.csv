@@ -1,0 +1,3 @@
+key,name,notes,money,kind,key:sponsorship
+donation1,Donation 1,First donation notes,EUR 100.00,ALTRUIST,sponsorship1
+donation2,Donation 2,Second donation notes,EUR 50.00,REWARDED,sponsorship2
