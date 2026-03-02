@@ -14,8 +14,8 @@
 	    <jstl:when test="${_command == 'show'}">
 			<acme:form-double code="any.campaign.form.label.monthsActive" path="monthsActive" readonly="true"/>
 			<acme:form-double code="any.campaign.form.label.effort" path="effort" readonly="true"/>
-			<acme:submit code="any.campaign.button.milestones" action="/spokesperson/campaign/list?milestoneId=${milestoneId}"/>
-			<acme:submit code="any.campaign.button.spokesperson" action="/spokesperson/campaign/list?spokespersonId=${spokespersonId}"/>    
+			<acme:button code="any.campaign.button.milestones" action="/any/milestone/list?campaignId=${id}"/>
+			<acme:button code="any.campaign.button.spokesperson" action="/any/spokesperson/show?campaignId=${id}"/>    
 		</jstl:when> 		
 	</jstl:choose>		
 </acme:form>
