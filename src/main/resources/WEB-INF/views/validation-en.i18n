@@ -1,0 +1,6 @@
+# Student 4 messages
+
+acme.validation.campaign.duplicated-ticker.message =  This campaign ticker already exists.
+acme.validation.campaign.draftMode.message = Campaign can not be published without a milestone. 
+acme.validation.campaign.startMoment.message = Start date can not be after the publish date.
+acme.validation.campaign.endMoment.message = End date can not be after the start date.

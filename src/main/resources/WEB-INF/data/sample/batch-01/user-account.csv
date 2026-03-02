@@ -31,3 +31,6 @@ user-account-fundraiser-20,true,"UserIdentity{name: 'Bruno', surname: 'Almeida',
 user-account-fundraiser-21,true,"UserIdentity{name: 'Sara', surname: 'Ibrahim', email: 'sara.fundraiser@acme.com'}",fundraiser21,fundraiser21
 user-account-fundraiser-22,true,"UserIdentity{name: 'Tomás', surname: 'Novák', email: 'tomas.fundraiser@acme.com'}",fundraiser22,fundraiser22
 user-account-fundraiser-23,true,"UserIdentity{name: 'Elena', surname: 'Gruber', email: 'elena.fundraiser@acme.com'}",fundraiser23,fundraiser23
+user-account-inventor-01,true,"UserIdentity{name: 'Inventor1', surname: 'Acme', email: 'inventor1@acme.com'}",inventor1,inventor1
+user-account-inventor-02,true,"UserIdentity{name: 'Inventor2', surname: 'Acme', email: 'inventor2@acme.com'}",inventor2,inventor2
+user-account-inventor-03,true,"UserIdentity{name: 'Inventor3', surname: 'Acme', email: 'inventor3@acme.com'}",inventor3,inventor3
