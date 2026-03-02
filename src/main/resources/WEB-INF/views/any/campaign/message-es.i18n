@@ -1,0 +1,18 @@
+any.campaign.form.title = Campaña
+any.campaign.list.title = Lista de campañas
+
+any.campaign.list.label.name = Nombre
+any.campaign.list.label.description = Descripción 
+any.campaign.list.label.startMoment = Fecha de inicio
+any.campaign.list.label.endMoment = Fecha de fin
+
+any.campaign.form.label.name = Nombre
+any.campaign.form.label.description = Descripción
+any.campaign.form.label.startMoment = Fecha de inicio
+any.campaign.form.label.endMoment = Fecha de fin
+any.campaign.form.label.moreInfo = Información adicional
+any.campaign.form.label.monthsActive = Meses activo
+any.campaign.form.label.effort = Esfuerzo
+
+any.campaign.button.milestones = Hito
+any.campaign.button.spokesperson = Portavoz

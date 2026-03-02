@@ -50,7 +50,13 @@
 			<acme:menu-suboption code="master.menu.fundraiser.strategy.list" action="/fundraiser/strategy/list"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
+			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.any.strategy" action="/any/strategy/list"/>
+				
+		<acme:menu-option code="master.menu.any.campaign" action="/any/campaign/list"/>
 		
 	</acme:menu-left>
 
