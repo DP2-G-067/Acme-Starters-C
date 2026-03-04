@@ -9,6 +9,7 @@
 	<acme:form-moment   code="inventor.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment   code="inventor.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url      code="inventor.invention.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textbox  code="inventor.invention.form.label.cost" path="cost" readonly="true"/>
 	
 	<jstl:if test="${_command != 'create'}">
 	    <acme:form-double 
@@ -25,23 +26,26 @@
 		<acme:submit code="inventor.invention.form.button.create" action="/inventor/invention/create"/>
 	</jstl:if>
 
-	<jstl:if test="${_command == 'update'}">
-		<acme:submit code="inventor.invention.form.button.update" action="/inventor/invention/update"/>
+	<!-- UPDATE: desde show si está en borrador -->
+	<jstl:if test="${_command == 'show' && showUpdate}">
+	    <acme:submit code="inventor.invention.form.button.update"
+	        action="/inventor/invention/update"/>
+	</jstl:if>
+	
+	<jstl:if test="${_command == 'show' && showPublish}">
+	    <acme:submit code="inventor.invention.form.button.publish"
+	        action="/inventor/invention/publish"/>
+	</jstl:if>
+	
+	<jstl:if test="${_command == 'show' && showDelete}">
+	    <acme:submit code="inventor.invention.form.button.delete"
+	        action="/inventor/invention/delete"/>
 	</jstl:if>
 
-	<jstl:if test="${_command == 'delete'}">
-		<acme:submit code="inventor.invention.form.button.delete" action="/inventor/invention/delete"/>
-	</jstl:if>
-
-	<!-- Botón Publish: solo tiene sentido si estás en update/show y está en borrador -->
-	<jstl:if test="${_command == 'update' || _command == 'show'}">
-		<jstl:if test="${draftMode}">
-			<acme:submit code="inventor.invention.form.button.publish" action="/inventor/invention/publish"/>
-		</jstl:if>
-	</jstl:if>
 
 	<!-- Navegación a parts (siempre en show/update) -->
 	<jstl:if test="${_command == 'show' || _command == 'update'}">
 		<acme:button code="inventor.invention.form.button.parts" action="/inventor/part/list?inventionId=${id}"/>
 	</jstl:if>
+	
 </acme:form>

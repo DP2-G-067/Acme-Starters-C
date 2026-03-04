@@ -80,7 +80,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		super.state(allEur, "*", "inventor.invention.publish.error.parts-not-eur");
 
 		// 4) (recomendado) parts deben estar en draft antes de publicar
-		boolean allDraft = this.parts != null && this.parts.stream().allMatch(p -> Boolean.TRUE.equals(p.getDraftMode()));
+		boolean allDraft = this.parts != null && this.parts.stream().allMatch(p -> Boolean.TRUE.equals(!p.getDraftMode()));
 		super.state(allDraft, "*", "inventor.invention.publish.error.parts-not-draft");
 	}
 
