@@ -4,6 +4,7 @@ package acme.features.inventor.invention;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.datatypes.Money;
 import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
@@ -18,6 +19,8 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	private InventorInventionRepository	repository;
 
 	private Invention					invention;
+	@Autowired
+	private InventorPartRepository		partRepository;
 
 	// AbstractService interface ---------------------------------------------
 
@@ -48,18 +51,22 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 
 		draftMode = Boolean.TRUE.equals(this.invention.getDraftMode());
 
-		tuple = super.unbindObject(this.invention, //
-			"ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		Double total = this.partRepository.sumAmountEurByInventionId(this.invention.getId());
 
-		// Transient calculado
+		Money cost = new Money();
+		cost.setCurrency("EUR");
+		cost.setAmount(total);
+
+		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+
 		tuple.put("monthsActive", this.invention.getMonthsActive());
 
-		// Para la UI: mostrar/ocultar botones según si está publicada
 		tuple.put("showPublish", draftMode);
 		tuple.put("showUpdate", draftMode);
 		tuple.put("showDelete", draftMode);
 
-		// Para navegar a parts (usamos inventionId)
 		tuple.put("inventionId", this.invention.getId());
+		tuple.put("cost", cost);
 	}
+
 }

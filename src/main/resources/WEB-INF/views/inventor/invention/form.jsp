@@ -9,6 +9,7 @@
 	<acme:form-moment   code="inventor.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment   code="inventor.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url      code="inventor.invention.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textbox  code="inventor.invention.form.label.cost" path="cost" readonly="true"/>
 	
 	<jstl:if test="${_command != 'create'}">
 	    <acme:form-double 

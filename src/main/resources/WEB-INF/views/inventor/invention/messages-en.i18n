@@ -18,6 +18,7 @@ inventor.invention.form.button.update = Update
 inventor.invention.form.button.delete = Delete
 inventor.invention.form.button.publish = Publish
 inventor.invention.form.button.parts = Parts
+inventor.invention.form.label.cost = Cost
 
 inventor.invention.list.button.create = Create
 

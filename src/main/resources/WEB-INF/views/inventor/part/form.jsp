@@ -11,23 +11,22 @@
 	<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kinds}"/>
 
 
-	<!-- CREATE -->
-	<jstl:if test="${_command == 'create'}">
-		<acme:submit code="inventor.part.form.button.create"
-			action="/inventor/part/create?inventionId=${inventionId}"/>
+	<!-- UPDATE ( show) -->
+	<jstl:if test="${_command == 'show' && showUpdate}">
+	    <acme:submit code="inventor.part.form.button.update"
+	        action="/inventor/part/update"/>
 	</jstl:if>
-
-	<!-- UPDATE -->
-	<jstl:if test="${_command == 'update'}">
-		<acme:submit code="inventor.part.form.button.update"
-			action="/inventor/part/update"/>
+	
+	<!-- PUBLISH ( show) -->
+	<jstl:if test="${_command == 'show' && showPublish}">
+	    <acme:submit code="inventor.part.form.button.publish"
+	        action="/inventor/part/publish"/>
 	</jstl:if>
-
-	<!-- DELETE -->
-	<jstl:if test="${_command == 'delete'}">
-		<acme:submit code="inventor.part.form.button.delete"
-			action="/inventor/part/delete"/>
+	
+	<!-- DELETE ( show) -->
+	<jstl:if test="${_command == 'show' && showDelete}">
+	    <acme:submit code="inventor.part.form.button.delete"
+	        action="/inventor/part/delete"/>
 	</jstl:if>
-
 	
 </acme:form>
