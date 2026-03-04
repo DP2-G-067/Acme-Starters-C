@@ -41,9 +41,12 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
-
 		super.unbindObjects(this.parts, "name", "kind", "cost", "draftMode");
+
 		super.getResponse().addGlobal("inventionId", this.inventionId);
 
+		Invention invention = this.repository.findOneInventionById(this.inventionId);
+		boolean showCreate = invention != null && Boolean.TRUE.equals(invention.getDraftMode());
+		super.getResponse().addGlobal("showCreate", showCreate);
 	}
 }
