@@ -11,6 +11,12 @@
 	<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kinds}"/>
 
 
+	<!-- CREATE -->
+	<jstl:if test="${_command == 'create'}">
+	    <acme:submit code="inventor.part.form.button.create"
+	        action="/inventor/part/create?inventionId=${inventionId}"/>
+	</jstl:if>
+	
 	<!-- UPDATE ( show) -->
 	<jstl:if test="${_command == 'show' && showUpdate}">
 	    <acme:submit code="inventor.part.form.button.update"

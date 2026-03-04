@@ -18,4 +18,5 @@ inventor.part.form.button.delete = Borrar
 inventor.part.form.button.return = Volver
 inventor.part.form.title = Parte
 
-inventor.part.list.button.create = Create
+inventor.part.form.button.publish = Publicar
+inventor.part.list.button.create = Crear

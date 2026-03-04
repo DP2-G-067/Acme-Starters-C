@@ -24,31 +24,34 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 
 	@Override
-	public void load() {
-		int inventionId = super.getRequest().getData("inventionId", int.class);
+	public void authorise() {
+		boolean status;
+		int inventionId;
+		Invention invention;
 
-		this.invention = this.repository.findOneInventionById(inventionId);
+		inventionId = super.getRequest().getData("inventionId", int.class);
+		invention = this.repository.findOneInventionById(inventionId);
 
-		this.part = new Part();
-		this.part.setInvention(this.invention);
-		this.part.setDraftMode(true); // siempre se crea en borrador
+		status = invention != null && invention.getInventor() != null && invention.getInventor().isPrincipal() && Boolean.TRUE.equals(invention.getDraftMode());
+
+		this.invention = invention; // <-- CLAVE
+		super.setAuthorised(status);
+
 	}
 
 	@Override
-	public void authorise() {
-		boolean status;
-
-		status = this.invention != null && this.invention.getInventor().isPrincipal() && Boolean.TRUE.equals(this.invention.getDraftMode()); // si la invention está publicada, no se pueden crear parts
-
-		super.setAuthorised(status);
+	public void load() {
+		// Aquí ya usamos this.invention (ya validada en authorise)
+		this.part = new Part();
+		this.part.setInvention(this.invention);
+		this.part.setDraftMode(true);
 	}
 
 	@Override
 	public void bind() {
-		// No bindear invention ni draftMode (anti-hacking)
 		super.bindObject(this.part, "name", "description", "kind", "cost");
 
-		// refuerzo anti-hacking
+		// anti-hacking
 		this.part.setInvention(this.invention);
 		this.part.setDraftMode(true);
 	}
@@ -57,7 +60,6 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void validate() {
 		super.validateObject(this.part);
 
-		// EUR obligatorio
 		if (this.part.getCost() != null && this.part.getCost().getCurrency() != null)
 			super.state("EUR".equals(this.part.getCost().getCurrency()), "cost", "inventor.part.form.error.currency");
 	}
@@ -73,8 +75,6 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost");
 		tuple.put("inventionId", this.invention.getId());
-
-		SelectChoices choices = SelectChoices.from(PartKind.class, this.part.getKind());
-		tuple.put("kinds", choices);
+		tuple.put("kinds", SelectChoices.from(PartKind.class, this.part.getKind()));
 	}
 }

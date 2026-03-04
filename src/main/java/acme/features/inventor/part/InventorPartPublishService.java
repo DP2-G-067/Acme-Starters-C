@@ -14,8 +14,9 @@ import acme.realms.Inventor;
 public class InventorPartPublishService extends AbstractService<Inventor, Part> {
 
 	@Autowired
-	InventorPartRepository	repository;
-	private Part			part;
+	private InventorPartRepository	repository;
+
+	private Part					part;
 
 
 	@Override
@@ -26,23 +27,44 @@ public class InventorPartPublishService extends AbstractService<Inventor, Part> 
 
 	@Override
 	public void authorise() {
-		boolean status = this.part != null && this.part.getInvention().getInventor().isPrincipal() && Boolean.TRUE.equals(this.part.getDraftMode());
+		boolean status;
+
+		// Existe, es del inventor principal y está en borrador
+		status = this.part != null && this.part.getInvention() != null && this.part.getInvention().getInventor().isPrincipal() && Boolean.TRUE.equals(this.part.getDraftMode());
+
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
-		// normalmente no hace falta bindear nada para publicar
+		; // no binding on publish
 	}
 
 	@Override
 	public void validate() {
-		// si tienes reglas extra, aquí
+		// Validación estándar de la entidad (por si tienes ValidMoney, etc.)
+		super.validateObject(this.part);
+
+		// Reglas extra (opcionales pero recomendables)
+		super.state(this.part.getCost() != null, "cost", "inventor.part.publish.error.no-cost");
+		if (this.part.getCost() != null) {
+			super.state(this.part.getCost().getAmount() > 0.0, "cost", "inventor.part.publish.error.non-positive");
+			super.state("EUR".equals(this.part.getCost().getCurrency()), "cost", "inventor.part.publish.error.not-eur");
+		}
+	}
+
+	@Override
+	public void execute() {
+		this.part.setDraftMode(false);
+		this.repository.save(this.part);
 	}
 
 	@Override
 	public void unbind() {
-		Tuple tuple = super.unbindObject(this.part, "name", "description", "cost", "kind", "draftMode");
-		super.getResponse().setData(tuple); // si tu versión NO lo tiene, elimínalo (como antes)
+		Tuple tuple;
+
+		tuple = super.unbindObject(this.part, "name", "description", "kind", "cost", "draftMode");
+		tuple.put("inventionId", this.part.getInvention().getId());
+		tuple.put("kinds", acme.client.components.views.SelectChoices.from(acme.entities.part.PartKind.class, this.part.getKind()));
 	}
 }
