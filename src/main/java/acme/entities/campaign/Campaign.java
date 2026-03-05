@@ -83,9 +83,7 @@ public class Campaign extends AbstractEntity {
 	public Double getMonthsActive() {
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 		long days = duration.toDays();
-		double months = days / 30.4375;
-
-		return Math.round(months * 10.0) / 10.0;
+		return days / 30.0;
 	}
 
 	@Transient
