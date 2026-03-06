@@ -1,0 +1,23 @@
+spokepseson.campaign.form.title = Campaña
+spokesperson.campaign.list.title = Lista de campañas
+
+spokesperson.campaign.list.label.name = Nombre
+spokesperson.campaign.list.label.description = Descripción 
+spokesperson.campaign.list.label.startMoment = Fecha de inicio
+spokesperson.campaign.list.label.endMoment = Fecha de fin
+spokesperson.campaign.list.label.draftMode = Publicada
+
+spokesperson.campaign.form.label.name = Nombre
+spokesperson.campaign.form.label.description = Descripción
+spokesperson.campaign.form.label.startMoment = Fecha de inicio
+spokesperson.campaign.form.label.endMoment = Fecha de fin
+spokesperson.campaign.form.label.draftMode = Publicado
+spokesperson.campaign.form.label.moreInfo = Información adicional
+spokesperson.campaign.form.label.monthsActive = Meses activo
+spokesperson.campaign.form.label.effort = Esfuerzo
+
+spokesperon.campaign.button.create = Crear
+spokesperson.campaign.form.button.update = Actualizar
+spokesperson.campaign.form.button.delete = Eliminar
+spokesperson.campaign.button.milestones = Hito
+spokesperson.campaign.button.spokesperson = Portavoz
