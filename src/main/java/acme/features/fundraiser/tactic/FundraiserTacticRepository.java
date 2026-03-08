@@ -18,4 +18,7 @@ public interface FundraiserTacticRepository extends AbstractRepository {
 
 	@Query("select s from Strategy s where s.id = :id")
 	Strategy findStrategyById(int id);
+
+	@Query("select t from Tactic t where t.id = :id")
+	Tactic findTacticById(int id);
 }

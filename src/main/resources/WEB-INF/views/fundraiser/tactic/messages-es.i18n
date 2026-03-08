@@ -21,5 +21,5 @@ fundraiser.tactic.form.label.expectedPercentage = Porcentaje esperado
 fundraiser.tactic.form.label.kind = Tipo
 
 fundraiser.tactic.form.button.create = Crear
-fundraiser.tactic.form.button.Update = Actualizar
-fundraiser.tactic.form.button.Delete = Eliminar
+fundraiser.tactic.form.button.update = Actualizar
+fundraiser.tactic.form.button.delete = Eliminar
