@@ -2,14 +2,17 @@
 package acme.features.fundraiser.tactic;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
 import acme.entities.tactic.Tactic;
+import acme.entities.tactic.TacticKind;
 import acme.realms.Fundraiser;
 
+@Service
 public class FundraiserTacticCreateService extends AbstractService<Fundraiser, Tactic> {
 
 	@Autowired
@@ -25,14 +28,14 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 
 		this.strategy = this.repository.findStrategyById(strategyId);
 
-		this.tactic = new Tactic();
+		this.tactic = this.newObject(Tactic.class);
 		this.tactic.setStrategy(this.strategy);
 		this.tactic.setDraftMode(true);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		super.setAuthorised(super.getRequest().getPrincipal().getActiveRealm().getClass() == Fundraiser.class);
 	}
 
 	@Override
@@ -52,9 +55,11 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 	@Override
 	public void unbind() {
 		Tuple tuple;
-		SelectChoices choices;
-		//TODO: añadir las choices para el enum kind
+		SelectChoices choices = SelectChoices.from(TacticKind.class, this.tactic.kind);
 
 		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind");
+		tuple.put("kind", this.tactic.getKind());
+		tuple.put("choices", choices);
+		tuple.put("strategyId", this.tactic.getStrategy().getId());
 	}
 }

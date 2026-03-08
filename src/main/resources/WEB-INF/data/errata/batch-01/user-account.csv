@@ -1,2 +1,10 @@
 key,enabled,identity,password,username
 errata-user-account-1,true,"UserIdentity{name: '', surname: '', email: 'bademail'}",,
+
+errata-user-account-fundraiser-01,true,"UserIdentity{name: '', surname: 'Gómez', email: 'laura.fundraiser@acme.com'}",fundraiser1,fundraiser1
+errata-user-account-fundraiser-02,true,"UserIdentity{name: 'Liam', surname: '', email: 'hiro.fundraiser@acme.com'}",fundraiser2,fundraiser2
+errata-user-account-fundraiser-03,true,"UserIdentity{name: 'Liam', surname: 'التمويل ᏥᏲᏎᎭ', email: ''}",fundraiser3,fundraiser3
+errata-user-account-fundraiser-04,false,"UserIdentity{name: '', surname: 'Martínez', email: 'lucia.fundraiser@acme.com'}",fundraiser4,fundraiser4
+errata-user-account-fundraiser-05,false,"UserIdentity{name: '', surname: 'Kowalski', email: 'noah.fundraiser@acme.com'}",fundraiser5,fundraiser5
+errata-user-account-fundraiser-06,true,"UserIdentity{name: '', surname: 'Nakamura', email: 'sofia.fundraiser@acme.com'}",fundraiser6,fundraiser6
+errata-user-account-fundraiser-07,true,"UserIdentity{name: '', surname: 'O’Connor', email: 'liam.fundraiser@acme.com'}",fundraiser7,fundraiser7
