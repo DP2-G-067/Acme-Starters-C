@@ -1,7 +1,7 @@
 
 package acme.entities.strategy;
 
-import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -87,13 +87,7 @@ public class Strategy extends AbstractEntity {
 		if (this.getStartMoment() == null || this.getEndMoment() == null)
 			return 0.;
 
-		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
-
-		long days = duration.toDays();
-
-		double months = days / 30.4375;
-
-		return Math.round(months * 10.0) / 10.0;
+		return MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
 	}
 
 	@Transient

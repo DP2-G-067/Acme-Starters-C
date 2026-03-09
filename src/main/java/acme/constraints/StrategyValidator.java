@@ -12,7 +12,6 @@
 
 package acme.constraints;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
@@ -24,7 +23,6 @@ import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.strategy.Strategy;
 import acme.entities.strategy.StrategyRepository;
-import acme.entities.tactic.Tactic;
 
 @Validator
 public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy> {
@@ -55,29 +53,24 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 		return !super.hasErrors(context);
 	}
 
-	// Can not be published unless they have one milestone. 
 	private boolean correctStatus(final Strategy strategy, final ConstraintValidatorContext context) {
-		boolean correctStatus = true;
-		Collection<Tactic> tacticByStrategy = this.repository.findTacticsByStrategyId(strategy.getId());
-		if (!strategy.getDraftMode())
-			correctStatus = tacticByStrategy.size() > 0;
+		boolean isValid = strategy.getDraftMode() || this.repository.existsTacticsFromStrategyId(strategy.getId());
 
-		super.state(context, correctStatus, "draftMode", "acme.validation.strategy.draftMode.message");
+		super.state(context, isValid, "draftMode", "acme.validation.strategy.draftMode.message");
 		return !super.hasErrors(context);
 	}
 
 	private boolean isFutureDate(final Strategy strategy, final ConstraintValidatorContext context) {
-		boolean isFutureStart = true;
-		boolean isFutureEnd = true;
-		Date startDate = strategy.getStartMoment();
-		Date endDate = strategy.getEndMoment();
+		if (strategy.getDraftMode())
+			return true;
 
-		if (!strategy.getDraftMode()) {
-			isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
-			isFutureEnd = MomentHelper.isAfter(endDate, startDate);
-		}
-		super.state(context, isFutureStart, "startMoment", "acme.validation.strategy.startMoment.message");
-		super.state(context, isFutureEnd, "endMoment", "acme.validation.strategy.endMoment.message");
+		Date start = strategy.getStartMoment();
+		Date end = strategy.getEndMoment();
+		Date now = MomentHelper.getCurrentMoment();
+
+		super.state(context, MomentHelper.isAfter(start, now), "startMoment", "acme.validation.strategy.startMoment.message");
+		super.state(context, MomentHelper.isAfter(end, start), "endMoment", "acme.validation.strategy.endMoment.message");
+
 		return !super.hasErrors(context);
 	}
 }
