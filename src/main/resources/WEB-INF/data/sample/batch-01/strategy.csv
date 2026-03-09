@@ -65,13 +65,14 @@ strategy-47,fundraiser-01,KL53-TESTDATE,"Expansión Europa 2026","Estrategia par
 ##Casos positivos para ticker
 
 strategy-48,fundraiser-01,AA00-ABCDE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-49,fundraiser-01,ZZ99-12345,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-50,fundraiser-01,QW12-A1B2C3,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-51,fundraiser-01,ER34-ABC1234,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-52,fundraiser-01,TY56-ABCDEFGH,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-53,fundraiser-01,UI78-A1B2C3D4E5,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-54,fundraiser-01,OP90-1A2B3C4D5E,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-55,fundraiser-01,LM11-ABCDE12345,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-56,fundraiser-01,NB22-1234A,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-57,fundraiser-01,VC33-9Z8Y7X6W5,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
-strategy-59,fundraiser-01,AY12-AAC123,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-49,fundraiser-01,ZZ99-ABCDEF,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-50,fundraiser-01,ZY99-ABCDEFGHI,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-51,fundraiser-01,AB00-ABCDEFGHIJ,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-52,fundraiser-01,FF06-00000,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-53,fundraiser-01,TR04-9999999999,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-54,fundraiser-01,OP90-55555555,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-55,fundraiser-01,LM11-A5K3BOHE3,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-56,fundraiser-01,GA22-gwergas,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-57,fundraiser-01,VC33-zzzzzzz,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-58,fundraiser-01,ZZ99-dhgh_123G,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-59,fundraiser-01,ZZ99-test___,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
