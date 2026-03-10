@@ -68,9 +68,9 @@ public class Campaign extends AbstractEntity {
 	private String				moreInfo;
 
 	@Mandatory
-	@Valid
+	//@Valid by default
 	@Column
-	private Boolean				draftMode;
+	private boolean				draftMode;
 
 	@Mandatory
 	@Valid
@@ -80,16 +80,14 @@ public class Campaign extends AbstractEntity {
 
 	@Valid
 	@Transient
-	private Double getMonthsActive() {
+	public Double getMonthsActive() {
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 		long days = duration.toDays();
-		double months = days / 30.4375;
-
-		return Math.round(months * 10.0) / 10.0;
+		return days / 30.0;
 	}
 
 	@Transient
-	private Double effort() {
+	public Double getEffort() {
 		MilestoneRepository repository = SpringHelper.getBean(MilestoneRepository.class);
 		return repository.computeCampaignEffort(this.getId());
 	}

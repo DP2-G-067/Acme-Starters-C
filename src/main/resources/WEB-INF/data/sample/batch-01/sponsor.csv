@@ -1,0 +1,10 @@
+key,address,im,gold,key:userAccount
+sponsor1,Calle Mayor 1,im1,true,user-account-sponsor-02
+sponsor2,Calle Menor 2,im2,false,user-account-sponsor-03
+sponsor3,Plaza Mayor 3,im3,true,user-account-sponsor-04
+
+##Casos positivos para address
+
+##Casos positivos para im
+
+##Casos positivos para gold

@@ -22,14 +22,14 @@ public class FundraiserStrategyCreateService extends AbstractService<Fundraiser,
 		Fundraiser fundraiser;
 
 		fundraiser = (Fundraiser) super.getRequest().getPrincipal().getActiveRealm();
-		this.strategy = new Strategy();
+		this.strategy = this.newObject(Strategy.class);
 		this.strategy.setFundraiser(fundraiser);
 		this.strategy.setDraftMode(true);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		super.setAuthorised(super.getRequest().getPrincipal().getActiveRealm().getClass() == Fundraiser.class);
 	}
 
 	@Override
@@ -39,7 +39,6 @@ public class FundraiserStrategyCreateService extends AbstractService<Fundraiser,
 
 	@Override
 	public void validate() {
-		super.validateObject(this.strategy);
 	}
 
 	@Override

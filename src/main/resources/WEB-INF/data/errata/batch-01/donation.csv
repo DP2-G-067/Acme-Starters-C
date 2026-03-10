@@ -1,0 +1,4 @@
+key,name,notes,money,kind,key:sponsorship
+errata-donation-1,Donation Neg,Negative amount,EUR -10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-2,,Missing Name,EUR 10.00,ALTRUIST,errata-sponsorship-2
+errata-donation-3,Donation Bad Currency,Bad currency,USD 10.00,ALTRUIST,errata-sponsorship-1

@@ -4,3 +4,75 @@ strategy-02,fundraiser-01,CD34-VERDE2026,"Innovación Verde","Financiación de p
 strategy-03,fundraiser-01,EF56-DIGIGROW,"Digital Growth","Impulso de productos digitales y SaaS","2026/05/10 12:30","2027/12/10 12:30","",true
 strategy-04,fundraiser-01,GH78-INFRAURB,"Infraestructura Local","Desarrollo de infraestructuras urbanas","2026/09/01 08:00","2029/09/01 08:00","https://example.com/infra",true
 strategy-05,fundraiser-01,IJ90-BIOTECHX,"Salud y Biotech","Inversión en startups biotecnológicas","2026/08/20 11:15","2028/08/20 11:15","https://example.com/biotech",true
+
+##Casos positivos para name
+
+strategy-06,fundraiser-01,KL12-TESTNAME,"L","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-07,fundraiser-01,KL13-TESTNAME,"Lo","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-08,fundraiser-01,KL14-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-09,fundraiser-01,KL15-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-10,fundraiser-01,KL16-TESTNAME,"โลเร็ม อิปซัม","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-11,fundraiser-01,KL17-TESTNAME,"لوريم إيبسوم","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-12,fundraiser-01,KL18-TESTNAME,"洛伦·伊普森","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-13,fundraiser-01,KL19-TESTNAME,"<marquee>Hacked</marquee>","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-14,fundraiser-01,KL20-TESTNAME,"<script>alert(‘Hacked!’);</script>","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-15,fundraiser-01,KL21-TESTNAME,"' or 'A' = 'A ","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+
+##Casos positivos para description
+
+strategy-16,fundraiser-01,KL22-TESTDESC,"Expansión Europa 2026","L","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-17,fundraiser-01,KL23-TESTDESC,"Expansión Europa 2026","Lo","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-18,fundraiser-01,KL24-TESTDESC,"Expansión Europa 2026","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-19,fundraiser-01,KL25-TESTDESC,"Expansión Europa 2026","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-20,fundraiser-01,KL26-TESTDESC,"Expansión Europa 2026","โลเร็ม อิปซัม","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-21,fundraiser-01,KL27-TESTDESC,"Expansión Europa 2026","لوريم إيبسوم","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-22,fundraiser-01,KL28-TESTDESC,"Expansión Europa 2026","洛伦·伊普森","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-23,fundraiser-01,KL29-TESTDESC,"Expansión Europa 2026","<marquee>Hacked</marquee>","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-24,fundraiser-01,KL30-TESTDESC,"Expansión Europa 2026","<script>alert(‘Hacked!’);</script>","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-25,fundraiser-01,KL31-TESTDESC,"Expansión Europa 2026","' or 'A' = 'A ","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+
+##Casos positivos para moreInfo
+
+strategy-26,fundraiser-01,KL32-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://a.b",true
+strategy-27,fundraiser-01,KL33-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",true
+strategy-28,fundraiser-01,KL34-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",true
+strategy-29,fundraiser-01,KL35-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://www.lorem-ipsum.org",true
+strategy-30,fundraiser-01,KL36-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://www.lorem-ipsum.org",true
+strategy-31,fundraiser-01,KL37-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://www.lorem-ipsum.org/dolor/sit.html",true
+strategy-32,fundraiser-01,KL38-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://www.lorem-ipsum.org/dolor/sit.html#dolor",true
+strategy-33,fundraiser-01,KL39-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org?a=1&b=2",true
+strategy-34,fundraiser-01,KL40-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org?",true
+strategy-35,fundraiser-01,KL41-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org?a",true
+strategy-36,fundraiser-01,KL42-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org?a&b",true
+strategy-37,fundraiser-01,KL43-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org/",true
+strategy-38,fundraiser-01,KL44-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org/a",true
+strategy-39,fundraiser-01,KL45-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org/a/b",true
+strategy-40,fundraiser-01,KL46-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org/a/b?",true
+strategy-41,fundraiser-01,KL47-TESTURL,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","http://example.org/a/b?a&b",true
+
+##Casos positivos para startMoment
+
+strategy-42,fundraiser-01,KL48-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2025/01/01 00:00","2025/01/01 00:01","https://example.com/europa-2026",true
+strategy-43,fundraiser-01,KL49-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2025/01/01 00:01","2025/01/01 00:02","https://example.com/europa-2026",true
+strategy-44,fundraiser-01,KL50-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2200/12/31 23:58","2200/12/31 23:59","https://example.com/europa-2026",true
+
+## Casos positivos para endMoment
+
+strategy-45,fundraiser-01,KL51-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2025/01/01 00:00","2025/01/01 00:01","https://example.com/europa-2026",true
+strategy-46,fundraiser-01,KL52-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2200/12/31 23:57","2200/12/31 23:58","https://example.com/europa-2026",true
+strategy-47,fundraiser-01,KL53-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2200/12/31 23:58","2200/12/31 23:59","https://example.com/europa-2026",true
+
+##Casos positivos para ticker
+
+strategy-48,fundraiser-01,AA00-ABCDE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-49,fundraiser-01,ZZ99-ABCDEF,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-50,fundraiser-01,ZY99-ABCDEFGHI,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-51,fundraiser-01,AB00-ABCDEFGHIJ,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-52,fundraiser-01,FF06-00000,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-53,fundraiser-01,TR04-9999999999,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-54,fundraiser-01,OP90-55555555,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-55,fundraiser-01,LM11-A5K3BOHE3,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-56,fundraiser-01,GA22-gwergas,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-57,fundraiser-01,VC33-zzzzzzz,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-58,fundraiser-01,ZZ99-dhgh_123G,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true
+strategy-59,fundraiser-01,ZZ99-test___,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2026/06/01 10:00","2027/06/01 10:00","https://example.com/europa-2026",true

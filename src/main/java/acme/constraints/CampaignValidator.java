@@ -50,9 +50,9 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 	// Can not be published unless they have one milestone. 
 	private boolean correctStatus(final Campaign campaign, final ConstraintValidatorContext context) {
-		boolean correctStatus = false;
+		boolean correctStatus = true;
 		List<Milestone> milestoneByCampaign = this.milestoneRepository.findAllMilestoneByCampaignId(campaign.getId());
-		if (!campaign.getDraftMode())
+		if (!campaign.isDraftMode())
 			correctStatus = milestoneByCampaign.size() > 0;
 
 		super.state(context, correctStatus, "draftMode", "acme.validation.campaign.draftMode.message");
@@ -65,7 +65,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		Date startDate = campaign.getStartMoment();
 		Date endDate = campaign.getEndMoment();
 
-		if (!campaign.getDraftMode()) {
+		if (!campaign.isDraftMode()) {
 			isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
 			isFutureEnd = MomentHelper.isAfter(endDate, startDate);
 		}
