@@ -11,5 +11,7 @@
 	
 </acme:list>
 
-<acme:button code="inventor.part.list.button.create"
-    action="/inventor/part/create?inventionId=${inventionId}"/>
+<jstl:if test="${showCreate}">
+    <acme:button code="inventor.part.list.button.create"
+        action="/inventor/part/create?inventionId=${inventionId}"/>
+</jstl:if>
