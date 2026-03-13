@@ -18,3 +18,6 @@ inventor.part.form.button.update = Update
 inventor.part.form.button.delete = Delete
 inventor.part.form.button.return = Return
 inventor.part.form.title = Part
+
+inventor.part.form.button.publish = Publish
+inventor.part.list.button.create = Create

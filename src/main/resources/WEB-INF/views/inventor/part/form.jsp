@@ -8,29 +8,31 @@
 
 	<acme:form-money    code="inventor.part.form.label.cost" path="cost"/>
 
-	<!-- kind es enum, normalmente se muestra como textbox.
-	     Si quieres selector, te lo hago con choices (necesita que el service los ponga en el model). -->
-	<acme:form-textbox  code="inventor.part.form.label.kind" path="kind"/>
+	<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kinds}"/>
 
-	<acme:form-checkbox code="inventor.part.form.label.draftMode" path="draftMode" readonly="true"/>
 
 	<!-- CREATE -->
 	<jstl:if test="${_command == 'create'}">
-		<acme:submit code="inventor.part.form.button.create"
-			action="/inventor/part/create?inventionId=${inventionId}"/>
+	    <acme:submit code="inventor.part.form.button.create"
+	        action="/inventor/part/create?inventionId=${inventionId}"/>
 	</jstl:if>
-
-	<!-- UPDATE -->
-	<jstl:if test="${_command == 'update'}">
-		<acme:submit code="inventor.part.form.button.update"
-			action="/inventor/part/update"/>
+	
+	<!-- UPDATE ( show) -->
+	<jstl:if test="${_command == 'show' && showUpdate}">
+	    <acme:submit code="inventor.part.form.button.update"
+	        action="/inventor/part/update"/>
 	</jstl:if>
-
-	<!-- DELETE -->
-	<jstl:if test="${_command == 'delete'}">
-		<acme:submit code="inventor.part.form.button.delete"
-			action="/inventor/part/delete"/>
+	
+	<!-- PUBLISH ( show) -->
+	<jstl:if test="${_command == 'show' && showPublish}">
+	    <acme:submit code="inventor.part.form.button.publish"
+	        action="/inventor/part/publish"/>
 	</jstl:if>
-
+	
+	<!-- DELETE ( show) -->
+	<jstl:if test="${_command == 'show' && showDelete}">
+	    <acme:submit code="inventor.part.form.button.delete"
+	        action="/inventor/part/delete"/>
+	</jstl:if>
 	
 </acme:form>
