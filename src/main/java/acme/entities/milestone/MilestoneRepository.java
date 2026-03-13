@@ -12,8 +12,11 @@ import acme.client.repositories.AbstractRepository;
 public interface MilestoneRepository extends AbstractRepository {
 
 	@Query("select m from Milestone m where m.campaign.id = :campaignId")
-	List<Milestone> findAllMilestoneByCampaignId(Integer campaignId);
+	List<Milestone> findAllMilestoneByCampaignId(int campaignId);
+
+	@Query("select count(m)>0 from Milestone m where m.campaign.id = :campaignId")
+	boolean existsMilestoneFromCampaignId(int campaignId);
 
 	@Query("select sum(m.effort) from Milestone m where m.campaign.id = :campaignId")
-	Double computeCampaignEffort(Integer campaignId);
+	Double computeCampaignEffort(int campaignId);
 }

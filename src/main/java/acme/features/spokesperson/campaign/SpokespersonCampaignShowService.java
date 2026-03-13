@@ -34,7 +34,8 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	public void authorise() {
 		boolean status;
 
-		status = super.getRequest().getPrincipal().hasRealm(this.campaign.getSpokesperson());
+		status = this.campaign != null && //
+			(this.campaign.getSpokesperson().isPrincipal() || !this.campaign.isDraftMode());
 
 		super.setAuthorised(status);
 	}
