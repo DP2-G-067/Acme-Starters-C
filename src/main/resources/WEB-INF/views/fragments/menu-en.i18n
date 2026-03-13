@@ -10,6 +10,7 @@
 
 # master.menu.any #######################################################
 
+master.menu.any = Any
 master.menu.any.strategy = Public strategies
 master.menu.any.campaign = Public campaigns
 master.menu.any.invention.list = List Of Inventions
@@ -63,8 +64,6 @@ master.menu.user-account.become-fundraiser = Become a fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile
 master.menu.user-account.become-inventor = Become inventor
 master.menu.user-account.inventor-profile = Inventor profile
-master.menu.user-account.become-fundraiser = Become a fundraiser
-master.menu.user-account.fundraiser-profile = Fundraiser profile
 master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
 

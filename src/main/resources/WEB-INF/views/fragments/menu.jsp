@@ -54,9 +54,12 @@
 			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.any.strategy" action="/any/strategy/list"/>
-				
-		<acme:menu-option code="master.menu.any.campaign" action="/any/campaign/list"/>
+		<acme:menu-option code="master.menu.any" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.any.strategy" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.any.campaign" action="/any/campaign/list"/>
+			<acme:menu-suboption code="master.menu.any.invention.list" action="/any/invention/list"/>
+		</acme:menu-option>
+		
 		
 	</acme:menu-left>
 
