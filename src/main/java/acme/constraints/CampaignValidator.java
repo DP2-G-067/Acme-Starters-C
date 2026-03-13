@@ -62,7 +62,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		if (campaign.isDraftMode())
 			return true;
 
-		isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
 		isFutureEnd = MomentHelper.isAfter(endDate, startDate);
 
 		super.state(context, isFutureStart, "startMoment", "acme.validation.campaign.startMoment.message");
