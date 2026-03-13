@@ -4,6 +4,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
+	<acme:form-textbox code="spokesperson.campaign.form.label.ticker" path="ticker" readonly="${!draftMode}"/>
 	<acme:form-textbox code="spokesperson.campaign.form.label.name" path="name" readonly="${!draftMode}"/>	
 	<acme:form-textarea code="spokesperson.campaign.form.label.description" path="description" readonly="${!draftMode}"/>
 	<acme:form-moment code="spokesperson.campaign.form.label.startMoment" path="startMoment" readonly="${!draftMode}"/> 

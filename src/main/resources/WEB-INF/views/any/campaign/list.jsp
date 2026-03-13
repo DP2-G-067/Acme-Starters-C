@@ -5,8 +5,8 @@
 
 <acme:list>
 	<acme:list-column code="any.campaign.list.label.name" path="name"/>	
-	<acme:list-column code="any.campaign.list.label.description" path="description" width="40%"/>
 	<acme:list-column code="any.campaign.list.label.startMoment" path="startMoment"/> 
 	<acme:list-column code="any.campaign.list.label.endMoment" path="endMoment"/> 
+	<acme:list-hidden path="description"/>	
 	<acme:list-hidden path="moreInfo"/>	
 </acme:list>
