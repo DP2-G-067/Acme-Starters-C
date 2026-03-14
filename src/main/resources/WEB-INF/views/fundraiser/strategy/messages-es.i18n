@@ -29,3 +29,8 @@ fundraiser.strategy.form.button.create = Crear
 fundraiser.strategy.form.button.update = Actualizar
 fundraiser.strategy.form.button.publish = Publicar
 fundraiser.strategy.form.button.delete = Eliminar
+
+acme.validation.strategy.duplicated-ticker.message = Ticker duplicado, porfavor cambielo
+acme.validation.strategy.draftMode.message = No puede publicar una estrategia sin tacticas
+acme.validation.strategy.noTimeCompliant.message = Momento final no puede ir despues de momento inicial
+acme.validation.strategy.publish-after-start.message = No puedes publicar una estrategia despues de que empiece

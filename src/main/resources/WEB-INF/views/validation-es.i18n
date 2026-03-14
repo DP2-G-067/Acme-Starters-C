@@ -7,3 +7,4 @@ acme.validation.campaign.endMoment.message = La fecha de fin no puede ser poster
 
 acme.validation.header.message = La cabecera es incorrecta
 acme.validation.text.message = El texto es incorrecto
+acme.validation.ticker.message = El ticker es incorrecto
