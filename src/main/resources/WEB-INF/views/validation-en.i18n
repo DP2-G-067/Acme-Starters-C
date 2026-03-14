@@ -7,3 +7,4 @@ acme.validation.campaign.endMoment.message = End date can not be after the start
 
 acme.validation.header.message = The header is incorrect
 acme.validation.text.message = The text is incorrect
+acme.validation.ticker.message = The ticker is incorrect

@@ -27,4 +27,7 @@ public interface FundraiserStrategyRepository extends AbstractRepository {
 
 	@Query("select Count(t) from Tactic t where t.strategy.id = :id")
 	Integer countTacticsFromStrategyId(int id);
+
+	@Query("select count(t) > 0 from Tactic t where t.strategy.id = :id")
+	boolean existsTacticsFromStrategyId(int id);
 }

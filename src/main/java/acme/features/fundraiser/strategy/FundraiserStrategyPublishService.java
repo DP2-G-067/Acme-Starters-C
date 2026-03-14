@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
 import acme.entities.tactic.Tactic;
@@ -36,25 +37,24 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 	@Override
 	public void authorise() {
 		boolean status;
-		boolean existanceAndProperty;
-		boolean hasTactic;
-		int id;
 
-		id = super.getRequest().getData("id", int.class);
-		existanceAndProperty = this.strategy != null && this.strategy.getDraftMode() && this.strategy.getFundraiser().isPrincipal();
-		hasTactic = this.repository.countTacticsFromStrategyId(id) > 0;
+		status = this.strategy != null && this.strategy.getDraftMode() && this.strategy.getFundraiser().isPrincipal();
 
-		status = existanceAndProperty && hasTactic;
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
-		super.bindObject(this.strategy);
+		super.bindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 
 	@Override
 	public void validate() {
+		boolean isValidMoment = MomentHelper.isAfter(this.strategy.getStartMoment(), MomentHelper.getCurrentMoment());
+		super.state(isValidMoment, "*", "acme.validation.strategy.publish-after-start.message");
+
+		boolean isValidState = this.strategy.getDraftMode() && this.repository.existsTacticsFromStrategyId(this.strategy.getId());
+		super.state(isValidState, "*", "acme.validation.strategy.draftMode.message");
 		super.validateObject(this.strategy);
 	}
 
