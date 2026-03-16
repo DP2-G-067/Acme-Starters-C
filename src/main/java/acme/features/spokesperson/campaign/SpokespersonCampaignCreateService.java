@@ -35,7 +35,9 @@ public class SpokespersonCampaignCreateService extends AbstractService<Spokesper
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean validRealm;
+		validRealm = super.getRequest().getPrincipal().getActiveRealm().getClass() == Spokesperson.class;
+		super.setAuthorised(validRealm);
 	}
 
 	@Override

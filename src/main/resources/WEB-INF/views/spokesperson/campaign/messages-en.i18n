@@ -17,9 +17,12 @@ spokesperson.campaign.form.label.moreInfo = Additional information
 spokesperson.campaign.form.label.monthsActive = Months active
 spokesperson.campaign.form.label.effort = Effort
 
-
 spokesperon.campaign.button.create = Create
 spokesperson.campaign.form.button.update = Update
 spokesperson.campaign.form.button.delete = Delete
 spokesperson.campaign.button.milestones = Milestones
 spokesperson.campaign.button.spokesperson = Spokesperson
+
+acme.validation.campaign.publish-after-start.message = You cannot publish a campaign after its start moment
+acme.validation.campaign.milestones.message = You cannot publish a campaign with no milestones
+acme.validation.campaign.draftMode.message = Campaign already published

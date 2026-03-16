@@ -43,6 +43,11 @@ public class Milestone extends AbstractEntity {
 	private MilestoneKind		kind;
 
 	@Mandatory
+	//@Valid by default
+	@Column
+	private boolean				draftMode;
+
+	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
 	private Campaign			campaign;

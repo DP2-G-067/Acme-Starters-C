@@ -22,3 +22,7 @@ spokesperson.campaign.form.button.update = Actualizar
 spokesperson.campaign.form.button.delete = Eliminar
 spokesperson.campaign.button.milestones = Hito
 spokesperson.campaign.button.spokesperson = Portavoz
+
+acme.validation.campaign.publish-after-start.message = No puedes publicar una campaña despues de que empiece
+acme.validation.campaign.milestones.message = No se puede publicar una campaña sin hitos
+acme.validation.campaign.draftMode.message = La campaña ya esta publicada
