@@ -1,2 +1,18 @@
 key,address,im,gold,key:user-account
-errata-sponsor-1,,"im1",true,errata-user-account-1
+
+##Casos negativos para address
+
+errata-sponsor-1,null,"im1",true,errata-user-account-1
+errata-sponsor-2,"","im1",true,errata-user-account-1
+errata-sponsor-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolores","im1",true,errata-user-account-1
+
+##Casos negativos para im
+
+errata-sponsor-4,"Calle Mayor 1",null,true,errata-user-account-1
+errata-sponsor-5,"Calle Mayor 1","",true,errata-user-account-1
+errata-sponsor-6,"Calle Mayor 1","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te1",true,errata-user-account-1
+
+##Casos negativos para gold
+
+errata-sponsor-7,"Calle Mayor 1","im1",null,errata-user-account-1
+
