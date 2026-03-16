@@ -1,0 +1,42 @@
+key,key:campaign,title,achievements,effort,kind,draftMode
+
+##Datos generales
+milestone-01,campaign-01,"Milestone 01","Certificados",70.5,TEASER,false
+milestone-02,campaign-03,"Milestone 02","Certificados",70.5,TEASER,true
+milestone-03,campaign-03,"Milestone 03","Certificados",70.5,TEASER,true
+
+##Casos positivos para title
+milestone-04,campaign-03,"L","Certificados",70.5,TEASER,true
+milestone-05,campaign-03,"Lo","Certificados",70.5,TEASER,true
+milestone-06,campaign-03,"Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod t","Certificados",70.5,TEASER,true
+milestone-07,campaign-03,"Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod te","Certificados",70.5,TEASER,true
+milestone-08,campaign-03,"โลเร็ม อิปซัม","Certificados",70.5,TEASER,true
+milestone-09,campaign-03,"لوريم إيبسوم","Certificados",70.5,TEASER,true
+milestone-10,campaign-03,"洛伦·伊普森","Certificados",70.5,TEASER,true
+milestone-11,campaign-03,"<marquee>Hacked</marquee>","Certificados",70.5,TEASER,true
+milestone-12,campaign-03,"<script>alert(‘Hacked!’);</script>","Certificados",70.5,TEASER,true
+milestone-13,campaign-03,"' or 'A' = 'A ","Certificados",70.5,TEASER,true
+
+##Casos positivos para achievements
+milestone-14,campaign-03,"Prueba","L",70.5,TEASER,true
+milestone-15,campaign-03,"Prueba","Lo",70.5,TEASER,true
+milestone-16,campaign-03,"Prueba","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore",70.5,TEASER,true
+milestone-17,campaign-03,"Prueba","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore.",70.5,TEASER,true
+milestone-18,campaign-03,"Prueba","โลเร็ม อิปซัม",70.5,TEASER,true
+milestone-19,campaign-03,"Prueba","لوريم إيبسوم",70.5,TEASER,true
+milestone-20,campaign-03,"Prueba","<marquee>Hacked</marquee>",70.5,TEASER,true
+milestone-21,campaign-03,"Prueba","<script>alert(‘Hacked!’);</script>",70.5,TEASER,true
+milestone-22,campaign-03,"Prueba","' or 'A' = 'A ",70.5,TEASER,true
+
+##Casos positivos para effort
+milestone-23,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER,false
+milestone-24,campaign-02,"Prueba","Certificados de prueba",0.02,TEASER,false
+
+##Casos positivos para kind
+milestone-25,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER,false
+milestone-26,campaign-02,"Prueba","Certificados de prueba",0.01,ENGAGING,false
+milestone-27,campaign-02,"Prueba","Certificados de prueba",0.01,CONVERSION,false
+
+##Casos positivos para draftMode
+milestone-28,campaign-03,"Prueba","Certificados de prueba",0.01,TEASER,true
+milestone-29,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER,false

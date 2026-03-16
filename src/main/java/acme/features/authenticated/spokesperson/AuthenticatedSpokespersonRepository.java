@@ -17,4 +17,6 @@ public interface AuthenticatedSpokespersonRepository extends AbstractRepository 
 	@Query("select s from Spokesperson s where s.userAccount.id = :id")
 	Spokesperson findSpokespersonByUserAccountId(int id);
 
+	@Query("select ua from UserAccount ua where ua.id = :id")
+	UserAccount findOneUserAccountById(int id);
 }

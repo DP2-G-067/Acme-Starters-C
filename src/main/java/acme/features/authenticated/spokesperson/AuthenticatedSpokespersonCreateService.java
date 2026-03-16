@@ -29,7 +29,7 @@ public class AuthenticatedSpokespersonCreateService extends AbstractService<Auth
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
 		userAccount = this.repository.findUserAccountById(userAccountId);
 
-		this.spokesperson = new Spokesperson();
+		this.spokesperson = super.newObject(Spokesperson.class);
 		this.spokesperson.setUserAccount(userAccount);
 	}
 
@@ -53,7 +53,16 @@ public class AuthenticatedSpokespersonCreateService extends AbstractService<Auth
 
 	@Override
 	public void execute() {
+		Spokesperson spokesperson;
+
 		this.repository.save(this.spokesperson);
+
+		spokesperson = this.repository.findSpokespersonByUserAccountId(this.spokesperson.getUserAccount().getId());
+		if (spokesperson == null) {
+			spokesperson = super.newObject(Spokesperson.class);
+			spokesperson.setUserAccount(this.spokesperson.getUserAccount());
+			this.repository.save(spokesperson);
+		}
 	}
 
 	@Override

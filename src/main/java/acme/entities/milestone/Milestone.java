@@ -40,7 +40,12 @@ public class Milestone extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Column
-	private MilestoneKind		kind;
+	public MilestoneKind		kind;
+
+	@Mandatory
+	//@Valid by default
+	@Column
+	private boolean				draftMode;
 
 	@Mandatory
 	@Valid
