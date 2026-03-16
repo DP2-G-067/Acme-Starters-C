@@ -52,6 +52,10 @@
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.any.strategy" action="/any/strategy/list" access="hasRealm('Fundraiser')"/>
 		
+		<acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.sponsorship.list" action="/sponsor/sponsorship/list"/>
+		</acme:menu-option>
+
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>

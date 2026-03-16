@@ -47,6 +47,11 @@ master.menu.inventor.invention.list = Mis inventos
 master.menu.fundraiser = Recaudador
 master.menu.fundraiser.strategy.list = Mis estrategias
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.sponsorship.list = Mis patrocinios
+
 # master.menu.spokesperson ##########################################################
 
 master.menu.spokesperson = Portavoz
