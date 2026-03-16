@@ -23,7 +23,6 @@
 			<acme:menu-suboption code="master.menu.any.strategy" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.any.campaign" action="/any/campaign/list"/>
 			<acme:menu-suboption code="master.menu.any.invention.list" action="/any/invention/list"/>
-      <acme:menu-option code="master.menu.any.campaign" action="/any/campaign/list"/>
 
 		</acme:menu-option>
 
