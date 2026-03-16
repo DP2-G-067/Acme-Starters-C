@@ -33,13 +33,11 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 
 	@Override
 	public void authorise() {
-		// Si estás en realm Inventor, ya está autorizado
 		super.setAuthorised(true);
 	}
 
 	@Override
 	public void unbind() {
-		// Importante: incluye draftMode para distinguir publicadas/borrador
 		super.unbindObjects(this.inventions, "ticker", "name", "draftMode");
 	}
 }
