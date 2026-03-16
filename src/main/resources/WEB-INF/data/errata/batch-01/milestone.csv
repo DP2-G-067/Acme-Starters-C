@@ -1,17 +1,17 @@
-key,key:campaign,title,achievements,effort,kind
+key,key:campaign,title,achievements,effort,kind,draftMode
 
 ##Casos negativos para title
-milestone-01,campaign-01,null,"Certificados",70.5,TEASER
-milestone-02,campaign-01,"","Certificados",70.5,TEASER
-milestone-03,campaign-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tes","Certificados",70.5,TEASER
+milestone-01,campaign-01,null,"Certificados",70.5,TEASER,true
+milestone-02,campaign-01,"","Certificados",70.5,TEASER,true
+milestone-03,campaign-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tes","Certificados",70.5,TEASER,true
 
 ##Casos negativos para achievements
-milestone-04,campaign-01,"Milestone errata",null,70.5,TEASER
-milestone-05,campaign-01,"Milestone errata","",70.5,TEASER
-milestone-06,campaign-01,"Milestone errata","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore.L",70.5,TEASER
+milestone-04,campaign-01,"Milestone errata",null,70.5,TEASER,true
+milestone-05,campaign-01,"Milestone errata","",70.5,TEASER,true
+milestone-06,campaign-01,"Milestone errata","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore.L",70.5,TEASER,true
 
 ##Casos negativos para effort
-milestone-07,campaign-01,"Milestone errata","Certificados",0.00,TEASER
+milestone-07,campaign-01,"Milestone errata","Certificados",0.00,TEASER,true
 
 ##Casos positivos para kind
-milestone-08,campaign-01,"Prueba","Certificados de prueba",0.01,null
+milestone-08,campaign-01,"Prueba","Certificados de prueba",0.01,null,true
