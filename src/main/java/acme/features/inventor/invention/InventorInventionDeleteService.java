@@ -40,9 +40,6 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 	public void authorise() {
 		boolean status;
 
-		// Formal testing:
-		// - right realm, wrong user -> isPrincipal() lo bloquea
-		// - right user, wrong action -> draftMode==true requerido
 		status = this.invention != null && Boolean.TRUE.equals(this.invention.getDraftMode()) && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
@@ -50,8 +47,7 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 
 	@Override
 	public void bind() {
-		// Igual que en JobDeleteService: bindear campos del form por consistencia,
-		// pero NO permitir cambiar inventor/draftMode por hacking
+
 		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 		this.invention.setInventor(this.invention.getInventor());
 		this.invention.setDraftMode(true);
@@ -59,7 +55,6 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 
 	@Override
 	public void validate() {
-		// No hay validaciones adicionales para borrar (como en JobDeleteService) :contentReference[oaicite:2]{index=2}
 		;
 	}
 
@@ -67,7 +62,6 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 	public void execute() {
 		Collection<Part> parts;
 
-		// Borrar primero los hijos (parts), luego el padre (invention)
 		parts = this.partRepository.findManyByInventionId(this.invention.getId());
 		this.partRepository.deleteAll(parts);
 		this.repository.delete(this.invention);
