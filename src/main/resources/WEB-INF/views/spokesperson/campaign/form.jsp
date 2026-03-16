@@ -17,11 +17,12 @@
 			<acme:form-double code="spokesperson.campaign.form.label.effort" path="effort" readonly="true"/>
 			<acme:button code="spokesperson.campaign.button.milestones" action="/spokesperson/milestone/list?campaignId=${id}"/>
 		</jstl:when> 
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:form-double code="spokesperson.campaign.form.label.monthsActive" path="monthsActive" readonly="true"/>
 			<acme:submit code="spokesperson.campaign.form.button.update" action="/spokesperson/campaign/update"/>
 			<acme:submit code="spokesperson.campaign.form.button.publish" action="/spokesperson/campaign/publish"/>
 			<acme:submit code="spokesperson.campaign.form.button.delete" action="/spokesperson/campaign/delete"/>
+			<acme:button code="spokesperson.campaign.button.milestones" action="/spokesperson/milestone/list?campaignId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="spokesperson.campaign.form.button.create" action="/spokesperson/campaign/create?campaignId=${campaignId}"/>

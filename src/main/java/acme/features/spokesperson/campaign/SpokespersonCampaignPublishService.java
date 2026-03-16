@@ -56,7 +56,7 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 			int id;
 
 			id = super.getRequest().getData("id", int.class);
-			milestonesByCampaign = this.repository.countMilestoneFromCampaignId(id) > 0;
+			milestonesByCampaign = this.repository.countMilestoneFromCampaignId(id);
 			super.state(milestonesByCampaign, "*", "acme.validation.campaign.milestones.message");
 		}
 		{

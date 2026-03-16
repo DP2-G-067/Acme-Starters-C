@@ -19,7 +19,7 @@ public interface SpokespersonCampaignRepository extends AbstractRepository {
 	Collection<Campaign> findCampaignBySpokespersonId(int spokespersonId);
 
 	@Query("select count(m)>0 from Milestone m where m.campaign.id = :id")
-	Double countMilestoneFromCampaignId(int id);
+	Boolean countMilestoneFromCampaignId(int id);
 
 	@Query("select m from Milestone m where m.campaign.id = :id")
 	Collection<Milestone> findMilestonesByCampaignId(int id);
