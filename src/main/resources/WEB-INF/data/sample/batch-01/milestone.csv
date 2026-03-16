@@ -1,0 +1,40 @@
+key,key:campaign,title,achievements,effort,kind
+
+##Datos generales
+milestone-01,campaign-01,"Milestone 01","Certificados",70.5,TEASER
+milestone-02,campaign-02,"Milestone 02","Certificados",70.5,TEASER
+milestone-03,campaign-02,"Milestone 03","Certificados",70.5,TEASER
+
+##Casos positivos para title
+milestone-04,campaign-02,"L","Certificados",70.5,TEASER
+milestone-05,campaign-02,"Lo","Certificados",70.5,TEASER
+milestone-06,campaign-02,"Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod t","Certificados",70.5,TEASER
+milestone-07,campaign-02,"Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod te","Certificados",70.5,TEASER
+milestone-08,campaign-02,"โลเร็ม อิปซัม","Certificados",70.5,TEASER
+milestone-09,campaign-02,"لوريم إيبسوم","Certificados",70.5,TEASER
+milestone-10,campaign-02,"洛伦·伊普森","Certificados",70.5,TEASER
+milestone-11,campaign-02,"<marquee>Hacked</marquee>","Certificados",70.5,TEASER
+milestone-12,campaign-02,"<script>alert(‘Hacked!’);</script>","Certificados",70.5,TEASER
+milestone-13,campaign-02,"' or 'A' = 'A ","Certificados",70.5,TEASER
+
+##Casos positivos para achievements
+milestone-14,campaign-02,"Prueba","L",70.5,TEASER
+milestone-15,campaign-02,"Prueba","Lo",70.5,TEASER
+milestone-16,campaign-02,"Prueba","Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod t",70.5,TEASER
+milestone-17,campaign-02,"Prueba","Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod te",70.5,TEASER
+milestone-18,campaign-02,"Prueba","โลเร็ม อิปซัม",70.5,TEASER
+milestone-19,campaign-02,"Prueba","لوريم إيبسوم",70.5,TEASER
+milestone-20,campaign-02,"Prueba","<marquee>Hacked</marquee>",70.5,TEASER
+milestone-21,campaign-02,"Prueba","<script>alert(‘Hacked!’);</script>",70.5,TEASER
+milestone-22,campaign-02,"Prueba","' or 'A' = 'A ",70.5,TEASER
+
+##Casos positivos para effort
+milestone-23,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER
+milestone-24,campaign-02,"Prueba","Certificados de prueba",0.02,TEASER
+
+
+##Casos positivos para kind
+milestone-25,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER
+milestone-26,campaign-02,"Prueba","Certificados de prueba",0.01,ENGAGING
+milestone-27,campaign-02,"Prueba","Certificados de prueba",0.01,CONVERSION
+
