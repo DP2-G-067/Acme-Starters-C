@@ -80,6 +80,9 @@ public class Campaign extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
+		if (this.getStartMoment() == null || this.getEndMoment() == null)
+			return 0.;
+
 		Double duration = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
 		return duration;
 	}

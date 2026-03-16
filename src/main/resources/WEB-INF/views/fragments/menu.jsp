@@ -54,6 +54,7 @@
 		
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
+			<acme:menu-suboption code="master.menu.any.campaign" action="/any/campaign/list"/>
 		</acme:menu-option>
 
 	</acme:menu-left>
