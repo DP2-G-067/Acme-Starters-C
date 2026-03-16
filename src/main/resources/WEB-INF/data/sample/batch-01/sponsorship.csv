@@ -1,3 +1,77 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
-sponsorship1,SP01-BASE1,Sponsorship Base,"This is the base sponsorship with a valid description.",2027/06/01 10:00,2027/12/01 10:00,http://example.com,false,sponsor1
-sponsorship2,SP02-DRAFT,Sponsorship Draft,"This is a draft sponsorship.",2027/07/01 10:00,2027/11/01 10:00,http://example.com,true,sponsor2
+
+##Datos generales
+
+sponsorship-01,SP01-ALPHA,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,false,sponsor1
+sponsorship-02,SP02-BETAS,"Sponsorship Beta","Sponsorship for testing purposes.",2026/07/01 10:00,2027/07/01 10:00,http://example.com,true,sponsor1
+sponsorship-03,SP03-GAMMA,"Sponsorship Gamma","Sponsorship for testing purposes.",2026/08/01 10:00,2027/08/01 10:00,http://example.com,false,sponsor2
+
+##Casos positivos para name
+
+sponsorship-n01,NM01-TNAME,"A","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n02,NM02-TNAME,"AB","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n03,NM03-TNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n04,NM04-TNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n05,NM05-TNAME,"โลเร็ม อิปซัม","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n06,NM06-TNAME,"لوريم إيبسوم","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n07,NM07-TNAME,"洛伦·伊普森","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n08,NM08-TNAME,"<marquee>Hacked</marquee>","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n09,NM09-TNAME,"<script>alert('Hacked!');</script>","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-n10,NM10-TNAME,"' or 'A' = 'A ","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+
+##Casos positivos para description
+
+sponsorship-d01,DS01-TDESC,"Sponsorship Alpha","A",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d02,DS02-TDESC,"Sponsorship Alpha","AB",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d03,DS03-TDESC,"Sponsorship Alpha","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d04,DS04-TDESC,"Sponsorship Alpha","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d05,DS05-TDESC,"Sponsorship Alpha","โลเร็ม อิปซัม",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d06,DS06-TDESC,"Sponsorship Alpha","لوريم إيبسوم",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d07,DS07-TDESC,"Sponsorship Alpha","洛伦·伊普森",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d08,DS08-TDESC,"Sponsorship Alpha","<marquee>Hacked</marquee>",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d09,DS09-TDESC,"Sponsorship Alpha","<script>alert('Hacked!');</script>",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-d10,DS10-TDESC,"Sponsorship Alpha","' or 'A' = 'A ",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+
+##Casos positivos para moreInfo
+
+sponsorship-m01,MI01-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,null,true,sponsor1
+sponsorship-m02,MI02-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://a.b,true,sponsor1
+sponsorship-m03,MI03-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",true,sponsor1
+sponsorship-m04,MI04-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,https://www.example.com,true,sponsor1
+sponsorship-m05,MI05-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://www.example.org/some/path.html,true,sponsor1
+sponsorship-m06,MI06-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://www.example.org/page.html#section,true,sponsor1
+sponsorship-m07,MI07-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.org?a=1&b=2,true,sponsor1
+sponsorship-m08,MI08-TINFO,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.org/,true,sponsor1
+
+##Casos positivos para startMoment
+
+sponsorship-s01,ST01-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2000/01/01 00:00,2000/01/01 00:01,http://example.com,true,sponsor1
+sponsorship-s02,ST02-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2000/01/01 00:01,2000/01/01 00:02,http://example.com,true,sponsor1
+sponsorship-s03,ST03-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2024/12/31 23:59,2025/01/01 00:00,http://example.com,true,sponsor1
+sponsorship-s04,ST04-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2025/01/01 00:00,2025/01/01 00:01,http://example.com,true,sponsor1
+sponsorship-s05,ST05-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2025/01/01 00:01,2025/01/01 00:02,http://example.com,true,sponsor1
+sponsorship-s06,ST06-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2200/12/31 23:58,2200/12/31 23:59,http://example.com,true,sponsor1
+
+##Casos positivos para endMoment
+
+sponsorship-e01,EN01-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2000/01/01 00:00,2000/01/01 00:01,http://example.com,true,sponsor1
+sponsorship-e02,EN02-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2024/12/31 23:58,2024/12/31 23:59,http://example.com,true,sponsor1
+sponsorship-e03,EN03-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2024/12/31 23:59,2025/01/01 00:00,http://example.com,true,sponsor1
+sponsorship-e04,EN04-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2025/01/01 00:00,2025/01/01 00:01,http://example.com,true,sponsor1
+sponsorship-e05,EN05-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2200/12/31 23:57,2200/12/31 23:58,http://example.com,true,sponsor1
+sponsorship-e06,EN06-TDATE,"Sponsorship Alpha","Sponsorship for testing purposes.",2200/12/31 23:58,2200/12/31 23:59,http://example.com,true,sponsor1
+
+##Casos positivos para ticker
+
+sponsorship-t01,AA00-ABCDE,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t02,ZZ99-ABCDEF,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t03,ZY99-ABCDEFGHI,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t04,AB00-ABCDEFGHIJ,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t05,FF06-00000,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t06,TR04-9999999999,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t07,LM11-A5K3BOHE3X,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t08,GA22-gwergas,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t09,VC33-zzzzzzz,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t10,ZZ98-dhgh_123G,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+sponsorship-t11,ZZ97-test___,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
+

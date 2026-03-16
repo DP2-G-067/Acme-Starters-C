@@ -1,3 +1,48 @@
 key,name,notes,money,kind,key:sponsorship
-donation1,Donation 1,First donation notes,EUR 100.00,ALTRUIST,sponsorship1
-donation2,Donation 2,Second donation notes,EUR 50.00,REWARDED,sponsorship2
+
+##Datos generales
+
+donation-01,"Donation Alpha","Altruist donation for sponsorship Alpha.",EUR 500.00,ALTRUIST,sponsorship-01
+donation-02,"Donation Beta","Rewarded donation for sponsorship Alpha.",EUR 300.00,REWARDED,sponsorship-01
+donation-03,"Donation Gamma","Celebrated donation for sponsorship Alpha.",EUR 200.00,CELEBRATED,sponsorship-01
+donation-04,"Donation Delta","Donation for sponsorship Gamma.",EUR 150.00,ALTRUIST,sponsorship-03
+
+##Casos positivos para name
+
+donation-n01,"A","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n02,"AB","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n05,"โลเร็ม อิปซัม","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n06,"لوريم إيبسوم","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n07,"洛伦·伊普森","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n08,"<marquee>Hacked</marquee>","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n09,"<script>alert('Hacked!');</script>","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+donation-n10,"' or 'A' = 'A ","Test notes for donation.",EUR 10.00,ALTRUIST,sponsorship-01
+
+##Casos positivos para notes
+
+donation-o01,"Test Donation","A",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o02,"Test Donation","AB",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o03,"Test Donation","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o04,"Test Donation","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o05,"Test Donation","โลเร็ม อิปซัม",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o06,"Test Donation","لوريم إيبسوم",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o07,"Test Donation","洛伦·伊普森",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o08,"Test Donation","<marquee>Hacked</marquee>",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o09,"Test Donation","<script>alert('Hacked!');</script>",EUR 10.00,ALTRUIST,sponsorship-01
+donation-o10,"Test Donation","' or 'A' = 'A ",EUR 10.00,ALTRUIST,sponsorship-01
+
+##Casos positivos para money
+
+donation-p01,"Test Donation","Test notes for donation.",EUR 0.01,ALTRUIST,sponsorship-01
+donation-p02,"Test Donation","Test notes for donation.",EUR 0.02,ALTRUIST,sponsorship-01
+donation-p03,"Test Donation","Test notes for donation.",EUR 999999.99,ALTRUIST,sponsorship-01
+donation-p04,"Test Donation","Test notes for donation.",EUR 1000000.00,ALTRUIST,sponsorship-01
+
+##Casos positivos para kind
+
+donation-k01,"Test Donation","Test notes for donation.",EUR 50.00,ALTRUIST,sponsorship-01
+donation-k02,"Test Donation","Test notes for donation.",EUR 50.00,REWARDED,sponsorship-01
+donation-k03,"Test Donation","Test notes for donation.",EUR 50.00,CELEBRATED,sponsorship-01
+
