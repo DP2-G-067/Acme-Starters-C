@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
 import acme.realms.Fundraiser;
@@ -45,6 +46,9 @@ public class FundraiserStrategyUpdateService extends AbstractService<Fundraiser,
 
 	@Override
 	public void validate() {
+		boolean isValidMoment = MomentHelper.isAfter(this.strategy.getStartMoment(), MomentHelper.getCurrentMoment());
+		super.state(isValidMoment, "*", "acme.validation.strategy.publish-after-start.message");
+
 		super.validateObject(this.strategy);
 	}
 

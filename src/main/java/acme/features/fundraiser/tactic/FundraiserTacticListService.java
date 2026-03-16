@@ -34,7 +34,9 @@ public class FundraiserTacticListService extends AbstractService<Fundraiser, Tac
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(this.strategy.getFundraiser().isPrincipal());
+		boolean status;
+		status = this.strategy != null && this.strategy.getFundraiser().isPrincipal();
+		super.setAuthorised(status);
 	}
 
 	@Override

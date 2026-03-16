@@ -27,15 +27,20 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 		int strategyId = super.getRequest().getData("strategyId", int.class);
 
 		this.strategy = this.repository.findStrategyById(strategyId);
+		if (this.strategy != null) {
+			this.tactic = this.newObject(Tactic.class);
+			this.tactic.setStrategy(this.strategy);
+			this.tactic.setDraftMode(true);
+		}
 
-		this.tactic = this.newObject(Tactic.class);
-		this.tactic.setStrategy(this.strategy);
-		this.tactic.setDraftMode(true);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(super.getRequest().getPrincipal().getActiveRealm().getClass() == Fundraiser.class);
+		boolean status;
+		status = this.strategy != null && this.strategy.getDraftMode() && this.strategy.getFundraiser().isPrincipal();
+
+		super.setAuthorised(status);
 	}
 
 	@Override
