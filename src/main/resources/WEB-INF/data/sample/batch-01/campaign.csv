@@ -18,6 +18,7 @@ campaign-13,spokesperson-02,CC26-dhgh_123G,"Coca Cola 2026","Campaña para la nu
 campaign-14,spokesperson-02,CC26-te__st_,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 
 ##Casos positivos para name
+campaign-15,spokesperson-02,CC00-TESTNAME,"L","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 campaign-15,spokesperson-02,CC01-TESTNAME,"Lo","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 campaign-16,spokesperson-02,CC02-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 campaign-17,spokesperson-02,CC03-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
@@ -30,14 +31,15 @@ campaign-23,spokesperson-02,CC09-TESTNAME,"' or 'A' = 'A ","Campaña para la nue
 
 ##Casos positivos para descripcion
 campaign-24,spokesperson-02,CC10-TESTDESC,"Coca Cola 2026","Lo","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-25,spokesperson-02,CC11-TESTDESC,"Coca Cola 2026","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-26,spokesperson-02,CC12-TESTDESC,"Coca Cola 2026","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-27,spokesperson-02,CC13-TESTDESC,"Coca Cola 2026","โลเร็ม อิปซัม","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-28,spokesperson-02,CC14-TESTDESC,"Coca Cola 2026","洛伦·伊普森","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-29,spokesperson-02,CC15-TESTDESC,"Coca Cola 2026", "لوريم إيبسوم", "2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-30,spokesperson-02,CC16-TESTDESC,"Coca Cola 2026","<marquee>Hacked</marquee>","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-31,spokesperson-02,CC17-TESTDESC,"Coca Cola 2026","<script>alert(‘Hacked!’);</script>","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
-campaign-32,spokesperson-02,CC18-TESTDESC,"Coca Cola 2026","' or 'A' = 'A ","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-24,spokesperson-02,CC11-TESTDESC,"Coca Cola 2026","L","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-25,spokesperson-02,CC12-TESTDESC,"Coca Cola 2026","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-26,spokesperson-02,CC13-TESTDESC,"Coca Cola 2026","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore.","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-27,spokesperson-02,CC14-TESTDESC,"Coca Cola 2026","โลเร็ม อิปซัม","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-28,spokesperson-02,CC15-TESTDESC,"Coca Cola 2026","洛伦·伊普森","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-29,spokesperson-02,CC16-TESTDESC,"Coca Cola 2026", "لوريم إيبسوم", "2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-30,spokesperson-02,CC17-TESTDESC,"Coca Cola 2026","<marquee>Hacked</marquee>","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-31,spokesperson-02,CC18-TESTDESC,"Coca Cola 2026","<script>alert(‘Hacked!’);</script>","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-32,spokesperson-02,CC19-TESTDESC,"Coca Cola 2026","' or 'A' = 'A ","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 
 ##Casos positivos para startMoment
 campaign-33,spokesperson-02,CC19-TESTDATE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2000/01/01 00:00","2000/01/01 00:01","https://example.com/cocacolacherry-2026",true

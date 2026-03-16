@@ -1,0 +1,16 @@
+key,key:userAccount,cv,achievements,licensed
+
+##Casos negativos para cv
+
+spokesperson-01,errata-user-account-spokesperson-01,"","Certificado en electrónica industrial",true
+spokesperson-02,errata-user-account-spokesperson-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i","Certificado en electrónica industrial",true
+spokesperson-03,errata-user-account-spokesperson-01,null,"Certificado en electrónica industrial",true
+
+##Casos negativos para achievements
+
+spokesperson-04,errata-user-account-spokesperson-01,"Graduado en la Universidad de Sevilla","",true
+spokesperson-05,errata-user-account-spokesperson-01,"Graduado en la Universidad de Sevilla","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",true
+spokesperson-06,errata-user-account-spokesperson-01,"Graduado en la Universidad de Sevilla",null,true
+
+##Casos negativos para licensed
+spokesperson-08,errata-user-account-spokesperson-01,"Graduado en la Universidad de Sevilla","Certificado en electrónica industrial",null

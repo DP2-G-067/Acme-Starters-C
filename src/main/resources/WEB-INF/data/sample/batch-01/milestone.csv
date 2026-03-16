@@ -20,8 +20,8 @@ milestone-13,campaign-02,"' or 'A' = 'A ","Certificados",70.5,TEASER
 ##Casos positivos para achievements
 milestone-14,campaign-02,"Prueba","L",70.5,TEASER
 milestone-15,campaign-02,"Prueba","Lo",70.5,TEASER
-milestone-16,campaign-02,"Prueba","Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod t",70.5,TEASER
-milestone-17,campaign-02,"Prueba","Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod te",70.5,TEASER
+milestone-16,campaign-02,"Prueba","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore",70.5,TEASER
+milestone-17,campaign-02,"Prueba","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore.",70.5,TEASER
 milestone-18,campaign-02,"Prueba","โลเร็ม อิปซัม",70.5,TEASER
 milestone-19,campaign-02,"Prueba","لوريم إيبسوم",70.5,TEASER
 milestone-20,campaign-02,"Prueba","<marquee>Hacked</marquee>",70.5,TEASER
@@ -31,7 +31,6 @@ milestone-22,campaign-02,"Prueba","' or 'A' = 'A ",70.5,TEASER
 ##Casos positivos para effort
 milestone-23,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER
 milestone-24,campaign-02,"Prueba","Certificados de prueba",0.02,TEASER
-
 
 ##Casos positivos para kind
 milestone-25,campaign-02,"Prueba","Certificados de prueba",0.01,TEASER
