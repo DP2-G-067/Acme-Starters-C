@@ -1,8 +1,56 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
-errata-sponsorship-1,ER01-DUP01,Dup Ticker 1,Desc 1,2025/06/01 10:00,2025/12/01 10:00,http://example.com,true,errata-sponsor-1
-errata-sponsorship-2,ER01-DUP01,Dup Ticker 2,Desc 2,2025/07/01 10:00,2025/11/01 10:00,http://example.com,true,errata-sponsor-1
-errata-sponsorship-3,ER02-NOD02,No Donation,No donation pub,2025/08/01 10:00,2026/01/01 10:00,http://example.com,false,errata-sponsor-1
-errata-sponsorship-4,ER03-BAD03,Bad Dates,End before start,2025/12/01 10:00,2025/06/01 10:00,http://example.com,true,errata-sponsor-1
-errata-sponsorship-5,ER04-PAS04,Past Dates,Start in the past,2024/01/01 10:00,2025/12/01 10:00,http://example.com,true,errata-sponsor-1
-errata-sponsorship-6,,Missing Ticker,Missing mandatory ticker,2025/06/01 10:00,2025/12/01 10:00,http://example.com,true,errata-sponsor-1
-errata-sponsorship-7,ER05-MIS05,Missing End,Missing end,2025/06/01 10:00,,http://example.com,true,errata-sponsor-1
+
+##Casos negativos para ticker
+
+errata-sponsorship-1,ER01-DUP01,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-2,ER01-DUP01,"Sponsorship Test","Sponsorship for testing purposes.",2026/07/01 10:00,2027/07/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-5,null,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-6,,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-16,Z99-ABCDE,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-17,AB0-ABCDE,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-18,FFF06-00000,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-19,AB00-ABCD,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-20,AB00-ABCDEFGHIJK,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-21,ab00-ABCDE,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-22,AB00-?)(Ç*%,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+
+##Casos negativos para name
+
+errata-sponsorship-8,ER08-TNAME,NULL,"Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-9,ER09-TNAME,"","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-10,ER10-TNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te1","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+
+##Casos negativos para description
+
+errata-sponsorship-11,ER11-TDESC,"Sponsorship Test",NULL,2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-12,ER12-TDESC,"Sponsorship Test","",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-13,ER13-TDESC,"Sponsorship Test","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolores",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,errata-sponsor-1
+
+##Casos negativos para moreInfo
+
+errata-sponsorship-14,ER14-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,"",true,errata-sponsor-1
+errata-sponsorship-15,ER15-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://,true,errata-sponsor-1
+errata-sponsorship-30,ER30-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,ftp://example.com,true,errata-sponsor-1
+errata-sponsorship-31,ER31-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,NULL,true,errata-sponsor-1
+errata-sponsorship-32,ER32-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",true,errata-sponsor-1
+errata-sponsorship-33,ER33-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,"http://a",true,errata-sponsor-1
+errata-sponsorship-34,ER34-TINFO,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,"ftp://a",true,errata-sponsor-1
+
+##Casos negativos para startMoment
+
+errata-sponsorship-23,ER23-TDATE,"Sponsorship Test","Sponsorship for testing purposes.",1999/12/31 23:59,2000/01/01 00:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-24,ER24-TDATE,"Sponsorship Test","Sponsorship for testing purposes.",2201/01/01 00:00,2201/01/01 00:01,http://example.com,true,errata-sponsor-1
+errata-sponsorship-7,ER05-MIS05,"Sponsorship Test","Sponsorship for testing purposes.",,2026/06/01 10:00,http://example.com,true,errata-sponsor-1
+
+##Casos negativos para endMoment
+
+errata-sponsorship-25,ER25-TDATE,"Sponsorship Test","Sponsorship for testing purposes.",1999/12/31 23:58,1999/12/31 23:59,http://example.com,true,errata-sponsor-1
+errata-sponsorship-26,ER26-TDATE,"Sponsorship Test","Sponsorship for testing purposes.",2201/01/01 00:00,2201/01/01 00:01,http://example.com,true,errata-sponsor-1
+errata-sponsorship-27,ER05-ENDBAD,"Sponsorship Test","Sponsorship for testing purposes.",2026/12/01 10:00,2026/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-28,ER05-ENDEQ,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,2026/06/01 10:00,http://example.com,true,errata-sponsor-1
+errata-sponsorship-29,ER05-ENDNUL,"Sponsorship Test","Sponsorship for testing purposes.",2026/06/01 10:00,,http://example.com,true,errata-sponsor-1
+
+##Publicacion sin donaciones
+
+errata-sponsorship-3,ER02-NOD02,"Sponsorship Test","Sponsorship for testing purposes.",2026/08/01 10:00,2027/01/01 10:00,http://example.com,false,errata-sponsor-1
+

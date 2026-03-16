@@ -1,4 +1,26 @@
 key,name,notes,money,kind,key:sponsorship
-errata-donation-1,Donation Neg,Negative amount,EUR -10.00,ALTRUIST,errata-sponsorship-1
-errata-donation-2,,Missing Name,EUR 10.00,ALTRUIST,errata-sponsorship-2
-errata-donation-3,Donation Bad Currency,Bad currency,USD 10.00,ALTRUIST,errata-sponsorship-1
+
+##Casos negativos para name
+
+errata-donation-1,NULL,"Test notes for donation.",EUR 10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-2,"","Test notes for donation.",EUR 10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te1","Test notes for donation.",EUR 10.00,ALTRUIST,errata-sponsorship-1
+
+##Casos negativos para notes
+
+errata-donation-4,"Test Donation",NULL,EUR 10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-5,"Test Donation","",EUR 10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-6,"Test Donation","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolores",EUR 10.00,ALTRUIST,errata-sponsorship-1
+
+##Casos negativos para money
+
+errata-donation-7,"Test Donation","Test notes for donation.",EUR -10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-8,"Test Donation","Test notes for donation.",EUR 0.00,ALTRUIST,errata-sponsorship-1
+errata-donation-9,"Test Donation","Test notes for donation.",USD 10.00,ALTRUIST,errata-sponsorship-1
+errata-donation-13,"Test Donation","Test notes for donation.",EUR 1000000.01,ALTRUIST,errata-sponsorship-1
+
+##Casos negativos para kind
+
+errata-donation-12,"Test Donation","Test notes for donation.",EUR 10.00,null,errata-sponsorship-1
+
+
