@@ -35,6 +35,6 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.campaigns, "name", "description", "startMoment", "endMoment", "moreInfo", "spokesperson.name");
+		super.unbindObjects(this.campaigns, "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 }

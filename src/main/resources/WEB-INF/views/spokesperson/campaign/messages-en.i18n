@@ -20,6 +20,7 @@ spokesperson.campaign.form.label.effort = Effort
 spokesperon.campaign.button.create = Create
 spokesperson.campaign.form.button.update = Update
 spokesperson.campaign.form.button.delete = Delete
+spokesperson.campaign.form.button.publish = Publish
 spokesperson.campaign.button.milestones = Milestones
 spokesperson.campaign.button.spokesperson = Spokesperson
 

@@ -4,9 +4,9 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="spokesperson.tactic.list.label.title" path="name"/>	
-	<acme:list-column code="spokesperson.tactic.list.label.effort" path="effor"/> 
-	<acme:list-column code="spokesperson.tactic.list.label.kind" path="kind"/> 
+	<acme:list-column code="spokesperson.milestone.list.label.title" path="title"/>	
+	<acme:list-column code="spokesperson.milestone.list.label.effort" path="effort"/> 
+	<acme:list-column code="spokesperson.milestone.list.label.kind" path="kind"/> 
 	<acme:list-hidden path="achievements"/>	
 </acme:list>
 

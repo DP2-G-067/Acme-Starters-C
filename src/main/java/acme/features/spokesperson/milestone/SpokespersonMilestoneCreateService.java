@@ -10,7 +10,6 @@ import acme.client.services.AbstractService;
 import acme.entities.campaign.Campaign;
 import acme.entities.milestone.Milestone;
 import acme.entities.milestone.MilestoneKind;
-import acme.realms.Fundraiser;
 import acme.realms.Spokesperson;
 
 @Service
@@ -36,12 +35,12 @@ public class SpokespersonMilestoneCreateService extends AbstractService<Spokespe
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(super.getRequest().getPrincipal().getActiveRealm().getClass() == Fundraiser.class);
+		super.setAuthorised(super.getRequest().getPrincipal().getActiveRealm().getClass() == Spokesperson.class);
 	}
 
 	@Override
 	public void bind() {
-		super.bindObject(this.milestone, "title", "achievements", "effort", "kind", "draftMode");
+		super.bindObject(this.milestone, "title", "achievements", "effort", "kind");
 	}
 
 	@Override

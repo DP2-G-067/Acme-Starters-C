@@ -4,7 +4,7 @@ key,key:spokesperson,ticker,name,description,startMoment,endMoment,moreInfo,draf
 campaign-01,spokesperson-01,AB12-CAMPAIGN1,"Campaña 01","Primera campaña de la empresa","2026/06/01 10:00","2027/06/01 10:00","https://example.com/campaign01",false
 
 ##Casos positivos para ticker
-campaign-02,spokesperson-02,AA00-ABCDE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-02,spokesperson-02,AA00-ABCDE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",false
 campaign-03,spokesperson-02,ZZ99-ABCDEF,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 campaign-04,spokesperson-02,TR04-ABCDEFGHI,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
 campaign-05,spokesperson-02,OP09-ABCDEFGHIJ,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true

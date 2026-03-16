@@ -7,7 +7,6 @@
 	<acme:form-textbox code="spokesperson.milestone.form.label.title" path="title" readonly="${!draftMode}"/>
 	<acme:form-textarea code="spokesperson.milestone.form.label.achievements" path="achievements" readonly="${!draftMode}"/>	
 	<acme:form-double code="spokesperson.milestone.form.label.effort" path="effort" readonly="${!draftMode}"/>
-	<acme:form-checkbox code="spokesperson.milestone.form.label.draftMode" path="draftMode" readonly="${!draftMode}"/> 
 	
 	<jstl:if test="${draftMode}">
 		<acme:form-select code="spokesperson.milestone.form.label.kind" path="kind" choices="${choices}"/>	

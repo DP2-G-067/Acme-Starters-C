@@ -44,12 +44,7 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 
 	@Override
 	public void bind() {
-		int spokespersonId;
-
-		spokespersonId = super.getRequest().getData("campaign", int.class);
-
-		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
-		this.campaign.setSpokesperson(this.repository.findSpokespersonById(spokespersonId));
+		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 
 	@Override

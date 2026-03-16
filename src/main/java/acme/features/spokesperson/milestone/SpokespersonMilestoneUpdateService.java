@@ -42,7 +42,7 @@ public class SpokespersonMilestoneUpdateService extends AbstractService<Spokespe
 
 	@Override
 	public void bind() {
-		super.bindObject(this.milestone, "title", "achievements", "effort", "kind", "draftMode");
+		super.bindObject(this.milestone, "title", "achievements", "effort", "kind");
 	}
 
 	@Override

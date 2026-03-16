@@ -10,7 +10,7 @@ spokesperson.milestone.form.label.title = Título
 spokesperson.milestone.form.label.achievements = Logros
 spokesperson.milestone.form.label.draftMode = Publicado
 spokesperson.milestone.form.label.effort = Esfuerzo
-spokesperson.milestone.list.label.kind = Tipo
+spokesperson.milestone.form.label.kind = Tipo
 
 
 spokesperon.milestone.button.create = Crear

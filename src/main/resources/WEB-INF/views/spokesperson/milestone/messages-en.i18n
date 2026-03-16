@@ -10,7 +10,7 @@ spokesperson.milestone.form.label.title = Title
 spokesperson.milestone.form.label.achievements = Achievements
 spokesperson.milestone.form.label.draftMode = Published
 spokesperson.milestone.form.label.effort = Effort
-spokesperson.milestone.list.label.kind = Kind
+spokesperson.milestone.form.label.kind = Kind
 
 
 spokesperon.milestone.button.create = Create
