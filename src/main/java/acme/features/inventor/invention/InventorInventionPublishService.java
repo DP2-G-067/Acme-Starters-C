@@ -59,11 +59,9 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	public void validate() {
 		super.validateObject(this.invention);
 
-		// 1) Debe tener al menos una parte
-		boolean hasParts = this.partRepository.countByInventionId(this.invention.getId()) > 0;
+		boolean hasParts = this.parts != null && !this.parts.isEmpty();
 		super.state(hasParts, "*", "inventor.invention.publish.error.no-parts");
 
-		// 2) Fechas futuras y consistentes
 		Date now = MomentHelper.getCurrentMoment();
 		Date start = this.invention.getStartMoment();
 		Date end = this.invention.getEndMoment();
@@ -75,22 +73,18 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		if (start != null && end != null)
 			super.state(end.after(start), "endMoment", "inventor.invention.publish.error.bad-interval");
 
-		// 3) EUR obligatorio en parts
 		boolean allEur = this.parts != null && this.parts.stream().allMatch(p -> p.getCost() != null && "EUR".equals(p.getCost().getCurrency()));
 		super.state(allEur, "*", "inventor.invention.publish.error.parts-not-eur");
 
-		// 4) (recomendado) parts deben estar en draft antes de publicar
-		boolean allDraft = this.parts != null && this.parts.stream().allMatch(p -> Boolean.TRUE.equals(!p.getDraftMode()));
+		boolean allDraft = this.parts != null && this.parts.stream().allMatch(p -> Boolean.TRUE.equals(p.getDraftMode()));
 		super.state(allDraft, "*", "inventor.invention.publish.error.parts-not-draft");
 	}
 
 	@Override
 	public void execute() {
-		// Publicar la invención
 		this.invention.setDraftMode(false);
 		this.repository.save(this.invention);
 
-		// Publicar automáticamente todas sus parts
 		for (Part part : this.parts) {
 			part.setDraftMode(false);
 			this.partRepository.save(part);

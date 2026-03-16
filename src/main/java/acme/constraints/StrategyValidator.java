@@ -38,7 +38,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 		if (value == null)
 			return true;
 		else
-			result = this.isUnique(value, context) && this.correctStatus(value, context) && this.isFutureDate(value, context);
+			result = this.isUnique(value, context) && this.correctStatus(value, context) && this.isTimeCompliant(value, context);
 		return result;
 	}
 
@@ -54,22 +54,20 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 	}
 
 	private boolean correctStatus(final Strategy strategy, final ConstraintValidatorContext context) {
-		boolean isValid = strategy.getDraftMode() || this.repository.existsTacticsFromStrategyId(strategy.getId());
+		boolean isValid = strategy.getDraftMode() || !strategy.getDraftMode() && this.repository.existsTacticsFromStrategyId(strategy.getId());
 
-		super.state(context, isValid, "draftMode", "acme.validation.strategy.draftMode.message");
+		super.state(context, isValid, "*", "acme.validation.strategy.draftMode.message");
 		return !super.hasErrors(context);
 	}
 
-	private boolean isFutureDate(final Strategy strategy, final ConstraintValidatorContext context) {
-		if (strategy.getDraftMode())
+	private boolean isTimeCompliant(final Strategy strategy, final ConstraintValidatorContext context) {
+		if (strategy.getStartMoment() == null || strategy.getEndMoment() == null)
 			return true;
 
 		Date start = strategy.getStartMoment();
 		Date end = strategy.getEndMoment();
-		Date now = MomentHelper.getCurrentMoment();
 
-		super.state(context, MomentHelper.isAfter(start, now), "startMoment", "acme.validation.strategy.startMoment.message");
-		super.state(context, MomentHelper.isAfter(end, start), "endMoment", "acme.validation.strategy.endMoment.message");
+		super.state(context, MomentHelper.isAfter(end, start), "*", "acme.validation.strategy.noTimeCompliant.message");
 
 		return !super.hasErrors(context);
 	}

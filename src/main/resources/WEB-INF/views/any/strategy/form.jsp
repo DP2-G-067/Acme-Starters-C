@@ -8,7 +8,7 @@
 	<acme:form-textbox code="any.strategy.form.label.name" path="name" readonly="true"/>
 	<acme:form-moment code="any.strategy.form.label.startMoment" path="startMoment" readonly="true"/>
 	<acme:form-moment code="any.strategy.form.label.endMoment" path="endMoment" readonly="true"/>
-	<acme:form-textbox code="any.strategy.form.label.description" path="description" readonly="true"/>
+	<acme:form-textarea code="any.strategy.form.label.description" path="description" readonly="true"/>
 	<acme:form-url code="any.strategy.form.label.moreInfo" path="moreInfo" readonly="true"/>
 	<acme:form-url code="any.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-url code="any.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>

@@ -23,12 +23,6 @@
 	        action="/inventor/part/update"/>
 	</jstl:if>
 	
-	<!-- PUBLISH ( show) -->
-	<jstl:if test="${_command == 'show' && showPublish}">
-	    <acme:submit code="inventor.part.form.button.publish"
-	        action="/inventor/part/publish"/>
-	</jstl:if>
-	
 	<!-- DELETE ( show) -->
 	<jstl:if test="${_command == 'show' && showDelete}">
 	    <acme:submit code="inventor.part.form.button.delete"
