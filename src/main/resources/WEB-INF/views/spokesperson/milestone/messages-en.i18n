@@ -1,28 +1,18 @@
-spokesperson.campaign.form.title = Campaign
-spokesperson.campaign.list.title = List of campaigns
+spokesperson.milestone.form.title = Milestone
+spokesperson.milestone.list.title = List of milestones
 
-spokesperson.campaign.list.label.name = Name
-spokesperson.campaign.list.label.description = Description
-spokesperson.campaign.list.label.startMoment = Start date
-spokesperson.campaign.list.label.endMoment = End date
-spokesperson.campaign.list.label.draftMode = Published
+spokesperson.milestone.list.label.title = Title
+spokesperson.milestone.list.label.achievements = Achievements
+spokesperson.milestone.list.label.effort = Effort
+spokesperson.milestone.list.label.kind = Kind
 
-spokesperson.campaign.form.label.ticker = Ticker
-spokesperson.campaign.form.label.name = Name
-spokesperson.campaign.form.label.description = Description
-spokesperson.campaign.form.label.startMoment = Start date
-spokesperson.campaign.form.label.endMoment = End date
-spokesperson.campaign.form.label.draftMode = Published
-spokesperson.campaign.form.label.moreInfo = Additional information
-spokesperson.campaign.form.label.monthsActive = Months active
-spokesperson.campaign.form.label.effort = Effort
+spokesperson.milestone.form.label.title = Title
+spokesperson.milestone.form.label.achievements = Achievements
+spokesperson.milestone.form.label.draftMode = Published
+spokesperson.milestone.form.label.effort = Effort
+spokesperson.milestone.list.label.kind = Kind
 
-spokesperon.campaign.button.create = Create
-spokesperson.campaign.form.button.update = Update
-spokesperson.campaign.form.button.delete = Delete
-spokesperson.campaign.button.milestones = Milestones
-spokesperson.campaign.button.spokesperson = Spokesperson
 
-acme.validation.campaign.publish-after-start.message = You cannot publish a campaign after its start moment
-acme.validation.campaign.milestones.message = You cannot publish a campaign with no milestones
-acme.validation.campaign.draftMode.message = Campaign already published
+spokesperon.milestone.button.create = Create
+spokesperson.milestone.form.button.update = Update
+spokesperson.milestone.form.button.delete = Delete
