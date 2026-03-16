@@ -1,0 +1,18 @@
+spokesperson.milestone.form.title = Hito
+spokesperson.milestone.list.title = Lista de hitos
+
+spokesperson.milestone.list.label.title = Título
+spokesperson.milestone.list.label.achievements = Logros
+spokesperson.milestone.list.label.effort = Esfuerzo
+spokesperson.milestone.list.label.kind = Tipo
+
+spokesperson.milestone.form.label.title = Título
+spokesperson.milestone.form.label.achievements = Logros
+spokesperson.milestone.form.label.draftMode = Publicado
+spokesperson.milestone.form.label.effort = Esfuerzo
+spokesperson.milestone.form.label.kind = Tipo
+
+
+spokesperon.milestone.button.create = Crear
+spokesperson.milestone.form.button.update = Actualizar
+spokesperson.milestone.form.button.delete = Eliminar

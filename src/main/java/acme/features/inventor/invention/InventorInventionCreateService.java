@@ -33,7 +33,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 		this.invention = new Invention();
 		this.invention.setInventor(inventor);
-		this.invention.setDraftMode(true);		// SIEMPRE se crea en borrador (anti-hacking)
+		this.invention.setDraftMode(true);
 	}
 
 	@Override
@@ -43,10 +43,8 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void bind() {
-		// IMPORTANTÍSIMO: no bindear inventor ni draftMode (anti-hacking)
 		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 
-		// Reforzamos valores “protegidos” (por si alguien intenta colarlos por POST)
 		Inventor inventor = (Inventor) super.getRequest().getPrincipal().getActiveRealm();
 		this.invention.setInventor(inventor);
 		this.invention.setDraftMode(true);
@@ -56,7 +54,6 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 	public void validate() {
 		super.validateObject(this.invention);
 
-		// Validación start < end + futuras, sin getBuffer()
 		Date start = this.invention.getStartMoment();
 		Date end = this.invention.getEndMoment();
 
@@ -80,7 +77,6 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
-		// Si tu JSP quiere mostrar monthsActive en create/update (readonly), puedes añadirlo:
 		tuple.put("monthsActive", this.invention.getMonthsActive());
 	}
 }

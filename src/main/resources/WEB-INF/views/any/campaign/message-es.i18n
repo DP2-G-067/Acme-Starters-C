@@ -6,6 +6,7 @@ any.campaign.list.label.description = Descripción
 any.campaign.list.label.startMoment = Fecha de inicio
 any.campaign.list.label.endMoment = Fecha de fin
 
+any.campaign.form.label.ticker = Ticker
 any.campaign.form.label.name = Nombre
 any.campaign.form.label.description = Descripción
 any.campaign.form.label.startMoment = Fecha de inicio

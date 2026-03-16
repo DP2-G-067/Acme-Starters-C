@@ -1,4 +1,34 @@
 key,key:userAccount,cv,achievements,licensed
+
+##Datos generales
 spokesperson-01,user-account-spokesperson-01,"Graduado en la Universidad de Sevilla","Certificado en electrónica industrial",true
-spokesperson-02,user-account-spokesperson-02,"貸んい建濯よ芝弾テソ Λορεμ ιπσθμ","N/A",false
-spokesperson-03,user-account-spokesperson-03,"之乎路可良 ᏥᏲᏎᎭ","Certificados varios",true
+spokesperson-02,user-account-spokesperson-02,"Graduado en la Universidad Carlos III de Madrid","N/A",true
+spokesperson-03,user-account-spokesperson-03,"Graduado de económicas en la Universidad de Manchester","Certificado en economía de bolsa",true
+
+##Casos positivos para cv
+spokesperson-04,user-account-spokesperson-04,"L","Certificado en electrónica industrial",true
+spokesperson-05,user-account-spokesperson-05,"Lo","Certificado en electrónica industrial",true
+spokesperson-06,user-account-spokesperson-06,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Certificado en electrónica industrial",true
+spokesperson-07,user-account-spokesperson-07,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Certificado en electrónica industrial",true
+spokesperson-08,user-account-spokesperson-08,"โลเร็ม อิปซัม","Certificado en electrónica industrial",true
+spokesperson-09,user-account-spokesperson-09,"وريم إيبسوم","Certificado en electrónica industrial",true
+spokesperson-10,user-account-spokesperson-10,"洛伦·伊普森","Certificado en electrónica industrial",true
+spokesperson-11,user-account-spokesperson-11,"<marquee>Hacked</marquee>","Certificado en electrónica industrial",true
+spokesperson-12,user-account-spokesperson-12,"<script>alert(‘Hacked!’);</script>","Certificado en electrónica industrial",true
+spokesperson-13,user-account-spokesperson-13,"' or 'A' = 'A ","Certificado en electrónica industrial",true
+
+##Casos positivos para achievements
+spokesperson-14,user-account-spokesperson-14,"Graduado en la Universidad de Sevilla","L",true
+spokesperson-15,user-account-spokesperson-15,"Graduado en la Universidad de Sevilla","Lo",true
+spokesperson-16,user-account-spokesperson-16,"Graduado en la Universidad de Sevilla","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",true
+spokesperson-17,user-account-spokesperson-17,"Graduado en la Universidad de Sevilla","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",true
+spokesperson-18,user-account-spokesperson-18,"Graduado en la Universidad de Sevilla","โลเร็ม อิปซัม",true
+spokesperson-19,user-account-spokesperson-19,"Graduado en la Universidad de Sevilla","وريم إيبسوم",true
+spokesperson-20,user-account-spokesperson-20,"Graduado en la Universidad de Sevilla","洛伦·伊普森",true
+spokesperson-21,user-account-spokesperson-21,"Graduado en la Universidad de Sevilla","<marquee>Hacked</marquee>",true
+spokesperson-22,user-account-spokesperson-22,"Graduado en la Universidad de Sevilla","<script>alert(‘Hacked!’);</script>",true
+spokesperson-23,user-account-spokesperson-23,"Graduado en la Universidad de Sevilla","' or 'A' = 'A ",true
+
+##Casos positivos para licensed
+spokesperson-24,user-account-spokesperson-24,"Graduado en la Universidad de Sevilla","Certificado en electrónica industrial",true
+spokesperson-25,user-account-spokesperson-25,"Graduado en la Universidad de Sevilla","Certificado en electrónica industrial",false

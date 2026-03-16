@@ -37,8 +37,6 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	public void authorise() {
 		boolean status;
 
-		// Formal testing:
-		// - right realm, wrong user -> isPrincipal() lo bloquea
 		status = this.invention != null && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);

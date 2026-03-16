@@ -34,14 +34,13 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 		status = invention != null && invention.getInventor() != null && invention.getInventor().isPrincipal() && Boolean.TRUE.equals(invention.getDraftMode());
 
-		this.invention = invention; // <-- CLAVE
+		this.invention = invention;
 		super.setAuthorised(status);
 
 	}
 
 	@Override
 	public void load() {
-		// Aquí ya usamos this.invention (ya validada en authorise)
 		this.part = new Part();
 		this.part.setInvention(this.invention);
 		this.part.setDraftMode(true);
@@ -51,7 +50,6 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void bind() {
 		super.bindObject(this.part, "name", "description", "kind", "cost");
 
-		// anti-hacking
 		this.part.setInvention(this.invention);
 		this.part.setDraftMode(true);
 	}

@@ -1,0 +1,39 @@
+key,key:spokesperson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+
+##Casos negativos para ticker
+campaign-01,spokesperson-01,null,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-02,spokesperson-01,,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-03,spokesperson-01,Z99-ABCDEFGHI,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-04,spokesperson-01,AB0-ABCDEFGHIJ,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-05,spokesperson-01,FFF06-00000,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-06,spokesperson-01,TR044-9999999999,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-07,spokesperson-01,OP90-5555,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-08,spokesperson-01,LM11-99999999999,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-09,spokesperson-01,NB22-_?)(Ç*%,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-10,spokesperson-01,vc33-BRTWEC,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+
+##Casos negativos para name
+campaign-11,spokesperson-01,CC01-TESTNAME,null,"Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-12,spokesperson-01,CC02-TESTNAME,"","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-13,spokesperson-01,CC03-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tes","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+
+##Casos negativos para description
+campaign-14,spokesperson-01,CC01-TESTDESC,null,"Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-15,spokesperson-01,CC02-TESTDESC,"","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+campaign-16,spokesperson-01,CC03-TESTDESC,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore. ","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","https://example.com/cocacolacherry-2026",true
+
+##Casos negativos para startMoment
+campaign-17,spokesperson-01,CC19-TESTDATE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","1999/12/31 23:59","2000/01/01 00:00","https://example.com/cocacolacherry-2026",true
+campaign-18,spokesperson-01,CC10-TESTDATE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2201/01/01 00:01","2201/01/01 00:02","https://example.com/cocacolacherry-2026",true
+
+##Casos negativos para endMoment
+campaign-19,spokesperson-01,CC11-TESTDATE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","1999/12/31 23:58","1999/12/31 23:59","https://example.com/cocacolacherry-2026",true
+campaign-20,spokesperson-01,CC12-TESTDATE,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2201/01/01 00:00","2201/01/01 00:01","https://example.com/cocacolacherry-2026",true
+
+##Casos negativos para moreInfo
+campaign-21,spokesperson-01,CC01-TESTURL,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","",true
+campaign-22,spokesperson-01,CC01-TESTURL,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X2",true
+campaign-23,spokesperson-01,CC01-TESTURL,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","http://",true
+campaign-24,spokesperson-01,CC01-TESTURL,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","ftp://",true
+campaign-25,spokesperson-01,CC01-TESTURL,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","http://a",true
+campaign-26,spokesperson-01,CC01-TESTURL,"Coca Cola 2026","Campaña para la nueva cocacola con sabor cereza","2026/07/15 09:00","2028/01/15 09:00","ftp://a",true

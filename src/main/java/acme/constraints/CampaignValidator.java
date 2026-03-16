@@ -2,7 +2,6 @@
 package acme.constraints;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.validation.ConstraintValidatorContext;
 
@@ -13,7 +12,6 @@ import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
 import acme.entities.campaign.CampaignRepository;
-import acme.entities.milestone.Milestone;
 import acme.entities.milestone.MilestoneRepository;
 
 @Validator
@@ -50,11 +48,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 	// Can not be published unless they have one milestone. 
 	private boolean correctStatus(final Campaign campaign, final ConstraintValidatorContext context) {
-		boolean correctStatus = true;
-		List<Milestone> milestoneByCampaign = this.milestoneRepository.findAllMilestoneByCampaignId(campaign.getId());
-		if (!campaign.isDraftMode())
-			correctStatus = milestoneByCampaign.size() > 0;
-
+		boolean correctStatus = campaign.isDraftMode() || this.milestoneRepository.existsMilestoneFromCampaignId(campaign.getId());
 		super.state(context, correctStatus, "draftMode", "acme.validation.campaign.draftMode.message");
 		return !super.hasErrors(context);
 	}
@@ -65,10 +59,11 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		Date startDate = campaign.getStartMoment();
 		Date endDate = campaign.getEndMoment();
 
-		if (!campaign.isDraftMode()) {
-			isFutureStart = MomentHelper.isAfter(startDate, MomentHelper.getCurrentMoment());
-			isFutureEnd = MomentHelper.isAfter(endDate, startDate);
-		}
+		if (campaign.isDraftMode())
+			return true;
+
+		isFutureEnd = MomentHelper.isAfter(endDate, startDate);
+
 		super.state(context, isFutureStart, "startMoment", "acme.validation.campaign.startMoment.message");
 		super.state(context, isFutureEnd, "endMoment", "acme.validation.campaign.endMoment.message");
 		return !super.hasErrors(context);

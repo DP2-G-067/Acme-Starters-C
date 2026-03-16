@@ -38,7 +38,6 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 	public void bind() {
 		super.bindObject(this.part, "name", "description", "kind", "cost");
 
-		// refuerzo anti-hacking
 		this.part.setInvention(this.part.getInvention());
 		this.part.setDraftMode(true);
 	}
@@ -47,7 +46,6 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 	public void validate() {
 		super.validateObject(this.part);
 
-		// EUR obligatorio
 		if (this.part.getCost() != null && this.part.getCost().getCurrency() != null)
 			super.state("EUR".equals(this.part.getCost().getCurrency()), "cost", "inventor.part.form.error.currency");
 	}

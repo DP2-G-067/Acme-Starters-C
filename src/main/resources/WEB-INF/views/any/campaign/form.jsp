@@ -4,6 +4,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
+	<acme:form-textbox code="any.campaign.form.label.ticker" path="ticker" readonly="true"/>
 	<acme:form-textbox code="any.campaign.form.label.name" path="name" readonly="true"/>	
 	<acme:form-textarea code="any.campaign.form.label.description" path="description" readonly="true"/>
 	<acme:form-moment code="any.campaign.form.label.startMoment" path="startMoment" readonly="true"/> 

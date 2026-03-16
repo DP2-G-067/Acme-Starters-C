@@ -54,17 +54,18 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 	// Business rules ---------------------------------------------------------
 
 	private void checkTickerIsUnique(final Invention invention, final ConstraintValidatorContext context) {
-		boolean unique;
-		Invention existing;
+		boolean unique = true;
 
-		existing = this.inventionRepository.findInventionByTicker(invention.getTicker());
-		unique = existing == null || existing.equals(invention);
+		if (invention.getTicker() != null && !invention.getTicker().isBlank()) {
+			Invention existing = this.inventionRepository.findInventionByTicker(invention.getTicker());
+			unique = existing == null || existing.equals(invention);
+		}
 
 		super.state(context, unique, "ticker", "acme.entities.invention.error.ticker.not-unique");
 	}
 
 	private void checkTimeInterval(final Invention invention, final ConstraintValidatorContext context) {
-		boolean ok = false;
+		boolean ok = true;
 
 		final Date start = invention.getStartMoment();
 		final Date end = invention.getEndMoment();
@@ -99,14 +100,12 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			ok = parts != null && !parts.isEmpty();
 		}
 
-		// “Inventions cannot be published unless they have at least one part.” :contentReference[oaicite:2]{index=2}
 		super.state(context, ok, "*", "acme.entities.invention.error.published-without-parts");
 	}
 
 	private void checkPartsCostCurrencyIsEuro(final Invention invention, final ConstraintValidatorContext context) {
 		boolean ok = true;
 
-		// Solo tiene sentido si ya existe en BD (id != 0); si es nueva, aún no tendrá parts persistidas.
 		if (invention.getId() != 0) {
 			final Collection<Part> parts = this.partRepository.findByInventionId(invention.getId());
 
@@ -123,7 +122,6 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				}
 		}
 
-		// “Only Euros are accepted.” :contentReference[oaicite:3]{index=3}
 		super.state(context, ok, "*", "acme.entities.invention.error.parts-cost-not-eur");
 	}
 }

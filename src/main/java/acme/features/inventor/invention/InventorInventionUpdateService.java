@@ -37,9 +37,6 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 	public void authorise() {
 		boolean status;
 
-		// Formal testing:
-		// - right realm, wrong user -> isPrincipal() lo bloquea
-		// - right user, wrong action -> solo si está en borrador
 		status = this.invention != null && Boolean.TRUE.equals(this.invention.getDraftMode()) && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
@@ -47,10 +44,8 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 	@Override
 	public void bind() {
-		// No bindear inventor ni draftMode (anti-hacking)
 		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 
-		// Reforzar atributos protegidos
 		this.invention.setInventor(this.invention.getInventor());
 		this.invention.setDraftMode(true);
 	}
@@ -62,12 +57,9 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 		Date start = this.invention.getStartMoment();
 		Date end = this.invention.getEndMoment();
 
-		// end > start
 		if (start != null && end != null)
 			super.state(end.after(start), "endMoment", "inventor.invention.form.error.end-after-start");
 
-		// futuras (en update también deben seguir siendo futuras)
-		// OJO: en publish también se revalida con el "now" del reloj del sistema
 		if (start != null)
 			super.state(MomentHelper.isFuture(start), "startMoment", "inventor.invention.form.error.start-future");
 		if (end != null)
@@ -86,7 +78,6 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 		tuple.put("monthsActive", this.invention.getMonthsActive());
 
-		// flags para la UI
 		tuple.put("showPublish", Boolean.TRUE.equals(this.invention.getDraftMode()));
 		tuple.put("showDelete", Boolean.TRUE.equals(this.invention.getDraftMode()));
 		tuple.put("inventionId", this.invention.getId());

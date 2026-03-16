@@ -54,8 +54,6 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 
 	}
 
-	// ---- helper ----
-
 	private Money computePublishedCost(final int inventionId) {
 		Collection<Money> costs = this.partRepository.findPublishedCostsByInventionId(inventionId);
 
@@ -63,7 +61,7 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 		if (costs != null)
 			for (Money m : costs)
 				if (m != null)
-					// asumimos EUR (y además tu validador ya lo fuerza)
+
 					total += m.getAmount();
 
 		Money result = new Money();

@@ -36,12 +36,12 @@ public class InventorPartDeleteService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void bind() {
-		; // nada que bindear para borrar
+		;
 	}
 
 	@Override
 	public void validate() {
-		; // sin validaciones extra
+		;
 	}
 
 	@Override

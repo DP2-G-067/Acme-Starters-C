@@ -44,7 +44,6 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	public void authorise() {
 		boolean status;
 
-		// Igual que en EmployerJobPublishService: entidad existe, está en borrador y es del principal :contentReference[oaicite:1]{index=1}
 		status = this.invention != null && Boolean.TRUE.equals(this.invention.getDraftMode()) && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
@@ -52,7 +51,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 
 	@Override
 	public void bind() {
-		; // no binding on publish
+		;
 	}
 
 	@Override

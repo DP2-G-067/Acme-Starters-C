@@ -25,7 +25,8 @@ public class AnyFundraiserShowService extends AbstractService<Any, Fundraiser> {
 
 		strategyId = super.getRequest().getData("strategyId", int.class);
 		this.strategy = this.repository.getStrategyById(strategyId);
-		this.fundraiser = this.repository.getFundraiserById(this.strategy.getFundraiser().getId());
+		if (this.strategy != null)
+			this.fundraiser = this.repository.getFundraiserById(this.strategy.getFundraiser().getId());
 	}
 
 	@Override
