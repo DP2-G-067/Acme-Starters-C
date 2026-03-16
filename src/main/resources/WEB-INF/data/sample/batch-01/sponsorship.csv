@@ -75,3 +75,7 @@ sponsorship-t09,VC33-zzzzzzz,"Sponsorship Alpha","Sponsorship for testing purpos
 sponsorship-t10,ZZ98-dhgh_123G,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
 sponsorship-t11,ZZ97-test___,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,true,sponsor1
 
+##Casos positivos para draftMode
+
+sponsorship-dm01,DM01-TDRAF,"Sponsorship Alpha","Sponsorship for testing purposes.",2026/06/01 10:00,2027/06/01 10:00,http://example.com,false,sponsor1
+
