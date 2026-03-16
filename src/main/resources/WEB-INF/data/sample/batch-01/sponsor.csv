@@ -1,10 +1,34 @@
 key,address,im,gold,key:userAccount
-sponsor1,Calle Mayor 1,im1,true,user-account-sponsor-02
-sponsor2,Calle Menor 2,im2,false,user-account-sponsor-03
-sponsor3,Plaza Mayor 3,im3,true,user-account-sponsor-04
+
+##Datos generales
+
+sponsor1,"Calle Mayor 1",im1,true,user-account-sponsor-01
+sponsor2,Calle Menor 2,im1,false,user-account-sponsor-02
+sponsor3,Calle Nueva 3,im3,true,user-account-sponsor-03
 
 ##Casos positivos para address
 
+sponsor-04,A,im1,true,user-account-sponsor-04
+sponsor-05,AB,im1,true,user-account-sponsor-05
+sponsor-06,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",im1,true,user-account-sponsor-06
+sponsor-07,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore",im1,true,user-account-sponsor-07
+sponsor-08,"โลเร็ม อิปซัม",im1,true,user-account-sponsor-08
+sponsor-09,"لوريم إيبسوم",im1,true,user-account-sponsor-09
+sponsor-10,"洛伦·伊普森",im1,true,user-account-sponsor-10
+sponsor-11,"<marquee>Hacked</marquee>",im1,true,user-account-sponsor-11
+sponsor-12,"<script>alert('Hacked!');</script>",im1,true,user-account-sponsor-12
+sponsor-13,"' or 'A' = 'A ",im1,true,user-account-sponsor-13
+
 ##Casos positivos para im
 
-##Casos positivos para gold
+sponsor-14,"Calle Mayor 1",A,true,user-account-sponsor-14
+sponsor-15,"Calle Mayor 1",AB,true,user-account-sponsor-15
+sponsor-16,"Calle Mayor 1","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",true,user-account-sponsor-16
+sponsor-17,"Calle Mayor 1","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",true,user-account-sponsor-17
+sponsor-18,"Calle Mayor 1","โลเร็ม อิปซัม",true,user-account-sponsor-18
+sponsor-19,"Calle Mayor 1","لوريم إيبسوم",true,user-account-sponsor-19
+sponsor-20,"Calle Mayor 1","洛伦·伊普森",true,user-account-sponsor-20
+sponsor-21,"Calle Mayor 1","<marquee>Hacked</marquee>",true,user-account-sponsor-21
+sponsor-22,"Calle Mayor 1","<script>alert('Hacked!');</script>",true,user-account-sponsor-22
+sponsor-23,"Calle Mayor 1","' or 'A' = 'A ",true,user-account-sponsor-23
+

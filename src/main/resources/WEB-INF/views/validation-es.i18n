@@ -5,7 +5,8 @@ acme.validation.campaign.draftMode.message = La campaña no puede ser publicada 
 acme.validation.campaign.startMoment.message = La fecha de inicio no puede ser posterior a la de publicación.
 acme.validation.campaign.endMoment.message = La fecha de fin no puede ser posterior a la de inicio.
 
-acme.validation.ticker.message=El ticker no es válido.
-acme.validation.header.message=Este texto no es un encabezado válido.
-acme.validation.text.message=Este texto no es válido.
-acme.validation.not-blank.message=Este campo no puede estar vacío.
+
+acme.validation.header.message = La cabecera es incorrecta
+acme.validation.text.message = El texto es incorrecto
+acme.validation.ticker.message = El ticker es incorrecto
+

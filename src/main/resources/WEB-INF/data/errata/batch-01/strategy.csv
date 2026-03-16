@@ -24,11 +24,11 @@ strategy-13,fundraiser-01,KL38-TESTURL,"Expansión Europa 2026","Estrategia para
 
 ##Casos negativos para startMoment
 
-strategy-14,fundraiser-01,KL48-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2024/12/31 23:59","2025/01/01 00:00","https://example.com/europa-2026",true
+strategy-14,fundraiser-01,KL48-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","1999/12/31 23:59","2000/01/01 00:00","https://example.com/europa-2026",true
 strategy-16,fundraiser-01,KL50-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2201/01/01 00:01","2201/01/01 00:02","https://example.com/europa-2026",true
 
 ##Casos negativos para endMoment
-strategy-18,fundraiser-01,KL52-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2024/12/31 23:58","2024/12/31 23:59","https://example.com/europa-2026",true
+strategy-18,fundraiser-01,KL52-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","1999/12/31 23:58","1999/12/31 23:59","https://example.com/europa-2026",true
 strategy-19,fundraiser-01,KL53-TESTDATE,"Expansión Europa 2026","Estrategia para ampliar operaciones en Europa occidental","2201/01/01 00:00","2201/01/01 00:01","https://example.com/europa-2026",true
 
 ##Casos negativos para ticker

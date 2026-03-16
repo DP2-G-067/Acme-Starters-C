@@ -3,11 +3,13 @@ key,key:userAccount,bank,statement,agent
 ##Casos negativos para bank
 
 fundraiser-01,errata-user-account-fundraiser-01,"","Especialista en captación de fondos para proyectos tecnológicos y expansión internacional.",true
-fundraiser-02,errata-user-account-fundraiser-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
-fundraiser-03,errata-user-account-fundraiser-03,NULL,"Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
+fundraiser-02,errata-user-account-fundraiser-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
+fundraiser-03,errata-user-account-fundraiser-01,null,"Experiencia en financiación de iniciativas sostenibles y desarrollo verde.",false
 
 ##Casos negativos para statement
 
-fundraiser-04,errata-user-account-fundraiser-04,"Banco Santander","",true
-fundraiser-05,errata-user-account-fundraiser-05,"Banco Santander","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",true
-fundraiser-06,errata-user-account-fundraiser-06,"Banco Santander",NULL,true
+fundraiser-04,errata-user-account-fundraiser-01,"Banco Santander","",true
+fundraiser-05,errata-user-account-fundraiser-01,"Banco Santander","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",true
+fundraiser-06,errata-user-account-fundraiser-01,"Banco Santander",null,true
+
+fundraiser-07,errata-user-account-fundraiser-01,"Banco Santander","Experiencia en financiación de iniciativas sostenibles y desarrollo verde",null
