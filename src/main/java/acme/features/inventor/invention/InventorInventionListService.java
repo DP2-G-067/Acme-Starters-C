@@ -26,9 +26,18 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 	@Override
 	public void load() {
 		int userAccountId;
+		boolean spanish;
 
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
+		spanish = "es".equals(super.getRequest().getLocale().getLanguage());
+
 		this.inventions = this.repository.findManyByUserAccountId(userAccountId);
+
+		for (Invention invention : this.inventions)
+			if (spanish)
+				invention.setStatus(Boolean.TRUE.equals(invention.getDraftMode()) ? "Borrador" : "Publicado");
+			else
+				invention.setStatus(Boolean.TRUE.equals(invention.getDraftMode()) ? "Draft" : "Published");
 	}
 
 	@Override
