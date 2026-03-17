@@ -94,4 +94,9 @@ public class Invention extends AbstractEntity {
 	@Column
 	private Boolean draftMode;
 
+
+	@Transient
+	public String getPublicationStatus() {
+		return Boolean.TRUE.equals(this.draftMode) ? "Borrador" : "Publicado";
+	}
 }

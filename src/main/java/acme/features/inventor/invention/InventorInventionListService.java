@@ -38,6 +38,6 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.inventions, "ticker", "name", "draftMode");
+		super.unbindObjects(this.inventions, "ticker", "name", "status");
 	}
 }
