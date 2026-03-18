@@ -59,9 +59,9 @@ user-account-spokesperson-22,true,"UserIdentity{name: 'Spokesperson22', surname:
 user-account-spokesperson-23,true,"UserIdentity{name: 'Spokesperson23', surname: 'Acme', email: 'spokesperson23@acme.com'}",spokesperson23,spokesperson23
 user-account-spokesperson-24,true,"UserIdentity{name: 'Spokesperson24', surname: 'Acme', email: 'spokesperson24@acme.com'}",spokesperson24,spokesperson24
 user-account-spokesperson-25,true,"UserIdentity{name: 'Spokesperson25', surname: 'Acme', email: 'spokesperson25@acme.com'}",spokesperson25,spokesperson25
-user-account-sponsor-01,true,"UserIdentity{name: 'Sponsor1', surname: 'Acme', email: 'sponsor1@acme.com'}",sponsor1,sponsor1
-user-account-sponsor-02,true,"UserIdentity{name: 'Sponsor2', surname: 'Acme', email: 'sponsor2@acme.com'}",sponsor2,sponsor2
-user-account-sponsor-03,true,"UserIdentity{name: 'Sponsor3', surname: 'Acme', email: 'sponsor3@acme.com'}",sponsor3,sponsor3
+user-account-sponsor-01,true,"UserIdentity{name: 'Sponsor1', surname: 'Acme', email: 'sponsor1@acme.com'}",sponsor,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'Sponsor2', surname: 'Acme', email: 'sponsor2@acme.com'}",sponsor,sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Sponsor3', surname: 'Acme', email: 'sponsor3@acme.com'}",sponsor,sponsor3
 user-account-sponsor-04,true,"UserIdentity{name: 'Sponsor4', surname: 'Acme', email: 'sponsor4@acme.com'}",sponsor4,sponsor4
 user-account-sponsor-05,true,"UserIdentity{name: 'Sponsor5', surname: 'Acme', email: 'sponsor5@acme.com'}",sponsor5,sponsor5
 user-account-sponsor-06,true,"UserIdentity{name: 'Sponsor6', surname: 'Acme', email: 'sponsor6@acme.com'}",sponsor6,sponsor6

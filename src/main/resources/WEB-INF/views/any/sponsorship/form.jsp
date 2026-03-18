@@ -10,7 +10,7 @@
 	<acme:form-moment code="any.sponsorship.form.label.endMoment" path="endMoment" readonly="true"/>
 	<acme:form-textarea code="any.sponsorship.form.label.description" path="description" readonly="true"/>
 	<acme:form-url code="any.sponsorship.form.label.moreInfo" path="moreInfo" readonly="true"/>
-	<acme:form-textbox code="any.sponsorship.form.label.monthsActive" path="monthsActive" readonly="true"/>
+	<acme:form-double code="any.sponsorship.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-money code="any.sponsorship.form.label.totalMoney" path="totalMoney" readonly="true"/>
 
 	<jstl:if test="${_command == 'show'}">

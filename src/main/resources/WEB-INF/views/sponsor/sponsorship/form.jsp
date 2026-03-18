@@ -12,7 +12,7 @@
 	<acme:form-url code="sponsor.sponsorship.form.label.moreInfo" path="moreInfo" readonly="${!draftMode}"/>
 
 	<jstl:if test="${_command != 'create'}">
-		<acme:form-textbox code="sponsor.sponsorship.form.label.monthsActive" path="monthsActive" readonly="true"/>
+		<acme:form-double code="sponsor.sponsorship.form.label.monthsActive" path="monthsActive" readonly="true"/>
 		<acme:form-money code="sponsor.sponsorship.form.label.totalMoney" path="totalMoney" readonly="true"/>
 		<acme:button code="sponsor.sponsorship.form.button.donation" action="/sponsor/donation/list?sponsorshipId=${id}"/>
 	</jstl:if>
