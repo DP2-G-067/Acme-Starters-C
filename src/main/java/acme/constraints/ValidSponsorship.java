@@ -15,7 +15,7 @@ public @interface ValidSponsorship {
 
     // Standard validation properties -----------------------------------------
 
-    String message() default "{acme.entities.sponsorship.error}";
+    String message() default "";
 
     Class<?>[] groups() default {};
 
