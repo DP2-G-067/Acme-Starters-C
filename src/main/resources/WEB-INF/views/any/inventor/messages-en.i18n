@@ -2,6 +2,6 @@ any.inventor.form.title = Inventor profile
 
 any.inventor.form.label.bio = Bio:
 any.inventor.form.label.keyWords = Keywords:
-any.inventor.form.label.licensed = Licensed:
+any.inventor.form.label.licensed = Licensed
 
 any.inventor.form.button.return = Return

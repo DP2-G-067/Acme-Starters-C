@@ -11,8 +11,7 @@ inventor.part.form.label.name = Name
 inventor.part.form.label.description = Description
 inventor.part.form.label.cost = Cost
 inventor.part.form.label.kind = Kind
-inventor.part.form.label.draftMode = Draft mode
-
+inventor.part.list.label.status=Status
 inventor.part.form.button.create = Create
 inventor.part.form.button.update = Update
 inventor.part.form.button.delete = Delete
