@@ -1,0 +1,20 @@
+key,key:auditReport,name,notes,hours,kind
+
+# Datos generales
+audit-section-01,audit-report-01,"Phase 1","Preliminary checks and scoping",10,PRELIMINARY
+audit-section-02,audit-report-01,"Phase 2","Evaluation of financial assets",25,EVALUATION
+audit-section-03,audit-report-02,"Phase 1","Security scoping",15,PRELIMINARY
+audit-section-04,audit-report-02,"Phase 2","Penetration testing",30,EVALUATION
+audit-section-05,audit-report-03,"Phase 1","Digital assets discovery",10,PRELIMINARY
+audit-section-06,audit-report-03,"Phase 3","Final digital report",18,CONCLUSION
+audit-section-07,audit-report-04,"Phase 1","Infra planning",22,PRELIMINARY
+audit-section-08,audit-report-04,"Phase 2","Infra evaluation",35,EVALUATION
+audit-section-09,audit-report-05,"Phase 1","Biotech planning",12,PRELIMINARY
+audit-section-10,audit-report-05,"Phase 2","Biotech lab testing",27,EVALUATION
+
+# Secciones asignadas a los test cases de los reports para que no den error de horas 0
+audit-section-11,audit-report-06,"L","Preliminary checks and scoping",10,PRELIMINARY
+audit-section-12,audit-report-07,"<marquee>Hacked</marquee>","Preliminary checks and scoping",10,PRELIMINARY
+audit-section-13,audit-report-08,"<script>alert('Hacked!');</script>","Preliminary checks and scoping",10,PRELIMINARY
+audit-section-14,audit-report-09,"' or 'A' = 'A ","Preliminary checks and scoping",10,PRELIMINARY
+audit-section-15,audit-report-10,"Phase 1","Preliminary checks and scoping",1,PRELIMINARY

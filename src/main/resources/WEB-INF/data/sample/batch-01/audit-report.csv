@@ -1,0 +1,17 @@
+key,key:auditor,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+
+# Datos generales
+audit-report-01,auditor-01,AA11-REPORT01,"Q3 Financial Audit","Detailed financial analysis of Q3","2026/06/01 10:00","2027/06/01 10:00","http://www.acme.com",false
+audit-report-02,auditor-01,BB22-REPORT02,"Security Audit","IT security and privacy report","2026/07/15 09:00","2028/01/15 09:00","http://www.acme.com",true
+audit-report-03,auditor-02,CC33-REPORT03,"Digital Audit","Digital products evaluation","2026/05/10 12:30","2027/12/10 12:30",,true
+audit-report-04,auditor-02,DD44-REPORT04,"Infrastructure Audit","Urban infrastructure development","2026/09/01 08:00","2029/09/01 08:00","http://example.com",true
+audit-report-05,auditor-02,EE55-REPORT05,"Biotech Audit","Biotech startups investment audit","2026/08/20 11:15","2028/08/20 11:15","http://example.com",true
+
+# Casos positivos para name
+audit-report-06,auditor-01,FF66-TESTNAME,"L","Detailed financial analysis of Q3","2026/06/01 10:00","2027/06/01 10:00","http://www.acme.com",true
+audit-report-07,auditor-01,GG77-TESTNAME,"Lo","Detailed financial analysis of Q3","2026/06/01 10:00","2027/06/01 10:00","http://www.acme.com",true
+audit-report-08,auditor-01,HH88-TESTNAME,"<marquee>Hacked</marquee>","Detailed financial analysis of Q3","2026/06/01 10:00","2027/06/01 10:00","http://www.acme.com",true
+
+# Casos positivos para fechas
+audit-report-09,auditor-01,II99-TESTDATE,"Q3 Financial Audit","Detailed financial analysis of Q3","2025/01/01 00:01","2025/01/01 00:02","http://www.acme.com",true
+audit-report-10,auditor-01,JJ00-TESTDATE,"Q3 Financial Audit","Detailed financial analysis of Q3","2200/12/31 23:58","2200/12/31 23:59","http://www.acme.com",true

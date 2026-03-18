@@ -1,0 +1,6 @@
+key,key:userAccount,firm,highlights,solicitor
+
+# Datos generales
+auditor-01,user-account-auditor-1,"Acme Audit Firm","Top tier financial audits.",true
+auditor-02,user-account-auditor-2,"Global Audits","Specialized in tech and security.",false
+auditor-03,user-account-auditor-3,"Local Audits","Consulting services for small businesses.",true
