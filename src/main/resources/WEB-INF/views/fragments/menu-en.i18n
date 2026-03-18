@@ -14,6 +14,7 @@ master.menu.any = Any
 master.menu.any.strategy = Public strategies
 master.menu.any.campaign = Public campaigns
 master.menu.any.invention.list = List Of Inventions
+master.menu.any.sponsorship = Public sponsorships
 
 # master.menu.anonymous #######################################################
 
