@@ -24,7 +24,10 @@ public class SponsorSponsorshipListService extends AbstractService<Sponsor, Spon
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().getActiveRealm().getClass() == Sponsor.class;
+		super.setAuthorised(status);
 	}
 
 	@Override
