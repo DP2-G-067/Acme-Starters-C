@@ -54,7 +54,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 		existingSponsorship = this.sponsorshipRepository.findSponsorshipByTicker(sponsorship.getTicker());
 		uniqueTicker = existingSponsorship == null || existingSponsorship.equals(sponsorship);
 
-		super.state(context, uniqueTicker, "ticker", "acme.entities.sponsorship.error.ticker.not-unique");
+		super.state(context, uniqueTicker, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
 	}
 
 	private void checkTimeCompliance(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
@@ -62,14 +62,14 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 		Date end = sponsorship.getEndMoment();
 
 		if (start != null && end != null)
-			super.state(context, MomentHelper.isAfter(end, start), "*", "acme.entities.sponsorship.error.not-time-compliant");
+			super.state(context, MomentHelper.isAfter(end, start), "*", "acme.validation.sponsorship.noTimeCompliant.message");
 	}
 
 	private void checkPublicationConsistency(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
 		boolean isPublishedWithNoDonations = sponsorship.getDraftMode() != null && !sponsorship.getDraftMode() //
-			&& this.donationRepository.existsDonationBySponsorshipId(sponsorship.getId()) == 0;
+			&& !this.donationRepository.existsDonationBySponsorshipId(sponsorship.getId());
 
-		super.state(context, !isPublishedWithNoDonations, "*", "acme.entities.sponsorship.error.published-no-donations");
+		super.state(context, !isPublishedWithNoDonations, "*", "acme.validation.sponsorship.draftMode.message");
 	}
 
 }

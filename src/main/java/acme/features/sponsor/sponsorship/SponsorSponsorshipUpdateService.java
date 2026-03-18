@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.sponsorship.Sponsorship;
 import acme.realms.Sponsor;
@@ -44,6 +45,11 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 
 	@Override
 	public void validate() {
+		boolean isValidMoment;
+
+		isValidMoment = MomentHelper.isAfter(this.sponsorship.getStartMoment(), MomentHelper.getCurrentMoment());
+		super.state(isValidMoment, "*", "acme.validation.sponsorship.publish-after-start.message");
+
 		super.validateObject(this.sponsorship);
 	}
 

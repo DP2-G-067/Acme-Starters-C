@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="sponsor.donation.form.label.name" path="name" readonly="${!draftMode && id != 0}"/>
-	<acme:form-textbox code="sponsor.donation.form.label.notes" path="notes" readonly="${!draftMode && id != 0}"/>
+	<acme:form-textarea code="sponsor.donation.form.label.notes" path="notes" readonly="${!draftMode && id != 0}"/>
 	<acme:form-money code="sponsor.donation.form.label.money" path="money" readonly="${!draftMode && id != 0}"/>
 
 	<jstl:if test="${!draftMode && id != 0}">

@@ -27,8 +27,10 @@ public class SponsorDonationCreateService extends AbstractService<Sponsor, Donat
 
 		sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
 		this.sponsorship = this.repository.findSponsorshipById(sponsorshipId);
-		this.donation = super.newObject(Donation.class);
-		this.donation.setSponsorship(this.sponsorship);
+		if (this.sponsorship != null) {
+			this.donation = super.newObject(Donation.class);
+			this.donation.setSponsorship(this.sponsorship);
+		}
 	}
 
 	@Override
