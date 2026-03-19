@@ -14,6 +14,7 @@ master.menu.any = Cualquiera
 master.menu.any.strategy = Estrategias públicas
 master.menu.any.campaign = Campañas públicas
 master.menu.any.invention.list = Lista de Inventos
+master.menu.any.audit-reports = Informes de auditoría
 
 # master.menu.anonymous #######################################################
 
