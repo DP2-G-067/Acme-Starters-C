@@ -1,0 +1,21 @@
+auditor.audit-report.list.title = Mis informes de auditoría
+auditor.audit-report.form.title = Informe de auditoría
+auditor.audit-report.list.label.ticker = Ticker
+auditor.audit-report.list.label.name = Nombre
+auditor.audit-report.list.label.description = Descripción
+auditor.audit-report.form.label.ticker = Ticker
+auditor.audit-report.form.label.name = Nombre
+auditor.audit-report.form.label.startMoment = Fecha de inicio
+auditor.audit-report.form.label.endMoment = Fecha de fin
+auditor.audit-report.form.label.description = Descripción
+auditor.audit-report.form.label.moreInfo = Información adicional
+auditor.audit-report.form.button.audit-section = Ver secciones
+auditor.audit-report.form.button.create = Crear
+auditor.audit-report.form.button.update = Actualizar
+auditor.audit-report.form.button.publish = Publicar
+auditor.audit-report.form.button.delete = Eliminar
+
+acme.validation.audit-report.duplicated-ticker.message = Ticker duplicado, por favor cámbielo
+acme.validation.audit-report.draftMode.message = No puede publicar un informe sin secciones
+acme.validation.audit-report.noTimeCompliant.message = La fecha final no puede ser anterior a la inicial
+acme.validation.audit-report.publish-after-start.message = No puede publicar un informe después de su fecha de inicio
