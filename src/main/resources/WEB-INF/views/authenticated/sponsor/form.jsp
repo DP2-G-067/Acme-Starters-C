@@ -5,7 +5,7 @@
 
 <acme:form>
 
-	<acme:form-textarea
+	<acme:form-textbox
 		code="authenticated.sponsor.form.label.address"
 		path="address"/>
 
