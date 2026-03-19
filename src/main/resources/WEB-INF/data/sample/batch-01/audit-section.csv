@@ -17,4 +17,4 @@ audit-section-11,audit-report-06,"L","Preliminary checks and scoping",10,PRELIMI
 audit-section-12,audit-report-07,"<marquee>Hacked</marquee>","Preliminary checks and scoping",10,PRELIMINARY
 audit-section-13,audit-report-08,"<script>alert('Hacked!');</script>","Preliminary checks and scoping",10,PRELIMINARY
 audit-section-14,audit-report-09,"' or 'A' = 'A ","Preliminary checks and scoping",10,PRELIMINARY
-audit-section-15,audit-report-10,"Phase 1","Preliminary checks and scoping",1,PRELIMINARY
+audit-section-15,audit-report-10,"Phase 1","Preliminary checks and the scoping",1,PRELIMINARY
