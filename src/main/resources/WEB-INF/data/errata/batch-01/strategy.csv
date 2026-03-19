@@ -1,14 +1,14 @@
 key,key:fundraiser,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
 ##Casos negativos para name
-strategy-01,fundraiser-01,KL12-TESTNAME,NULL,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
+strategy-01,fundraiser-01,KL12-TESTNAME,null,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-02,fundraiser-01,KL13-TESTNAME,"",Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-03,fundraiser-01,KL15-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",Estrategia para ampliar operaciones en Europa occidentals,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 ##Casos negativos para description
-strategy-04,fundraiser-01,KL22-TESTDESC,Expansión Europa 2026,NULL,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
+strategy-04,fundraiser-01,KL22-TESTDESC,Expansión Europa 2026,null,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-05,fundraiser-01,KL23-TESTDESC,Expansión Europa 2026,"",2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-06,fundraiser-01,KL25-TESTDESC,Expansión Europa 2026,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolores",2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 ##Casos negativos para moreInfo
-strategy-07,fundraiser-01,KL32-TESTURL,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,NULL,true
+strategy-07,fundraiser-01,KL32-TESTURL,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,null,true
 strategy-08,fundraiser-01,KL33-TESTURL,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,"",true
 strategy-09,fundraiser-01,KL34-TESTURL,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X2",true
 strategy-10,fundraiser-01,KL35-TESTURL,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,http://,true
@@ -22,7 +22,7 @@ strategy-16,fundraiser-01,KL50-TESTDATE,Expansión Europa 2026,Estrategia para a
 strategy-18,fundraiser-01,KL52-TESTDATE,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,1999/12/31 23:58,1999/12/31 23:59,https://example.com/europa-2026,true
 strategy-19,fundraiser-01,KL53-TESTDATE,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2200/12/31 23:59,2201/01/01 00:00,https://example.com/europa-2026,true
 ##Casos negativos para ticker,"","","","","",""
-strategy-20,fundraiser-01,NULL,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
+strategy-20,fundraiser-01,null,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-21,fundraiser-01,,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-22,fundraiser-01,Z99-ABCDEFGHI,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-23,fundraiser-01,AB0-ABCDEFGHIJ,Expansión Europa 2026,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
