@@ -16,24 +16,31 @@ public class AuditorAuditSectionListService extends AbstractService<Auditor, Aud
 
 	@Autowired
 	protected AuditorAuditSectionRepository	repository;
-	private Collection<AuditSection>		auditSections;
-	private AuditReport						auditReport;
 
+	protected Collection<AuditSection>		auditSections;
+
+
+	@Override
+	public void authorise() {
+		int auditReportId = super.getRequest().getData("auditReportId", int.class);
+		AuditReport auditReport = this.repository.findOneAuditReportById(auditReportId);
+		boolean status = auditReport != null && auditReport.getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		super.setAuthorised(status);
+	}
 
 	@Override
 	public void load() {
 		int auditReportId = super.getRequest().getData("auditReportId", int.class);
-		this.auditReport = this.repository.findOneAuditReportById(auditReportId);
-		this.auditSections = this.repository.findManyAuditSectionsByAuditReportId(auditReportId);
+		this.auditSections = this.repository.findManyByAuditReportId(auditReportId);
 	}
-	@Override
-	public void authorise() {
-		super.setAuthorised(this.auditReport.getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId());
-	}
+
 	@Override
 	public void unbind() {
-		super.unbindGlobal("draftMode", this.auditReport.getDraftMode());
-		super.unbindGlobal("auditReportId", this.auditReport.getId());
-		super.unbindObjects(this.auditSections, "name", "hours", "kind");
+		int auditReportId = super.getRequest().getData("auditReportId", int.class);
+		AuditReport auditReport = this.repository.findOneAuditReportById(auditReportId);
+
+		super.unbindGlobal("auditReportId", auditReportId);
+		super.unbindGlobal("draftMode", auditReport.getDraftMode());
+		super.unbindObjects(this.auditSections, "name", "notes", "hours", "kind");
 	}
 }

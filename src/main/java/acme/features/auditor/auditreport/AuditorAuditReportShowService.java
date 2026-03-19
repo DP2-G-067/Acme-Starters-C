@@ -13,17 +13,22 @@ public class AuditorAuditReportShowService extends AbstractService<Auditor, Audi
 
 	@Autowired
 	protected AuditorAuditReportRepository	repository;
-	private AuditReport						auditReport;
 
+	protected AuditReport					auditReport;
+
+
+	@Override
+	public void authorise() {
+		boolean status = this.auditReport != null && this.auditReport.getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		super.setAuthorised(status);
+	}
 
 	@Override
 	public void load() {
-		this.auditReport = this.repository.findOneAuditReportById(super.getRequest().getData("id", int.class));
+		int id = super.getRequest().getData("id", int.class);
+		this.auditReport = this.repository.findOneAuditReportById(id);
 	}
-	@Override
-	public void authorise() {
-		super.setAuthorised(this.auditReport.getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId());
-	}
+
 	@Override
 	public void unbind() {
 		super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");

@@ -99,11 +99,13 @@ public class AuditReport extends AbstractEntity {
 	@ValidNumber(min = 1)
 	public Integer getHours() {
 		Integer result = 0;
-		if (this.repository != null && this.getId() != 0) {
+
+		if (this.repository != null && this.getId() != 0)
 			result = this.repository.computeHoursByAuditReportId(this.getId());
-			if (result == null)
-				result = 0;
-		}
+
+		if (result == null || result == 0)
+			result = 1;
+
 		return result;
 	}
 }

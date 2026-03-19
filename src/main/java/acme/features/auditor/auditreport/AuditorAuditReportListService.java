@@ -15,19 +15,23 @@ public class AuditorAuditReportListService extends AbstractService<Auditor, Audi
 
 	@Autowired
 	protected AuditorAuditReportRepository	repository;
-	private Collection<AuditReport>			auditReports;
+
+	protected Collection<AuditReport>		auditReports;
 
 
-	@Override
-	public void load() {
-		this.auditReports = this.repository.findManyAuditReportsByAuditorId(super.getRequest().getPrincipal().getActiveRealm().getId());
-	}
 	@Override
 	public void authorise() {
 		super.setAuthorised(true);
 	}
+
+	@Override
+	public void load() {
+		int auditorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		this.auditReports = this.repository.findManyByAuditorId(auditorId);
+	}
+
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.auditReports, "ticker", "name", "description", "draftMode");
+		super.unbindObjects(this.auditReports, "ticker", "name", "description", "startMoment", "endMoment", "draftMode");
 	}
 }

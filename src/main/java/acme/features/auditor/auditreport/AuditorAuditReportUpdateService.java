@@ -13,38 +13,39 @@ public class AuditorAuditReportUpdateService extends AbstractService<Auditor, Au
 
 	@Autowired
 	protected AuditorAuditReportRepository	repository;
-	private AuditReport						auditReport;
 
+	protected AuditReport					auditReport;
+
+
+	@Override
+	public void authorise() {
+		boolean status = this.auditReport != null && this.auditReport.getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId() && this.auditReport.getDraftMode();
+		super.setAuthorised(status);
+	}
 
 	@Override
 	public void load() {
-		this.auditReport = this.repository.findOneAuditReportById(super.getRequest().getData("id", int.class));
+		int id = super.getRequest().getData("id", int.class);
+		this.auditReport = this.repository.findOneAuditReportById(id);
 	}
-	@Override
-	public void authorise() {
-		boolean isOwner = this.auditReport.getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
-		super.setAuthorised(isOwner && this.auditReport.getDraftMode());
-	}
+
 	@Override
 	public void bind() {
-		super.bindObject(this.auditReport, "ticker", "name", "startMoment", "endMoment", "description", "moreInfo");
+		super.bindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
+
 	@Override
 	public void validate() {
 		super.validateObject(this.auditReport);
-		if (!super.getErrors().hasErrors("ticker")) {
-			AuditReport existing = this.repository.findOneAuditReportByTicker(this.auditReport.getTicker());
-			super.state(existing == null || existing.getId() == this.auditReport.getId(), "ticker", "acme.validation.audit-report.duplicated-ticker.message");
-		}
-		if (!super.getErrors().hasErrors("startMoment") && !super.getErrors().hasErrors("endMoment"))
-			super.state(!this.auditReport.getEndMoment().before(this.auditReport.getStartMoment()), "endMoment", "acme.validation.audit-report.noTimeCompliant.message");
 	}
+
 	@Override
 	public void execute() {
 		this.repository.save(this.auditReport);
 	}
+
 	@Override
 	public void unbind() {
-		super.unbindObject(this.auditReport, "ticker", "name", "startMoment", "endMoment", "description", "moreInfo", "draftMode");
+		super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
 }

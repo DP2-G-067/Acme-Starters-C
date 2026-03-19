@@ -15,21 +15,26 @@ public class AuditorAuditSectionShowService extends AbstractService<Auditor, Aud
 
 	@Autowired
 	protected AuditorAuditSectionRepository	repository;
-	private AuditSection					auditSection;
 
+	protected AuditSection					auditSection;
+
+
+	@Override
+	public void authorise() {
+		boolean status = this.auditSection != null && this.auditSection.getAuditReport().getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		super.setAuthorised(status);
+	}
 
 	@Override
 	public void load() {
-		this.auditSection = this.repository.findOneAuditSectionById(super.getRequest().getData("id", int.class));
+		int id = super.getRequest().getData("id", int.class);
+		this.auditSection = this.repository.findOneAuditSectionById(id);
 	}
-	@Override
-	public void authorise() {
-		super.setAuthorised(this.auditSection.getAuditReport().getAuditor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId());
-	}
+
 	@Override
 	public void unbind() {
 		super.unbindGlobal("draftMode", this.auditSection.getAuditReport().getDraftMode());
-		super.unbindGlobal("kinds", SelectChoices.from(SectionKind.class, this.auditSection.getKind()));
+		super.unbindGlobal("kindChoices", SelectChoices.from(SectionKind.class, this.auditSection.getKind()));
 		super.unbindObject(this.auditSection, "name", "notes", "hours", "kind");
 	}
 }

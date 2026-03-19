@@ -1,21 +1,22 @@
-auditor.audit-report.list.title = My audit reports
-auditor.audit-report.form.title = Audit report
+auditor.audit-report.list.title = Audit Reports list
+auditor.audit-report.form.title = Audit Report
+
 auditor.audit-report.list.label.ticker = Ticker
 auditor.audit-report.list.label.name = Name
 auditor.audit-report.list.label.description = Description
+auditor.audit-report.list.label.startMoment = Start date
+auditor.audit-report.list.label.endMoment = End date
+auditor.audit-report.list.button.create = Create
+
 auditor.audit-report.form.label.ticker = Ticker
 auditor.audit-report.form.label.name = Name
+auditor.audit-report.form.label.description = Description
 auditor.audit-report.form.label.startMoment = Start date
 auditor.audit-report.form.label.endMoment = End date
-auditor.audit-report.form.label.description = Description
 auditor.audit-report.form.label.moreInfo = Additional information
+
 auditor.audit-report.form.button.audit-section = View sections
 auditor.audit-report.form.button.create = Create
 auditor.audit-report.form.button.update = Update
-auditor.audit-report.form.button.publish = Publish
 auditor.audit-report.form.button.delete = Delete
-
-acme.validation.audit-report.duplicated-ticker.message = Duplicated ticker, please change it
-acme.validation.audit-report.draftMode.message = You cannot publish a report with no sections
-acme.validation.audit-report.noTimeCompliant.message = End moment cannot be before start moment
-acme.validation.audit-report.publish-after-start.message = You cannot publish a report after its start date
+auditor.audit-report.form.button.publish = Publish
