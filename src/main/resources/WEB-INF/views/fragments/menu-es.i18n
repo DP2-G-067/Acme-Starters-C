@@ -76,3 +76,10 @@ master.menu.user-account.become-spokesperson = Hazte portavoz
 master.menu.user-account.spokesperson-profile = Perfil de portavoz
 master.menu.user-account.become-sponsor = Hazte patrocinador
 master.menu.user-account.sponsor-profile = Perfil de patrocinador
+master.menu.user-account.become-auditor = Convertirse en Auditor
+master.menu.user-account.auditor-profile = Perfil de Auditor
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.user-account.sponsor-profile = Perfil de patrocinador
