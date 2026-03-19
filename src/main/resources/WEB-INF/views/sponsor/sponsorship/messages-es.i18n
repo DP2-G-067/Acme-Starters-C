@@ -1,0 +1,26 @@
+sponsor.sponsorship.list.title = Lista de patrocinios
+sponsor.sponsorship.form.title = Patrocinio
+
+sponsor.sponsorship.list.label.ticker = Ticker
+sponsor.sponsorship.list.label.name = Nombre
+sponsor.sponsorship.list.label.description = Descripción
+
+sponsor.sponsorship.form.label.ticker = Ticker
+sponsor.sponsorship.form.label.name = Nombre
+sponsor.sponsorship.form.label.startMoment = Fecha de inicio
+sponsor.sponsorship.form.label.endMoment = Fecha de fin
+sponsor.sponsorship.form.label.description = Descripción
+sponsor.sponsorship.form.label.moreInfo = Información adicional
+sponsor.sponsorship.form.label.monthsActive = Meses activo
+sponsor.sponsorship.form.label.totalMoney = Dinero total
+
+sponsor.sponsorship.form.button.donation = Ver donaciones
+sponsor.sponsorship.form.button.create = Crear
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.publish = Publicar
+sponsor.sponsorship.form.button.delete = Eliminar
+
+acme.validation.sponsorship.duplicated-ticker.message = Ticker duplicado, por favor cámbielo
+acme.validation.sponsorship.draftMode.message = No puede publicar un patrocinio sin donaciones
+acme.validation.sponsorship.noTimeCompliant.message = El momento final no puede ser anterior al momento inicial
+acme.validation.sponsorship.publish-after-start.message = No puede publicar un patrocinio después de que comience
