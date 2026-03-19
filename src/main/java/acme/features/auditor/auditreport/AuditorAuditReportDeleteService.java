@@ -1,11 +1,14 @@
 
 package acme.features.auditor.auditreport;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.auditReport.AuditReport;
+import acme.entities.auditSection.AuditSection;
 import acme.realms.Auditor;
 
 @Service
@@ -41,6 +44,11 @@ public class AuditorAuditReportDeleteService extends AbstractService<Auditor, Au
 
 	@Override
 	public void execute() {
+		Collection<AuditSection> sections = this.repository.findManyByAuditReportId(this.auditReport.getId());
+
+		for (AuditSection section : sections)
+			this.repository.delete(section);
+
 		this.repository.delete(this.auditReport);
 	}
 
