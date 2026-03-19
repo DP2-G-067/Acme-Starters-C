@@ -27,7 +27,7 @@ public class AuthenticatedSponsorCreateService extends AbstractService<Authentic
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
 		userAccount = this.repository.findOneUserAccountById(userAccountId);
 
-		this.sponsor = new Sponsor();
+		this.sponsor = this.newObject(Sponsor.class);
 		this.sponsor.setUserAccount(userAccount);
 	}
 
