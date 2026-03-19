@@ -25,10 +25,19 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void load() {
+		boolean spanish;
+
 		this.inventionId = super.getRequest().getData("inventionId", int.class);
+		spanish = "es".equals(super.getRequest().getLocale().getLanguage());
 
 		this.invention = this.repository.findOneInventionById(this.inventionId);
 		this.parts = this.repository.findManyByInventionId(this.inventionId);
+
+		for (Part part : this.parts)
+			if (spanish)
+				part.setStatus(Boolean.TRUE.equals(part.getDraftMode()) ? "Borrador" : "Publicado");
+			else
+				part.setStatus(Boolean.TRUE.equals(part.getDraftMode()) ? "Draft" : "Published");
 	}
 
 	@Override
@@ -41,7 +50,7 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.parts, "name", "kind", "cost", "draftMode");
+		super.unbindObjects(this.parts, "name", "kind", "cost", "status");
 
 		super.getResponse().addGlobal("inventionId", this.inventionId);
 

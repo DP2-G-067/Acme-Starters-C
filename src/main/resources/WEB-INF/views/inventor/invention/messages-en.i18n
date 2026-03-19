@@ -13,6 +13,8 @@ inventor.invention.form.label.moreInfo = More info
 inventor.invention.form.label.monthsActive = Months active
 inventor.invention.form.label.draftMode = Draft mode
 
+inventor.invention.list.label.publicationStatus=Status
+
 inventor.invention.form.button.create = Create
 inventor.invention.form.button.update = Update
 inventor.invention.form.button.delete = Delete
