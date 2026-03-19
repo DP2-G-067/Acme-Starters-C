@@ -1,4 +1,4 @@
-	# menu-en.i18n
+# menu-en.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -15,6 +15,7 @@ master.menu.any.strategy = Public strategies
 master.menu.any.campaign = Public campaigns
 master.menu.any.invention.list = List Of Inventions
 master.menu.any.audit-reports = Audit reports
+master.menu.any.sponsorship = Public sponsorships
 
 # master.menu.anonymous #######################################################
 
@@ -44,10 +45,16 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.strategy.list = My Strategies
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.sponsorship.list = My Sponsorships
+
 # master.menu.spokesperson ##########################################################
 
 master.menu.spokesperson = Spokesperson
 master.menu.spokesperson.campaign.list = My Campaigns
+
 # master.menu.inventor ##########################################################
 
 master.menu.inventor = Inventor
@@ -74,8 +81,11 @@ master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
 master.menu.user-account.become-sponsor = Become a sponsor
 master.menu.user-account.sponsor-profile = Sponsor profile
+master.menu.user-account.become-auditor = Become an Auditor
+master.menu.user-account.auditor-profile = Auditor Profile
 
 # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Sponsor
 
+master.menu.user-account.sponsor-profile = Sponsor profile

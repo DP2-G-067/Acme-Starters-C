@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
+import acme.entities.campaign.Campaign;
 import acme.entities.milestone.Milestone;
 import acme.entities.milestone.MilestoneKind;
 import acme.realms.Spokesperson;
@@ -20,6 +21,7 @@ public class SpokespersonMilestoneUpdateService extends AbstractService<Spokespe
 	private SpokespersonMilestoneRepository	repository;
 
 	private Milestone						milestone;
+	private Campaign						campaign;
 
 	// AbstractService interface -------------------------------------------
 
@@ -30,13 +32,15 @@ public class SpokespersonMilestoneUpdateService extends AbstractService<Spokespe
 
 		id = super.getRequest().getData("id", int.class);
 		this.milestone = this.repository.findMilestoneById(id);
+		if (this.milestone != null)
+			this.campaign = this.milestone.getCampaign();
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = this.milestone != null && this.milestone.isDraftMode() && this.milestone.getCampaign().getSpokesperson().isPrincipal();
+		status = this.campaign != null && this.campaign.isDraftMode() && this.campaign.getSpokesperson().isPrincipal();
 		super.setAuthorised(status);
 	}
 

@@ -92,6 +92,8 @@ public class Invention extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Column
-	private Boolean draftMode;
+	private Boolean	draftMode;
 
+	@Transient
+	private String	status;
 }

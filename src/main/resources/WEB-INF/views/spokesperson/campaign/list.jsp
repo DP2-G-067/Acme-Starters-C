@@ -11,6 +11,4 @@
 	<acme:list-hidden path="moreInfo"/>	
 </acme:list>
 
-<jstl:if test="${showCreate}">
 	<acme:button code="spokesperon.campaign.button.create" action="/spokesperson/campaign/create?campaignId=${campaignId}"/>
-</jstl:if>
