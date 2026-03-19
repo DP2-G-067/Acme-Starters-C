@@ -60,6 +60,11 @@ master.menu.sponsor.sponsorship.list = Mis patrocinios
 master.menu.spokesperson = Portavoz
 master.menu.spokesperson.campaign.list = Mis campañas
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.audit-reports = Mis informes de auditoría
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
