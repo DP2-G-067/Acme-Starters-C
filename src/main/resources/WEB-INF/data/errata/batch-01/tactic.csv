@@ -1,23 +1,15 @@
 key,key:strategy,name,notes,expectedPercentage,kind,draftMode
-
 ##Casos negativos para name
-
 tactic-01,strategy-01,null,Colaboración con distribuidores regionales,15.0,SUBTLE,true
 tactic-02,strategy-01,"",Colaboración con distribuidores regionales,15.0,SUBTLE,true
-tactic-03,strategy-02,Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod te,Colaboración con distribuidores regionaless,15.0,SUBTLE,true
-
+tactic-03,strategy-02,Lorem ipsum dolor sit ameta consectetur adipiscing elit. Sed do: eiusmod teo,Colaboración con distribuidores regionaless,15.0,SUBTLE,true
 ##Casos negativos para notes
-
 tactic-04,strategy-02,Alianzas locales,null,15.0,SUBTLE,true
 tactic-05,strategy-02,Alianzas locales,"",15.0,SUBTLE,true
 tactic-06,strategy-03,Alianzas locales,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolore*",15.0,SUBTLE,true
-
 ##Casos negativos para expectedPercentage
-
 tactic-07,strategy-03,Alianzas locales,Colaboración con distribuidores regionales,-00.01,SUBTLE,true
 tactic-08,strategy-03,Alianzas locales,Colaboración con distribuidores regionales,-00.01,SUBTLE,true
 tactic-09,strategy-04,Alianzas locales,Colaboración con distribuidores regionales,null,SUBTLE,true
-
 tactic-11,strategy-03,Alianzas locales,Colaboración con distribuidores regionales,-00.01,null,true
-
 tactic-12,strategy-04,Alianzas locales,Colaboración con distribuidores regionales,100.01,SUBTLE,null

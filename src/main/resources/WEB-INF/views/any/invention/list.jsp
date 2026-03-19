@@ -5,8 +5,8 @@
 
 <acme:list>
 	<acme:list-column code="any.invention.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="any.invention.list.label.name" path="name" width="60%"/>
-	<acme:list-column code="any.invention.list.label.description" path="description" width="20%"/>
+	<acme:list-column code="any.invention.list.label.name" path="name" width="40%"/>
+	<acme:list-column code="any.invention.list.label.description" path="description" width="40%"/>
 	
 	
 	<acme:list-hidden path="moreInfo"/>

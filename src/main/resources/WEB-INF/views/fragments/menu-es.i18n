@@ -15,6 +15,7 @@ master.menu.any.strategy = Estrategias públicas
 master.menu.any.campaign = Campañas públicas
 master.menu.any.invention.list = Lista de Inventos
 master.menu.any.audit-reports = Informes de auditoría
+master.menu.any.sponsorship = Patrocinios públicos
 
 # master.menu.anonymous #######################################################
 
@@ -49,6 +50,11 @@ master.menu.inventor.invention.list = Mis inventos
 master.menu.fundraiser = Recaudador
 master.menu.fundraiser.strategy.list = Mis estrategias
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.sponsorship.list = Mis patrocinios
+
 # master.menu.spokesperson ##########################################################
 
 master.menu.spokesperson = Portavoz
@@ -70,7 +76,3 @@ master.menu.user-account.become-spokesperson = Hazte portavoz
 master.menu.user-account.spokesperson-profile = Perfil de portavoz
 master.menu.user-account.become-sponsor = Hazte patrocinador
 master.menu.user-account.sponsor-profile = Perfil de patrocinador
-
-# master.menu.sponsor ##########################################################
-
-master.menu.sponsor = Patrocinador

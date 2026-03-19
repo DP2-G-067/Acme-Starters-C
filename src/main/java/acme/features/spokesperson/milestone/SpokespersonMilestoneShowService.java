@@ -32,7 +32,7 @@ public class SpokespersonMilestoneShowService extends AbstractService<Spokespers
 	public void authorise() {
 		boolean status;
 
-		status = this.milestone != null;
+		status = this.milestone != null && this.milestone.getCampaign().getSpokesperson().isPrincipal();
 
 		super.setAuthorised(status);
 	}
