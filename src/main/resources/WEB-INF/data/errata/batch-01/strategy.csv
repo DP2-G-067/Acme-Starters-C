@@ -2,7 +2,7 @@ key,key:fundraiser,ticker,name,description,startMoment,endMoment,moreInfo,draftM
 ##Casos negativos para name
 strategy-01,fundraiser-01,KL12-TESTNAME,null,Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-02,fundraiser-01,KL13-TESTNAME,"",Estrategia para ampliar operaciones en Europa occidental,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
-strategy-03,fundraiser-01,KL15-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",Estrategia para ampliar operaciones en Europa occidentals,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
+strategy-03,fundraiser-01,KL15-TESTNAME,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod teo",Estrategia para ampliar operaciones en Europa occidentals,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 ##Casos negativos para description
 strategy-04,fundraiser-01,KL22-TESTDESC,Expansión Europa 2026,null,2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
 strategy-05,fundraiser-01,KL23-TESTDESC,Expansión Europa 2026,"",2026/06/01 10:00,2027/06/01 10:00,https://example.com/europa-2026,true
