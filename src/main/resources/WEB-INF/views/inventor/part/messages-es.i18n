@@ -19,3 +19,6 @@ inventor.part.form.title = Parte
 
 inventor.part.form.button.publish = Publicar
 inventor.part.list.button.create = Crear
+
+acme.validation.part.cost.message = El coste debe estar en EUR
+acme.validation.part.publish.message = No se puede publicar la parte mientras la invención esté en modo borrador

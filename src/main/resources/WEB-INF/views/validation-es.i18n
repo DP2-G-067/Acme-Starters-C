@@ -8,5 +8,5 @@ acme.validation.campaign.endMoment.message = La fecha de fin no puede ser poster
 
 acme.validation.header.message = La cabecera es incorrecta
 acme.validation.text.message = El texto es incorrecto
-acme.validation.ticker.message = El ticker es incorrecto
+acme.validation.ticker.message = El ticker debe tener el formato: 2 letras mayúsculas, 2 números, un guion y entre 5 y 10 caracteres alfanuméricos.
 

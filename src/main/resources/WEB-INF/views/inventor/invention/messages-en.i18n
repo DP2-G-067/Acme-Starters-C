@@ -33,3 +33,9 @@ inventor.invention.publish.error.start-not-future = The start moment must be in 
 inventor.invention.publish.error.end-not-future = The end moment must be in the future to publish.
 inventor.invention.publish.error.bad-interval = The end moment must be after the start moment.
 inventor.invention.publish.error.parts-not-eur = All parts must be priced in EUR to publish.
+
+
+acme.validation.invention.duplicated-ticker.message =  Duplicated ticker, please change it
+acme.validation.invention.noTimeCompliant.message = End moment cannot be before start Moment
+acme.validation.invention.draftMode.message = You cannot publish an invention with no parts
+acme.validation.invention.cost.message = Only EUR is accepted

@@ -52,7 +52,7 @@ public class PartValidator extends AbstractValidator<ValidPart, Part> {
 			ok = currency != null && "EUR".equals(currency);
 		}
 
-		super.state(context, ok, "cost", "acme.entities.part.error.cost-not-eur");
+		super.state(context, ok, "cost", "acme.validation.part.cost.message");
 	}
 
 	private void checkPublishingConsistency(final Part part, final ConstraintValidatorContext context) {
@@ -76,6 +76,6 @@ public class PartValidator extends AbstractValidator<ValidPart, Part> {
 			}
 		}
 
-		super.state(context, ok, "*", "acme.entities.part.error.published-with-invention-draft");
+		super.state(context, ok, "*", "acme.validation.part.publish.message");
 	}
 }

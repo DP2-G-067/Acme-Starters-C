@@ -61,7 +61,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			unique = existing == null || existing.equals(invention);
 		}
 
-		super.state(context, unique, "ticker", "acme.entities.invention.error.ticker.not-unique");
+		super.state(context, unique, "ticker", "acme.validation.invention.duplicated-ticker.message");
 	}
 
 	private void checkTimeInterval(final Invention invention, final ConstraintValidatorContext context) {
@@ -86,7 +86,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			}
 		}
 
-		super.state(context, ok, "*", "acme.entities.invention.error.not-time-compliant");
+		super.state(context, ok, "*", "acme.validation.invention.noTimeCompliant.message");
 	}
 
 	private void checkPublishingRequiresParts(final Invention invention, final ConstraintValidatorContext context) {
@@ -100,7 +100,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			ok = parts != null && !parts.isEmpty();
 		}
 
-		super.state(context, ok, "*", "acme.entities.invention.error.published-without-parts");
+		super.state(context, ok, "*", "acme.validation.invention.draftMode.message");
 	}
 
 	private void checkPartsCostCurrencyIsEuro(final Invention invention, final ConstraintValidatorContext context) {
@@ -122,6 +122,6 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				}
 		}
 
-		super.state(context, ok, "*", "acme.entities.invention.error.parts-cost-not-eur");
+		super.state(context, ok, "*", "acme.validation.invention.cost.message");
 	}
 }

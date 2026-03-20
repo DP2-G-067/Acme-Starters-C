@@ -31,3 +31,8 @@ inventor.invention.publish.error.start-not-future = La fecha de inicio debe esta
 inventor.invention.publish.error.end-not-future = La fecha de fin debe estar en el futuro para publicar.
 inventor.invention.publish.error.bad-interval = La fecha de fin debe ser posterior a la de inicio.
 inventor.invention.publish.error.parts-not-eur = Todas las piezas deben estar en EUR para publicar.
+
+acme.validation.invention.duplicated-ticker.message = El ticker ya está en uso, por favor cámbialo
+acme.validation.invention.noTimeCompliant.message = La fecha de finalización no puede ser anterior a la fecha de inicio
+acme.validation.invention.draftMode.message = No puedes publicar una invención sin partes
+acme.validation.invention.cost.message = Solo se acepta EUR

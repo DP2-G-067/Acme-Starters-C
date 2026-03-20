@@ -20,3 +20,6 @@ inventor.part.form.title = Part
 
 inventor.part.form.button.publish = Publish
 inventor.part.list.button.create = Create
+
+acme.validation.part.cost.message = The cost must be in EUR
+acme.validation.part.publish.message = A part cannot be published while its invention is in draft mode
