@@ -25,7 +25,7 @@
 			<acme:button code="spokesperson.campaign.button.milestones" action="/spokesperson/milestone/list?campaignId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="spokesperson.campaign.button.create" action="/spokesperson/campaign/create?campaignId=${campaignId}"/>
+			<acme:submit code="spokesperson.campaign.button.create" action="/spokesperson/campaign/create"/>
 		</jstl:when>		
 	</jstl:choose>		
 </acme:form>

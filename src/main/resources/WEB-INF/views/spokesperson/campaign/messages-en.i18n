@@ -17,7 +17,7 @@ spokesperson.campaign.form.label.moreInfo = Additional information
 spokesperson.campaign.form.label.monthsActive = Months active
 spokesperson.campaign.form.label.effort = Effort
 
-spokesperon.campaign.button.create = Create
+spokesperson.campaign.button.create = Create
 spokesperson.campaign.form.button.update = Update
 spokesperson.campaign.form.button.delete = Delete
 spokesperson.campaign.form.button.publish = Publish

@@ -13,6 +13,6 @@ spokesperson.milestone.form.label.effort = Effort
 spokesperson.milestone.form.label.kind = Kind
 
 
-spokesperon.milestone.button.create = Create
+spokesperson.milestone.button.create = Create
 spokesperson.milestone.form.button.update = Update
 spokesperson.milestone.form.button.delete = Delete

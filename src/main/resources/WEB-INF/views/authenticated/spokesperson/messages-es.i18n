@@ -15,4 +15,4 @@ authenticated.spokesperson.form.label.achievements = Logros
 authenticated.spokesperson.form.label.licensed = Licenciado
 
 authenticated.spokesperson.form.button.create = Registrarse
-authenticated.spokesperson.form.button.update = Actualizar
+authenticated.spokesperson.form.button.update = Editar

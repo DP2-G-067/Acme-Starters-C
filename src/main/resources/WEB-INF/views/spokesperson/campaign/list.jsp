@@ -11,4 +11,4 @@
 	<acme:list-hidden path="moreInfo"/>	
 </acme:list>
 
-	<acme:button code="spokesperon.campaign.button.create" action="/spokesperson/campaign/create?campaignId=${campaignId}"/>
+	<acme:button code="spokesperson.campaign.button.create" action="/spokesperson/campaign/create"/>
