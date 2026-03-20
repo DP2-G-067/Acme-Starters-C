@@ -54,17 +54,15 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 	}
 
 	private boolean isFutureDate(final Campaign campaign, final ConstraintValidatorContext context) {
-		boolean isFutureStart = true;
 		boolean isFutureEnd = true;
+		if (campaign.getStartMoment() == null || campaign.getEndMoment() == null)
+			return true;
+
 		Date startDate = campaign.getStartMoment();
 		Date endDate = campaign.getEndMoment();
 
-		if (campaign.isDraftMode())
-			return true;
-
 		isFutureEnd = MomentHelper.isAfter(endDate, startDate);
 
-		super.state(context, isFutureStart, "startMoment", "acme.validation.campaign.startMoment.message");
 		super.state(context, isFutureEnd, "endMoment", "acme.validation.campaign.endMoment.message");
 		return !super.hasErrors(context);
 	}

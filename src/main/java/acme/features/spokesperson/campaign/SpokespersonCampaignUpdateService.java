@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.campaign.Campaign;
 import acme.realms.Spokesperson;
@@ -47,8 +46,6 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 
 	@Override
 	public void validate() {
-		boolean isValidMoment = MomentHelper.isAfter(this.campaign.getStartMoment(), MomentHelper.getCurrentMoment());
-		super.state(isValidMoment, "*", "acme.validation.campaign.publish-after-start.message");
 		super.validateObject(this.campaign);
 	}
 

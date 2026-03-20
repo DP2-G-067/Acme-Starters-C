@@ -24,6 +24,6 @@ spokesperson.campaign.form.button.publish = Publicar
 spokesperson.campaign.button.milestones = Hito
 spokesperson.campaign.button.spokesperson = Portavoz
 
-acme.validation.campaign.publish-after-start.message = No puedes publicar una campaña despues de que empiece
+acme.validation.campaign.after-start.message = La fecha de incio es posterior a la actual
 acme.validation.campaign.milestones.message = No se puede publicar una campaña sin hitos
 acme.validation.campaign.draftMode.message = La campaña ya esta publicada

@@ -18,18 +18,20 @@ public class SpokespersonMilestoneCreateService extends AbstractService<Spokespe
 	@Autowired
 	private SpokespersonMilestoneRepository	repository;
 
-	private Campaign						campaign;
 	private Milestone						milestone;
 
 
 	@Override
 	public void load() {
-		int campaignId = super.getRequest().getData("campaignId", int.class);
+		Campaign campaign;
+		int campaignId;
 
-		this.campaign = this.repository.findCampaignById(campaignId);
-		if (this.campaign != null) {
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		campaign = this.repository.findCampaignById(campaignId);
+
+		if (campaign != null) {
 			this.milestone = this.newObject(Milestone.class);
-			this.milestone.setCampaign(this.campaign);
+			this.milestone.setCampaign(campaign);
 			this.milestone.setDraftMode(true);
 		}
 	}
@@ -37,7 +39,13 @@ public class SpokespersonMilestoneCreateService extends AbstractService<Spokespe
 	@Override
 	public void authorise() {
 		boolean status;
-		status = this.campaign != null && this.campaign.isDraftMode() && super.getRequest().getPrincipal().getActiveRealm().getClass() == Spokesperson.class;
+		Campaign campaign;
+		int campaignId;
+
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		campaign = this.repository.findCampaignById(campaignId);
+
+		status = campaign != null && campaign.isDraftMode() && super.getRequest().getPrincipal().getActiveRealm().getClass() == Spokesperson.class;
 		super.setAuthorised(status);
 	}
 
