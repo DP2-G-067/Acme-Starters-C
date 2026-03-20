@@ -82,3 +82,6 @@ user-account-sponsor-20,true,"UserIdentity{name: 'Sponsor20', surname: 'Acme', e
 user-account-sponsor-21,true,"UserIdentity{name: 'Sponsor21', surname: 'Acme', email: 'sponsor21@acme.com'}",sponsor21,sponsor21
 user-account-sponsor-22,true,"UserIdentity{name: 'Sponsor22', surname: 'Acme', email: 'sponsor22@acme.com'}",sponsor22,sponsor22
 user-account-sponsor-23,true,"UserIdentity{name: 'Sponsor23', surname: 'Acme', email: 'sponsor23@acme.com'}",sponsor23,sponsor23
+user-account-auditor-1,true,"UserIdentity{name: 'Auditor1', surname: 'Acme', email: 'auditor1@acme.com'}",auditor1,auditor1
+user-account-auditor-2,true,"UserIdentity{name: 'Auditor2', surname: 'Acme', email: 'auditor2@acme.com'}",auditor2,auditor2
+user-account-auditor-3,true,"UserIdentity{name: 'Auditor3', surname: 'Acme', email: 'auditor3@acme.com'}",auditor3,auditor3
