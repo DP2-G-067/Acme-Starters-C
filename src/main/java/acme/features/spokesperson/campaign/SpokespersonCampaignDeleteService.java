@@ -43,12 +43,12 @@ public class SpokespersonCampaignDeleteService extends AbstractService<Spokesper
 
 	@Override
 	public void bind() {
-		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 
 	@Override
 	public void validate() {
-		super.validateObject(this.campaign);
+		;
 	}
 
 	@Override

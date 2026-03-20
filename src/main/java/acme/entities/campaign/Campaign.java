@@ -12,13 +12,14 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
-import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
@@ -76,6 +77,14 @@ public class Campaign extends AbstractEntity {
 	@ManyToOne(optional = false)
 	private Spokesperson		spokesperson;
 
+	// Derived attributes -----------------------------------------------------
+
+	@Mandatory
+	@Valid
+	@Transient
+	@Autowired
+	private MilestoneRepository	repository;
+
 
 	@Valid
 	@Transient
@@ -89,8 +98,7 @@ public class Campaign extends AbstractEntity {
 
 	@Transient
 	public Double getEffort() {
-		MilestoneRepository repository = SpringHelper.getBean(MilestoneRepository.class);
-		return repository.computeCampaignEffort(this.getId());
+		return this.repository.computeCampaignEffort(this.getId());
 	}
 
 }
