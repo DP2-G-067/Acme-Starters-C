@@ -27,3 +27,5 @@ spokesperson.campaign.button.spokesperson = Portavoz
 acme.validation.campaign.after-start.message = La fecha de incio es posterior a la actual
 acme.validation.campaign.milestones.message = No se puede publicar una campaña sin hitos
 acme.validation.campaign.draftMode.message = La campaña ya esta publicada
+acme.validation.campaign.endMoment.message = La fecha de fin no puede ser posterior a la de inicio.
+acme.validation.campaign.startMoment.message = La fecha de inicio no puede ser posterior a la de publicación.

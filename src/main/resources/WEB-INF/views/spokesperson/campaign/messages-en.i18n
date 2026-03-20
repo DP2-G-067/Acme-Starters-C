@@ -27,3 +27,5 @@ spokesperson.campaign.button.spokesperson = Spokesperson
 acme.validation.campaign.after-start.message = Start moment is after current
 acme.validation.campaign.milestones.message = You cannot publish a campaign with no milestones
 acme.validation.campaign.draftMode.message = Campaign already published
+acme.validation.campaign.endMoment.message = End date can not be after the start date.
+acme.validation.campaign.startMoment.message = Start date can not be after the publish date.
