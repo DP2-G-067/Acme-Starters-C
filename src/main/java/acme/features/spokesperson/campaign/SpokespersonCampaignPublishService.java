@@ -61,7 +61,7 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 		}
 		{
 			boolean isValidMoment = MomentHelper.isAfter(this.campaign.getStartMoment(), MomentHelper.getCurrentMoment());
-			super.state(isValidMoment, "*", "acme.validation.campaign.publish-after-start.message");
+			super.state(isValidMoment, "*", "acme.validation.campaign.after-start.message");
 		}
 		{
 			boolean isValidDraft = this.campaign.isDraftMode();
