@@ -6,6 +6,7 @@ donation-01,"Donation Alpha","Altruist donation for sponsorship Alpha.",EUR 500.
 donation-02,"Donation Beta","Rewarded donation for sponsorship Alpha.",EUR 300.00,REWARDED,sponsorship-01
 donation-03,"Donation Gamma","Celebrated donation for sponsorship Alpha.",EUR 200.00,CELEBRATED,sponsorship-01
 donation-04,"Donation Delta","Donation for sponsorship Gamma.",EUR 150.00,ALTRUIST,sponsorship-03
+donation-05,"Donation Epsilon","Donation for unpublished sponsorship Beta.",EUR 100.00,ALTRUIST,sponsorship-02
 
 ##Casos positivos para name
 

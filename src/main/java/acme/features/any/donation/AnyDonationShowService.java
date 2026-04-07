@@ -3,6 +3,7 @@ package acme.features.any.donation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.donation.Donation;
@@ -38,6 +39,9 @@ public class AnyDonationShowService extends AbstractService<Any, Donation> {
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.donation, "name", "notes", "money", "kind");
+		Tuple tuple;
+
+		tuple = super.unbindObject(this.donation, "name", "notes", "money", "kind");
+		tuple.put("sponsorshipId", this.donation.getSponsorship().getId());
 	}
 }
