@@ -43,6 +43,10 @@ public class AnyDonationListService extends AbstractService<Any, Donation> {
 
 	@Override
 	public void unbind() {
+		int sponsorshipId;
+
+		sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
 		super.unbindObjects(this.donations, "name", "money", "kind");
+		super.unbindGlobal("sponsorshipId", sponsorshipId);
 	}
 }
